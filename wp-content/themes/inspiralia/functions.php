@@ -36,6 +36,7 @@
 	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-custom-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-sourcing-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-video-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-map-image-widget.php');
 
 	// SERVICES
 	require( $inspiralia_theme_custom_widgets_path . 'services-accordion-widget.php');
@@ -96,7 +97,7 @@ function inspiralia_setup() {
 	add_theme_support( 'custom-logo', array(
 		'width'       => 150,
 		'height'      => 35,
-		'flex-width'  => true,
+		'flex-width'  => false,
 	) );
 
 	// Set up the WordPress core custom background feature.

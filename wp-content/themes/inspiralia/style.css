@@ -34,10 +34,11 @@
 =========================================
 -----------------------------------------*/
 .inspiralia-trhead {
-	position: absolute;
-	right: 0;
-	left: 0;
 	z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%
 }
 .inspiralia-cart {
 	position: relative;
@@ -878,6 +879,36 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
 	padding: 0;
 	margin: 0;
 }
+
+.inspiralia-section .need-item.need-information {
+  margin: 0px auto;
+}
+.inspiralia-section .need-item.need-information .need-information-content {
+  width: 80%;
+  margin: 5% auto;
+  display: block;
+}
+.inspiralia-section .need-item.need-information .need-information-content .h2-header {
+  font-size: 3rem;
+  margin: 3.5rem auto 2rem auto;
+  width: 50%;
+  word-break: normal;
+}
+.inspiralia-section .need-item.need-information .need-information-content .content {
+  margin: 10px auto;
+  width: 90%;
+  font-size: 130%;
+}
+.inspiralia-section .need-item.need-information .need-information-content .button {
+  margin: 5% auto;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 38px;
+}
+
 #content {
 	padding: 60px 0;
 }
@@ -1027,19 +1058,10 @@ p.heading {
 	vertical-align: middle;
 	text-align: center;
 	display: block;
-	min-height: 25rem;
-	display: block;
-	padding: 5rem 0;
-  min-height: 40rem;
+	padding: 0;
+  height: 41rem;
 }
 
-#product .row .need-item p {
-	width: 60%;
-	margin: 0 auto;
-}
-#product .row .needs-section-arrow {
-
-}
 #product .row .needs-section-arrow.need-arrow-1 {
   background: url(images/homepage/need-arrow-1.png) #00b1dd no-repeat center center;
 }
@@ -1084,12 +1106,10 @@ ul#accordion {
 .inspiralia-section.inspiralia-sourcing h3 {
   font-size: 6rem;
   line-height: 90px;
-  color: #00b1dd;
 }
 
 .inspiralia-section.inspiralia-sourcing a.btn {
   margin: 90px 0;
-  background: #00b1dd;
   -webkit-border-radius: 21px;
   -moz-border-radius: 21px;
   border-radius: 21px;
@@ -1101,6 +1121,30 @@ ul#accordion {
 .inspiralia-section.inspiralia-video iframe {
   width: 100%;
   min-height: 620px;
+}
+
+/*---------------------------------------
+  map-information
+-----------------------------------------*/
+.map-information .title-information {
+  font-size: 6rem;
+  margin: 9rem auto;
+  text-align: center;
+}
+
+.map-information .map-image {
+  width: 100%;
+  height: 100%;
+}
+
+.map-information .button-information {
+  margin: 10rem auto;
+  -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  border-radius: 21px;
+  display: block;
+  width: 30%;
+  line-height: 3.5rem;
 }
 
 /*---------------------------------------
@@ -1469,12 +1513,15 @@ ul#accordion {
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
-	box-shadow: 0 0 5px 0 #aaaaaa;
+	/*box-shadow: 0 0 5px 0 #aaaaaa; */
+  position: relative;
 }
 .inspiralia-breadcrumb-section .overlay {
 	height: 100%;
 	padding: 100px 0;
-	position: relative;
+	position: absolute;
+  top: 0;
+  left: 0;
 	width: 100%;
 }
 .inspiralia-breadcrumb-title {
@@ -2176,9 +2223,6 @@ footer .inspiralia-social li span.icon-soci a {
 .woocommerce-page .products .product > a:first-child {
 /*		min-height: 325px; */
 }
-.inspiralia-trhead {
-	position: relative;
-}
 }
 @media (max-width: 767px) {
 .inspiralia-calltoaction {
@@ -2467,4 +2511,7 @@ footer .inspiralia-social li span.icon-soci a {
 .inspiralia-subscriber .subscription-form .int-box {
 	width: 100%;
 }
+}
+.navbar-collapse {
+
 }

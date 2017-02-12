@@ -7,15 +7,18 @@ function testimonials_meta_box_markup($page) { ?>
     <input name="testimonials-box-company-name" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "testimonials-box-company-name", true); ?>">
     <br />
     <label for="testimonials-box-company-url" class="post-attributes-label">URL</label><br/>
-    <input name="testimonials-box-company-url" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "testimonials-box-company-url", true); ?>">
+    <input name="testimonials-box-company-url" class="thick_field" type="text" placeholder="http://" value="<?php echo get_post_meta($page->ID, "testimonials-box-company-url", true); ?>">
   </div>
   <div style="clear: both;"></div>
 <?php }
 
 function add_testimonials_meta_box() {
-  add_meta_box("testimonials_meta_box", "Testimonials Extra Fields", "testimonials_meta_box_markup", "post", "normal", "high", null);
+  if (in_category('Testimonials')) {
+    add_meta_box("testimonials_meta_box", "Testimonials Extra Fields", "testimonials_meta_box_markup", "post", "normal", "high", null);
+  }
 }
-  add_action("add_meta_boxes", "add_testimonials_meta_box");
+
+add_action("add_meta_boxes", "add_testimonials_meta_box");
 
 
 function save_testimonials_meta_box($post_id, $post, $update)

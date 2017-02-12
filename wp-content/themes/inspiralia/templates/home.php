@@ -20,7 +20,8 @@
     get_template_part('sections/home', 'video');
     //=========== Get Index News ===========//
     get_template_part('sections/home', 'blog');
-
+    //=========== Get Index Map information ===========//
+    get_template_part('sections/home', 'map-information');
 
 get_footer();
 ?>
