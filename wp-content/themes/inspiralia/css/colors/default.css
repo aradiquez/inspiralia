@@ -1,0 +1,401 @@
+/*==================== Theme Menu ====================*/
+/*=== navbar background color ===*/
+.inspiralia-search-box .inspiralia-search .btn, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > .active > a:focus, .navbar-wp .dropdown-menu > li > a:hover, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus, .inspiralia-search-box .inspiralia-search .btn {
+	background: #FFF;
+}
+.is-sticky .navbar-wp {
+	background: rgba(0,0,0,0.9);
+}
+/*=== navbar hover color ===*/
+.navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-header .navbar-brand , .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-header .navbar-brand  {
+	color: #a7a9ac;
+}
+/*=== navbar hover border-color ===*/
+.navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus,  .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
+	border-color: #B17F53;
+}
+.navbar-wp .navbar-nav > li > ul::before {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #B17F53;
+}
+.navbar-wp .dropdown-menu > li {
+    border-color: #e0eded;
+}
+/*=== navbar Header background ===*/
+.navbar-wp {
+	background: rgba(0,0,0,0);
+}.navbar-wp .dropdown-menu {
+	background: #fff;
+}
+/*=== navbar drop down hover color ===*/
+.inspiralia-search-box .inspiralia-search .btn, .navbar-base .navbar-nav > .open > a, .navbar-base .navbar-nav > .open > a:hover, .navbar-base .navbar-nav > .open > a:focus, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > .active > a:focus, .navbar-wp .dropdown-menu > li > a:hover, .navbar-base .navbar-nav > li >a.dropdown-form-toggle, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
+	color: #212121;
+}
+.navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li >a:focus {
+	background-color: rgba(0,0,0,0);
+}
+/*=== navbar text color ===*/
+.navbar-wp .navbar-nav > li > a {
+	color: #a7a9ac;
+}
+.navbar-toggle, .navbar-wp .dropdown-menu > li > a, .navbar-wp .navbar-nav > li > a.dropdown-form-toggle {
+	color: #333;
+}
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+/*==================== Body & Global ====================*/
+
+body {
+	color: #58595b;
+}
+
+/*=== background theme ===*/
+.inspiralia-view-detail-slider .owl-controls .owl-buttons div:hover, .inspiralia-view-detail-slider .owl-controls .owl-page.active span, .inspiralia-feature-box-icon i:hover, input[type="submit"], button, .inspiralia-contact .inspiralia-widget-address li span.icon-addr, footer .inspiralia-mailchimp-widget .btn, footer .inspiralia-widget .inspiralia-widget-tags a:hover, footer .inspiralia-widget .tagcloud a:hover, footer .inspiralia-widget .inspiralia-widget-address li span.icon-addr, .inspiralia-slider-warraper .owl-controls.clickable .owl-page:hover span, .btn.btn-tislider:hover, .btn.btn-tislider:focus, .btn.btn-tislider-two, .content-testimonials span.icon-quote, #inspiralia-testimonial .owl-controls .owl-buttons div:hover, footer .calendar_wrap tbody #today, .inspiralia-sidebar .calendar_wrap tbody #today, .inspiralia-sidebar .inspiralia-widget .inspiralia-widget-address li span.icon-addr, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci:hover, .inspiralia-sidebar .inspiralia-widget h6::before, .inspiralia-sidebar > .inspiralia-widget-tags a:hover, .inspiralia-sidebar .inspiralia-widget > .tagcloud a:hover, #inspiralia-slider .aside-format .aside-icon, #inspiralia-slider .audio-format .audio-icon, #inspiralia-slider .quote-format .quote-icon, .inspiralia-port-modal .modal-header, .inspiralia-team-social, .inspiralia-callout-feature-box-icon:hover, .btn-theme, .btn-theme-two:hover, .btn-theme-two:focus, .btn-blog:hover, .inspiralia-portfolio-box-caption, .blog-slider .owl-controls .owl-buttons div:hover, .pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .pagination > li > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, footer .inspiralia-social li span.icon-soci:hover {
+	background: #B17F53;
+}
+.inspiralia-slider-warraper .owl-controls .owl-page span, .inspiralia-slider-warraper .owl-controls.clickable .owl-page:hover span, .inspiralia-slider-warraper .owl-controls .owl-page.active span, .inspiralia-slider-warraper .owl-controls .owl-page span:hover{
+	background: #fff;
+}
+.inspiralia-slider-warraper .owl-controls .owl-page span, .inspiralia-slider-warraper .owl-controls.clickable .owl-page:hover span, .inspiralia-slider-warraper .owl-controls .owl-page.active span, .inspiralia-slider-warraper .owl-controls .owl-page span:hover {
+	border-color: #B17F53;
+}
+footer .inspiralia-widget .inspiralia-social li span.icon-soci:hover, .inspiralia-skills .progress-bar-theme {
+ 	background-color: #B17F53;
+}
+.inspiralia-calltoaction .overlay {
+	background: rgba(0,0,0,0.6);
+}
+/*==== color theme ===*/
+a, .inspiralia-view-detail-content a, .inspiralia-blog-category a:hover, .inspiralia-blog-category a:focus, .inspiralia-callout-feature-box-info h4, .entry-header h1::before, .entry-content a, .entry-summary a, .entry-footer a, .inspiralia-sidebar a:hover, .inspiralia-sidebar a:focus, .btn.btn-tislider-two, .inspiralia-page-breadcrumb > li a:hover, .inspiralia-error-404 h1, .inspiralia-accordion-heading a, .inspiralia-accordion-heading a, .inspiralia-sidebar .inspiralia-widget .inspiralia-twitter-feed li a, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li a, .inspiralia-feature-box-icon i, .inspiralia-callout-feature i, .inspiralia-callout-feature-box-icon i, .inspiralia-callout-feature-box-info h4, .btn-video, .btn-video:focus, .inspiralia-comments .inspiralia-reply:hover, .inspiralia-footer-top-area .inspiralia-app-widget h5 a i, footer .inspiralia-widget .inspiralia-twitter-feed li a, .ti_scroll i, .inspiralia-service-inner h3 span, .inspiralia-service:hover .ser-icon, .inspiralia-service:hover .ser-icon i, .inspiralia-funfact h3, .inspiralia-link-caption i {
+	color: #B17F53;
+}
+/*=== border theme ===*/
+.inspiralia-view-detail-slider .owl-controls .owl-buttons div:hover, #inspiralia-slider .item .inspiralia-slider-inner .quote-format .quote-icon, footer .inspiralia-widget .inspiralia-social li span.icon-soci:hover, footer .inspiralia-social li span.icon-soci:hover, input[type="submit"], button, #inspiralia-slider .item .inspiralia-slider-inner .aside-format .aside-icon, .inspiralia-search-box .inspiralia-search .btn, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci:hover, #inspiralia-testimonial .owl-controls .owl-buttons div:hover, #inspiralia-slider .item .inspiralia-slider-inner .audio-format .audio-icon, #inspiralia-testimonial .owl-controls .owl-buttons div, #inspiralia-testimonial .owl-controls .owl-buttons div:hover, .inspiralia-callout-feature-box-icon, .inspiralia-callout-feature-box-icon:hover, .btn-blog:hover, .blog-slider .owl-controls .owl-buttons div:hover, footer .inspiralia-widget .inspiralia-subscribe, footer .inspiralia-widget.widget_search .btn, footer .inspiralia-widget .inspiralia-widget-tags a:hover, footer .inspiralia-widget .tagcloud a:hover, .btn-theme-two:hover, .btn-theme-two:focus, .inspiralia-sidebar .inspiralia-widget h6::before, .inspiralia-sidebar .inspiralia-widget h2::before, .ti_scroll, .ti_scroll:hover, .ti_scroll:focus, .pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .pagination > li > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, .wpcf7-form .wpcf7-form-control:hover, .wpcf7-form .wpcf7-form-control:focus, .wpcf7-form .wpcf7-form-control.wpcf7-submit, .inspiralia-sidebar .inspiralia-widget-tags a:hover, .inspiralia-sidebar .inspiralia-widget .tagcloud a:hover, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci, .form-control:focus, .form-control:hover, .form-control:active, .inspiralia-contact h5::before, .btn.btn-tislider:hover, .btn.btn-tislider:focus, .btn.btn-tislider-two, .inspiralia-slider-warraper .owl-controls .owl-buttons div:hover, #inspiralia-slider .item .inspiralia-slider-inner .quote-format .quote-icon, #inspiralia-slider .item .inspiralia-slider-inner .aside-format .aside-icon, #inspiralia-slider .item .inspiralia-slider-inner .audio-format .audio-icon, .inspiralia-heading-bor-bt h5::before, .inspiralia-skills h5::before, .inspiralia-feature-box-icon i, .inspiralia-feature-box-icon i:hover, .inspiralia-callout-feature-box-icon, blockquote, input:not([type]):hover, input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="url"]:hover, input[type="text"]:hover, input:not([type]):focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="text"]:focus {
+	border-color: #B17F53;
+}
+#product .inspiralia-product a h3 {
+	color: #333;
+}
+#product .inspiralia-product a.button {
+    background: #B17F53;
+    color: #fff;
+}
+#product .inspiralia-product a.button:hover, #product .inspiralia-product a.button:focus {
+    background: #222;
+}
+
+#product .row .needs-section-arrow {
+	background: #00b1dd;
+}
+
+#product .row .need-item,
+#product .row .need-item h2 {
+	color: #58595b;
+}
+
+.testimonials-section .sub-qute {
+    border-color: #B17F53;
+    background: #B17F53;
+}
+.testimonials-section .sub-qute::before {
+    border-top-color: #B17F53;
+}
+.testimonials-section .inspiralia-client:before {
+	background: #fff;
+	color: #B17F53;
+}
+.testimonials-section .inspiralia-client img {
+	border-color: #B17F53;
+}
+.inspiralia-heading-bor-bt h5::before, .inspiralia-skills h5::before  {
+	border-bottom-color: #B17F53;
+}
+/*=== theme hover background ===*/
+.btn.btn-tislider-two:hover, .btn.btn-tislider-two:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, footer .inspiralia-widget.widget_search .btn:hover, footer .inspiralia-widget.widget_search .btn:focus, .inspiralia-sidebar .widget_search .btn:hover, .inspiralia-sidebar .widget_search .btn:focus, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn:hover, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn:focus {
+	background: #222;
+}
+/*=== blog ===*/
+.inspiralia-blog-date span i, .inspiralia-blog-date span {
+	color: #fff;
+}
+.inspiralia-blog-date {
+	color: #fff;
+}
+.inspiralia-feature-box-info p, .inspiralia-blog-category a {
+	color: #fff;
+}
+.inspiralia-blog-post-box h2.inspiralia-blog-title, .inspiralia-blog-post-box h2.inspiralia-blog-title a {
+	color: #fff;
+}
+.inspiralia-blog-post-box .small > p {
+	color: #fff;
+}
+.inspiralia-blog-post-box h2.inspiralia-blog-title a:hover, .inspiralia-blog-post-box h2.inspiralia-blog-title a:focus {
+	color: #b17f53;
+}
+.inspiralia-blog-post-box .small {
+	background: rgba(0,0,0,0.3);
+}
+
+.inspiralia-blog-post-box.white h2.inspiralia-blog-title, .inspiralia-blog-post-box.white h2.inspiralia-blog-title a {
+	color: #212121;
+}
+.inspiralia-blog-post-box.white .small {
+	background: #fff;
+}
+.inspiralia-blog-post-box.white .small > p {
+	color: #757575;
+}
+.inspiralia-blog-post-box.white .inspiralia-blog-date {
+	color: #757575;
+}
+.inspiralia-blog-post-box.white h2.inspiralia-blog-title a:hover, .inspiralia-blog-post-box.white h2.inspiralia-blog-title a:focus {
+	color: #b17f53;
+}
+.inspiralia-blog-post-box.white .inspiralia-blog-date span i, .inspiralia-blog-post-box.white .inspiralia-blog-date span {
+	color: #757575;
+}
+.inspiralia-blog-post-box.white .inspiralia-blog-category a {
+	color: #757575;
+}
+
+/*=== theme hover border-color ===*/
+footer .inspiralia-widget.widget_search .btn:hover, footer .inspiralia-widget.widget_search .btn:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, .btn.btn-tislider-two:hover, .btn.btn-tislider-two:focus {
+	border-color: #222;
+}
+
+.inspiralia-service, .inspiralia-service:hover .ser-icon, .navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar, .inspiralia-link-caption i, .inspiralia-feature, .blog-slider .owl-controls .owl-page span, .inspiralia-clients-section {
+	background: #fff;
+}
+.inspiralia-service :hover .inspiralia-service-inner i, .inspiralia-service-inner h3, .inspiralia-service-inner h3 a, .inspiralia-service-inner p, .inspiralia-service :hover .inspiralia-service-inner h3, .inspiralia-service-inner .btn-more, footer .inspiralia-widget-payment a:hover, .inspiralia-detail-download .btn-download, .inspiralia-slider-warraper .owl-controls .owl-buttons div, .inspiralia-view-detail-slider .owl-controls .owl-buttons div,footer .inspiralia-social li span.icon-soci:hover i, .btn.btn-tislider, .inspiralia-service:hover .ser-icon, .inspiralia-sidebar .widget_product_search .btn, footer .widget_product_search .btn, .btn-theme-two, .inspiralia-service:hover .inspiralia-service-inner p, footer .inspiralia-widget ul li, footer .inspiralia-widget.widget_search .btn:hover, footer .calendar_wrap table tbody td, footer .inspiralia-widget .inspiralia-opening-hours li:hover, footer .inspiralia-widget .list-unstyled li a:hover, footer .inspiralia-widget ul li a:hover, footer .inspiralia-widget h6, footer a:hover, footer a:focus, footer .inspiralia-widget.widget_search .btn:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, .inspiralia-video .overlay .inspiralia-heading-inner, .inspiralia-video .overlay .subtitile, .inspiralia-calltoaction, .inspiralia-calltoaction h5, .inspiralia-calltoaction .btn-theme, .inspiralia-blog-date, .btn-blog:hover, .blog-slider .owl-controls .owl-buttons div, .blog-slider .owl-controls .owl-buttons div:hover, .inspiralia-contact .inspiralia-widget-address .icon-addr, .inspiralia-contact .inspiralia-widget-address li span.icon-addr i, footer .inspiralia-widget .inspiralia-social li span.icon-soci:hover i, .btn.btn-tislider, .btn.btn-tislider:hover, .btn.btn-tislider:focus, .inspiralia-plans .inspiralia-plan header, .inspiralia-plans .inspiralia-plan h2, .inspiralia-plans .inspiralia-plan .inspiralia-pupular-ribbon, .inspiralia-plans .inspiralia-plan .inspiralia-new-ribbon, .inspiralia-plans .inspiralia-plan .inspiralia-upcoming-ribbon, footer .inspiralia-widget .inspiralia-widget-address li span.icon-addr, footer .inspiralia-widget .inspiralia-social li span .icon-soci:hover, footer .inspiralia-widget .inspiralia-widget-tags a:hover, footer .inspiralia-widget .tagcloud a:hover, footer .calendar_wrap a, footer .calendar_wrap table tbody #today, footer .widget_rss, .pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .pagination > li > a:focus, .inspiralia-feature-box-icon i:hover, .inspiralia-slider-inner h1, .inspiralia-slider-inner h3, .inspiralia-slider-inner p, .inspiralia-breadcrumb-title h1, .inspiralia-page-breadcrumb > li + li:before, .inspiralia-page-breadcrumb > li a, .content-testimonials span.icon-quote, #inspiralia-testimonial .owl-controls .owl-buttons div, #inspiralia-testimonial .owl-controls .owl-buttons div:hover, .testimonials-section .user-designation, .inspiralia-sidebar .inspiralia-widget .inspiralia-widget-address li span.icon-addr, .inspiralia-skills .progress-bar-theme, .btn, .btn-theme:hover, .btn-theme:focus, .btn-theme-two:hover, .btn-theme-two:focus, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci:hover i, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci:hover, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn, #inspiralia-slider .item .inspiralia-slider-inner .aside-format .aside-icon i, #inspiralia-slider .item .inspiralia-slider-inner .aside-format .aside-format-inner, #inspiralia-slider .item .inspiralia-slider-inner .audio-format .audio-icon i, #inspiralia-slider .item .inspiralia-slider-inner .audio-format .audio-format-inner, #inspiralia-slider .item .inspiralia-slider-inner .quote-format .quote-icon i, #inspiralia-slider .item .inspiralia-slider-inner .quote-format .quote-format-inner, .inspiralia-service:hover .ser-icon, .inspiralia-service:hover h3, .inspiralia-service:hover p, .inspiralia-service:hover a, .inspiralia-service:hover .inspiralia-service-inner h3 span, .inspiralia-service:hover .inspiralia-service-inner .btn-more, .inspiralia-funfact h3.inspiralia-heading-inner, .inspiralia-funfact, .inspiralia-portfolio-box .inspiralia-portfolio-box-caption, .inspiralia-link-caption a, .inspiralia-portfolio-box .inspiralia-portfolio-box-caption .inspiralia-portfolio-box-caption-content .inspiralia-project-category a, .inspiralia-port-modal .modal-title, .inspiralia-sidebar .inspiralia-widget-tags a:hover, .inspiralia-sidebar .inspiralia-widget .tagcloud a:hover, .inspiralia-sidebar .calendar_wrap tbody #today, .inspiralia-sidebar .widget_search .btn, footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit, .wpcf7-form .wpcf7-form-control.wpcf7-submit, .btn.btn-tislider-two, .btn-tislider-two:hover, .btn-tislider-two:focus, .inspiralia-slider-warraper .owl-controls .owl-buttons div, .inspiralia-slider-warraper .owl-controls .owl-buttons div:hover, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, input[type="submit"], button, .inspiralia-subscriber h4, .inspiralia-subscriber h2, .inspiralia-search-box .inspiralia-search .btn, .inspiralia-search .btn-submit, input[type="submit"]:hover, button:hover, input[type="submit"]:focus, button:focus {
+	color: #fff;
+}
+
+.inspiralia-breadcrumb-title h1 {
+	color: #00b1dd;
+}
+
+.inspiralia-service:hover .inspiralia-service-inner i, .inspiralia-service:hover, .inspiralia-service:hover .inspiralia-service-inner .btn-more, .inspiralia-funfact .inspiralia-heading .inspiralia-heading-inner::before, .btn-theme-two, .testimonials-section .inspiralia-heading .inspiralia-heading-inner::before, .inspiralia-callout .inspiralia-heading .inspiralia-heading-inner::before, .inspiralia-service-inner .btn-more, .inspiralia-funfact .inspiralia-heading-inner::before, .inspiralia-callout .inspiralia-heading-inner::before, .inspiralia-video .overlay .inspiralia-heading-inner::before, .blog-slider .owl-controls .owl-buttons div, #inspiralia-testimonial .owl-controls .owl-buttons div, .testimonials-section .inspiralia-heading-inner::before, #inspiralia-testimonial .owl-controls .owl-buttons div {
+	border-color: #fff;
+}
+.inspiralia-team-social a:hover, footer .calendar_wrap table tbody #today:hover, footer .calendar_wrap table tbody td:hover, footer .inspiralia-widget .calendar_wrap table tfoot, .inspiralia-accordion-heading, .inspiralia-heading .inspiralia-heading-inner, footer .inspiralia-widget .calendar_wrap table tfoot a, .pagination > li > a, .woocommerce-page .products h3, .woocommerce div.product .woocommerce-tabs .panel h2, .related.products h2, .woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav .woocommerce-pagination ul li span, .inspiralia-sidebar .calendar_wrap table tbody td:hover, .inspiralia-sidebar .calendar_wrap table tbody #today:hover, .inspiralia-sidebar .calendar_wrap table tfoot {
+	color: #333;
+}
+.inspiralia-heading .inspiralia-heading-inner::before {
+	border-color: #333;
+}
+.inspiralia-sidebar .inspiralia-widget {
+    border-color: #b17f53;
+    background: #fff;
+}
+.inspiralia-sidebar a {
+    color: #666;
+}
+.inspiralia-sidebar .inspiralia-widget-tags a, .inspiralia-sidebar .inspiralia-widget .tagcloud a, .btn-blog, .inspiralia-sidebar .calendar_wrap table tbody td, .inspiralia-sidebar .calendar_wrap table tbody td a {
+	color: #999;
+}
+.inspiralia-accordion-body, .inspiralia-funfact-inner {
+	border-color: #ccc;
+}
+
+.navbar-wp .navbar-nav > .disabled > a, .navbar-wp .navbar-nav > .disabled > a:hover, .navbar-wp .navbar-nav > .disabled > a:focus, .form-control, .form-control::-moz-placeholder, .form-control:-ms-input-placeholder, .form-control::-webkit-input-placeholder,.inspiralia-subscriber .subscription-form .int-box, label, input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
+	color: #ccc;
+}
+
+.grey-bg, footer .calendar_wrap table tfoot, .inspiralia-sidebar .calendar_wrap table tfoot {
+	background: #f5f5f5;
+}
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav .woocommerce-pagination ul li span, .inspiralia-sidebar .inspiralia-widget .calendar_wrap table tbody td, .inspiralia-sidebar .calendar_wrap table tfoot, footer .calendar_wrap table tbody td, footer .calendar_wrap table tfoot, .inspiralia-sidebar .calendar_wrap table thead th, .inspiralia-sidebar .calendar_wrap table caption {
+	border-color: #ddd;
+}
+body, .inspiralia-sidebar .calendar_wrap table caption, footer .calendar_wrap caption {
+	background: #eee;
+}
+.inspiralia-plan-price .inspiralia-currency, .inspiralia-plan-price .inspiralia-period, .inspiralia-sidebar .inspiralia-widget .textwidget, .inspiralia-sidebar .inspiralia-widget .inspiralia-twitter-feed li, .inspiralia-sidebar .calendar_wrap table thead th {
+	color: #FFF;
+}
+.inspiralia-sidebar .inspiralia-widget h6, .inspiralia-sidebar .inspiralia-widget h2, .inspiralia-feature-box-info h4, .entry-header h1, .inspiralia-skills h5, .inspiralia-skills h6 {
+	color: #1c1f24;
+}
+.btn-video:hover, .entry-content a:hover, .entry-summary a:hover, .entry-footer a:hover {
+	color: #444;
+}
+.inspiralia-service-inner .btn-more {
+	border-color: #fff;
+}
+.inspiralia-sidebar .inspiralia-widget-tags a, .inspiralia-sidebar .inspiralia-widget .tagcloud a {
+	background: #f0f0f0;
+}
+.inspiralia-comments .inspiralia-reply, .inspiralia-sidebar .inspiralia-category-widget ul li, .inspiralia-sidebar .inspiralia-widget ul li, .inspiralia-sidebar .inspiralia-widget-tags a, .inspiralia-sidebar .inspiralia-widget .tagcloud a {
+	border-color: #f0f0f0;
+}
+footer .calendar_wrap table tbody #today:hover, footer .calendar_wrap table tbody td:hover, .inspiralia-sidebar .calendar_wrap table tbody td:hover, .inspiralia-sidebar .calendar_wrap table tbody #today:hover {
+	background: #f1f1f1;
+}
+footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit:hover, .wpcf7-form .wpcf7-form-control.wpcf7-submit:hover, .btn-theme:hover, .btn-theme:focus, .inspiralia-footer-copyright, footer .inspiralia-widget .inspiralia-widget-quote .form-control, input[type="submit"]:hover, button:hover, input[type="submit"]:focus, button:focus {
+	background: #222;
+}
+.wpcf7-form .wpcf7-form-control.wpcf7-submit:hover, .inspiralia-calltoaction .btn-theme:hover, .inspiralia-calltoaction .btn-theme:focus, input[type="submit"]:hover, button:hover, input[type="submit"]:focus, button:focus {
+	border-color: #222;
+}
+.inspiralia-accordion-heading {
+	background-color: #f5f5f5;
+}
+.btn-theme-two {
+	color: #f5f5f5;
+}
+/*==================== Body & Global ====================*/
+.form-control, .inspiralia-contact .inspiralia-widget-address > li, .woocommerce-cart table.cart td.actions .coupon .input-text, .wpcf7-form .wpcf7-form-control, input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
+	border-color: #ebebeb;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	color: #212121;
+}
+.inspiralia-service-inner i {
+	color: #3a3a3a;
+}
+.inspiralia-funfact .overlay {
+	background: rgba(32, 40, 48, 0.8);
+}
+.inspiralia-callout .overlay {
+	background: rgba(0, 5, 8, 0.7);
+}
+.inspiralia-video .overlay {
+	background: rgba(0,0,0,0.7);
+}
+.inspiralia-blog-section .overlay {
+	background: rgba(255,225,225,0);
+}
+.inspiralia-port-modal .modal-header .close {
+	background: transparent;
+}
+.btn-blog {
+	border-color: #e1e1e1;
+}
+.inspiralia-plans .overlay {
+	background: rgba(245,245,245,1);
+}
+.inspiralia-plans .inspiralia-plan header {
+	background: #232c3b;
+}
+.inspiralia-plan-features {
+	background: #f5f7fa;
+	border-color: #e6e9ed;
+}
+.inspiralia-plans .inspiralia-plan .inspiralia-pupular-ribbon {
+	background-color: #32c5d2;
+}
+.inspiralia-plans .inspiralia-plan .inspiralia-new-ribbon {
+	background-color: #4caf50;
+}
+.inspiralia-plans .inspiralia-plan .inspiralia-upcoming-ribbon {
+	background-color: #e64a19;
+}
+.inspiralia-contact .inspiralia-widget-address > li {
+	color: #959595;
+}
+.inspiralia-subscriber .overlay {
+	background: rgba(32, 40, 48, 0.6);
+}
+.inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci, .btn-theme-two, .inspiralia-feature-box-icon i, .inspiralia-callout-feature-box-icon i, footer .inspiralia-widget .form-control, footer .inspiralia-widget .inspiralia-social li span.icon-soci {
+	background: rgba(0,0,0,0);
+}
+.btn.btn-tislider {
+	background: rgba(255, 255, 255, 0.4);
+}
+.btn-tislider {
+	border-color: rgba(255, 255, 255, 0);
+}
+.inspiralia-accordion-heading, .inspiralia-sidebar {
+	border-color: rgba(0,0,0,0.1);
+}
+.testimonials-section .overlay {
+	background: rgba(18, 4, 1, 0.65);
+}
+.inspiralia-team-info {
+	background: rgba(225, 225, 225, 0.80);
+}
+.inspiralia-team-box:hover .inspiralia-team-info {
+	background: #B17F53;
+}
+.inspiralia-team-info h3, .inspiralia-team-info {
+	color: #222;
+}
+.inspiralia-team-box:hover .inspiralia-team-info h3,.inspiralia-team-info:hover p, .inspiralia-team-social a {
+	color: #fff;
+}
+
+.inspiralia-portfolio-box .overlay .btn:hover {
+	color: #fff;
+	background: #B17F53;
+	border-color: #B17F53;
+}
+.inspiralia-portfolio-box h4, .inspiralia-portfolio-box h4 a {
+	color: #333;
+}
+.inspiralia-portfolio-category a {
+	color: #a1a4a6;
+}
+.inspiralia-portfolio-category a:hover, .inspiralia-portfolio-category a:focus {
+	color: #B17F53;
+}
+.inspiralia-clients-section .owl-controls .owl-buttons div:hover {
+	background: #B17F53;
+	border-color: #B17F53;
+	color: #fff;
+}
+/*==================== footer color ====================*/
+/*=== footer heading color ===*/
+footer .inspiralia-footer-top-area h6, footer .inspiralia-widget h6 {
+	color: #fff;
+}
+
+footer .inspiralia-widget .calendar_wrap table thead th, label, footer .inspiralia-blog-post span, footer p, footer .inspiralia-widget .textwidget, footer a, footer .inspiralia-widget .list-unstyled li a, footer .inspiralia-widget .inspiralia-twitter-feed li, footer .inspiralia-widget .inspiralia-widget-address li, footer .inspiralia-widget .inspiralia-social li span.icon-soci, footer .inspiralia-widget .inspiralia-opening-hours li, footer .inspiralia-widget .inspiralia-widget-tags a ,footer .inspiralia-widget .tagcloud a, footer .inspiralia-widget-quote .form-control, footer .inspiralia-widget-tollfree li a, footer .inspiralia-widget-tollfree li i, footer .inspiralia-widget-payment a, footer .inspiralia-calendar a:hover, footer .inspiralia-calendar thead th, footer .wpcf7-form p, footer .inspiralia-widget .wpcf7-form .wpcf7-form-control {
+	color: #FFF;
+	font-weight: normal;
+}
+
+footer .inspiralia-widget .form-control, footer .inspiralia-widget ul li, footer .inspiralia-widget .list-unstyled li, footer .inspiralia-widget .inspiralia-social li span.icon-soci, footer .calendar_wrap caption, footer .inspiralia-widget .inspiralia-widget-tags a, footer .inspiralia-widget .tagcloud a, footer .calendar_wrap table thead th  {
+	border-color: #969ea7;
+}
+/*==================== footer hover color ====================*/
+footer a:hover, footer a:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, footer .inspiralia-widget .inspiralia-search-widget .btn:hover, footer .inspiralia-widget .inspiralia-search-widget .btn:focus, footer .inspiralia-widget .list-unstyled li a:hover, footer .inspiralia-widget .inspiralia-opening-hours li:hover, footer .inspiralia-widget .inspiralia-widget-address li span.icon-addr, footer .inspiralia-widget .inspiralia-social li span.icon-soci:hover i, footer .inspiralia-widget .inspiralia-social li span.icon-soci:hover, footer .inspiralia-widget .inspiralia-widget-tags a:hover ,footer .inspiralia-widget .tagcloud a:hover, footer .inspiralia-calendar a, footer .inspiralia-calendar tbody td, footer .inspiralia-calendar tbody #today {
+	color: #fff;
+}
+
+
+footer .inspiralia-calendar tbody #today:hover, footer .inspiralia-calendar tbody td:hover, footer .inspiralia-calendar tfoot, footer .inspiralia-calendar tfoot a {
+	color: #333;
+}
+
+/*==================== footer background ====================*/
+footer .inspiralia-footer-widget-area {
+	border-top-color: rgba(225,225,225,0.2);
+	color: #FFF;
+	background: #a7a9ac;
+}
+footer .inspiralia-footer-copyright {
+	background: #000;
+	border-color: rgba(225,225,225,0.2);
+}
+footer .inspiralia-footer-copyright p, footer .inspiralia-footer-copyright a {
+	color: #969ea7;
+}
+footer .inspiralia-footer-copyright a:hover, footer .inspiralia-footer-copyright a:focus {
+	color: #fff;
+}
+.inspiralia_scroll {
+	background: #00b1dd;
+	color: #fff;
+}
+.inspiralia_scroll i {
+	color: #fff;
+}
+
+/*Responsive*/
+@media (max-width: 992px) {
+.inspiralia-trhead {
+	background: rgba(0,0,0,0.8);
+}
+}

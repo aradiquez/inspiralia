@@ -19,17 +19,19 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
+$url = parse_url(getenv('DATABASE_URL') ? getenv('DATABASE_URL') : getenv('CLEARDB_DATABASE_URL'));
+
 /** The name of the database for WordPress */
-define('DB_NAME', 'inspiralia_wordpress');
+define('DB_NAME', trim($url['path'], '/'));
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', $url['user']);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', $url['pass']);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $url['host']);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -46,14 +48,15 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'yi6oqL(pHpyH/+UqUz+F?{L&`K1SA.sZe+y{VW?Szm|N4.RqeB$(t:XfxVjn^ExH');
-define('SECURE_AUTH_KEY',  'vwM ZU<4cL!j^*MQ7qMbp3cC3,Pp Hh67|x36(oDL#9.Kr4f)M(F-dUw$V4<=o{<');
-define('LOGGED_IN_KEY',    '>G$Duc.b:@@9dsd3{7%RRMbdE|I}:$$.tdOH|)ru 6BR{dX%-VBZ*F-qu&<v<`gb');
-define('NONCE_KEY',        '4/C+|/e@&+AVGC#vjrF^gE|Kk&Qi%t6V9n9Y0NT|4ilc:a,i^ VBA?1Q8s8q)hd8');
-define('AUTH_SALT',        '=KV^))as&1J5q-fK>Je$;N&+~?6f7cin.))p!Dmg}dHs3Y3qcL~$NvST~?[LaJ]-');
-define('SECURE_AUTH_SALT', 'R;o33,0QkIKy*E|<^#,51Sv+8n`eX/}DG)H7)m`jo7zAKJoP(5|[O@x[bpUt8%Fo');
-define('LOGGED_IN_SALT',   'n$A)g(+U~n%-(Y-s=HZ-`7g.UOy3J}/U>L8PE0K#IDZ5IsqVjb3I+zAi$-:#~vRb');
-define('NONCE_SALT',       '>:sw1WGvU%1>FBwx{h4llNf;noIO-n7VWol0fp;(JE h;IG)?vW+nL4!6;8[r%X-');
+
+define('AUTH_KEY',         getenv('AUTH_KEY'));
+define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY',    getenv('LOGGED_IN_KEY'));
+define('NONCE_KEY',        getenv('NONCE_KEY'));
+define('AUTH_SALT',        getenv('AUTH_SALT'));
+define('SECURE_AUTH_SALT', getenv('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT',   getenv('LOGGED_IN_SALT'));
+define('NONCE_SALT',       getenv('NONCE_SALT'));
 
 /**#@-*/
 
