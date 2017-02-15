@@ -31,6 +31,7 @@
 	/* ----------------------------------------------------------------------------------- */
 	require( $inspiralia_theme_custom_widgets_path . 'subtitle-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'testimonial-extra-fields-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'projects-extra-fields-widget.php');
 
 	// HOMEPAGE
 	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-custom-widget.php');
@@ -137,8 +138,8 @@ function inspiralia_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="inspiralia-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
 	) );
 
 	register_sidebar( array(
@@ -147,8 +148,8 @@ function inspiralia_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="col-xs-6 col-sm-2 col-md-2 %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
 	) );
 
 	register_sidebar( array(
@@ -157,8 +158,8 @@ function inspiralia_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<div id="%1$s" class="col-xs-6 col-sm-3 col-md-3 %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h6>',
-		'after_title'   => '</h6>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
 	) );
 
 	create_function('', 'return register_widget("Footer_Area_Menu_Widget");');

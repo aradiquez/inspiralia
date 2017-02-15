@@ -21,7 +21,7 @@
 }
 
 body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .navbar-toggle {
-	background: #a7a9ac;
+	background: #CBCBCB;
 }
 
 .wrapper {
@@ -172,6 +172,23 @@ a, .inspiralia-view-detail-content a, .inspiralia-blog-category a:hover, .inspir
 }
 .inspiralia-blog-post-box.white .inspiralia-blog-category a {
 	color: #58595b;
+}
+
+.inspiralia-project-news-section .row .item .inspiralia-project-news-post-box.white,
+.inspiralia-project-news-section .row .item .inspiralia-project-news-post-box.white h4 {
+	color: #FFF;
+}
+
+.inspiralia-project-news-section .row .item-more {
+	background: #00b1dd;
+}
+
+.inspiralia-project-news-section .row .item-more .inspiralia-project-news-more {
+	color: #FFF;
+}
+
+.proud-member-information .title-information {
+	color: #a7a9ac;
 }
 
 /*=== theme hover border-color ===*/
@@ -361,13 +378,38 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: #fff;
 }
 
-.inspiralia-section.inspiralia-sourcing h3, .map-information .title-information {
+.projects-news-header .row h3, .inspiralia-section.inspiralia-sourcing h3, .map-information .title-information {
 	color: #00b1dd;
 }
+.inspiralia-testimonial-section .row .item {
+	color: #FFF;
+}
 
-.map-information .button-information, .inspiralia-section.inspiralia-sourcing a.btn {
+.inspiralia-testimonial-section .row .item, .map-information .button-information, .inspiralia-section.inspiralia-sourcing a.btn {
 	background: #00b1dd;
 }
+
+.inspiralia-testimonial-section .row .item:nth-child(2) {
+	background: #a1a4a6;
+}
+
+.inspiralia-testimonial-section .row .item:nth-child(3) {
+	background-color: transparent;
+}
+
+.inspiralia-testimonial-section .inspiralia-testimonial-post-box article .inspiralia-testimonial-contact h4,
+.inspiralia-testimonial-section .inspiralia-testimonial-post-box article .inspiralia-testimonial-contact h5,
+.inspiralia-testimonial-section .inspiralia-testimonial-post-box article .inspiralia-testimonial-contact a {
+	color: #FFF;
+}
+.inspiralia-testimonial-section .row .item {
+  background: #0BADDC;
+}
+
+.inspiralia-project-news-section .row .item article.large h4, .inspiralia-project-news-section .row .item a {
+	color: #58595b;
+}
+
 
 /*==================== footer color ====================*/
 /*=== footer heading color ===*/
@@ -397,7 +439,10 @@ footer .inspiralia-calendar tbody #today:hover, footer .inspiralia-calendar tbod
 footer .inspiralia-footer-widget-area {
 	border-top-color: rgba(225,225,225,0.2);
 	color: #FFF;
-	background: #58595b;
+	background: #a7a9ac;
+}
+footer .inspiralia-footer-widget-area .inspiralia-widget h4 {
+	color: #fff;
 }
 footer .inspiralia-footer-copyright {
 	background: #000;

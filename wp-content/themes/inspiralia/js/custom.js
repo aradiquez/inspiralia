@@ -17,6 +17,23 @@ jQuery(document).ready(function() {
       "<i class='fa fa-angle-right'></i>"
       ]
     });
+
+  jQuery("#testimonial").owlCarousel({
+    navigation : false, // Show next and prev buttons
+    slideSpeed : 400,
+    pagination : false,
+    singleItem: true,
+    video:true,
+    autoPlay : true,
+    transitionStyle : "fade",
+  });
+
+  jQuery(".inspiralia-project-news-post-box-link").on('mouseover', function(){
+    jQuery(this).find('img').css({ 'opacity': '1' }).css({ 'z-index' : '100' });
+  }).on('mouseout', function(){
+    jQuery(this).find('img').css({ 'opacity': '0.6' }).css({ 'z-index' : '0' });
+  });
+
 });
 
 

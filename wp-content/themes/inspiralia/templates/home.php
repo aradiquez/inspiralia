@@ -18,10 +18,14 @@
     get_template_part('sections/home', 'sourcing');
     //=========== Get Index Video ===========//
     get_template_part('sections/home', 'video');
-    //=========== Get Index News ===========//
-    get_template_part('sections/home', 'blog');
     //=========== Get Index Map information ===========//
     get_template_part('sections/home', 'map-information');
+    //=========== Get Index Testimonials ===========//
+    get_template_part('sections/home', 'testimonials');
+    //=========== Get Index project news ===========//
+    get_template_part('sections/home', 'projects-news');
+    //=========== Get Index project news ===========//
+    get_template_part('sections/home', 'proud-member');
 
 get_footer();
 ?>

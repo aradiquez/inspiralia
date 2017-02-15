@@ -30,17 +30,16 @@ function save_testimonials_meta_box($post_id, $post, $update)
     if($slug != $post->post_type)
         return $post_id;
 
-    for($i = 1; $i <= 3; $i++) {
-      if(isset($_POST["testimonials-box-company-name"])) {
-          $testimonials_box_company_name = $_POST["testimonials-box-company-name"];
-      }
-      update_post_meta($post_id, "testimonials-box-company-name", $testimonials_box_company_name);
-
-      if(isset($_POST["testimonials-box-company-url"])) {
-          $testimonials_box_company_url = $_POST["testimonials-box-company-url"];
-      }
-      update_post_meta($post_id, "testimonials-box-company-url", $testimonials_box_company_url);
+    if(isset($_POST["testimonials-box-company-name"])) {
+        $testimonials_box_company_name = $_POST["testimonials-box-company-name"];
     }
+    update_post_meta($post_id, "testimonials-box-company-name", $testimonials_box_company_name);
+
+    if(isset($_POST["testimonials-box-company-url"])) {
+        $testimonials_box_company_url = $_POST["testimonials-box-company-url"];
+    }
+    update_post_meta($post_id, "testimonials-box-company-url", $testimonials_box_company_url);
+
 }
 
 add_action("save_post", "save_testimonials_meta_box", 10, 3);
