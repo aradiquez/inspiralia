@@ -138,7 +138,7 @@ add_action( 'save_post',     'inspiralia_category_transient_flusher' );
 function inspiralia_custom_header_setup() {
 
 	$args = array(
-			'default-image'		=>  get_template_directory_uri() .'/images/breadcrumb/background.jpg',
+			'default-image'		=>  get_template_directory_uri() .'/images/breadcrumb/background.png',
 			'width'			=> 1600,
 			'height'		=> 200,
 			'flex-height'		=> false,

@@ -200,7 +200,7 @@ require get_template_directory() . '/inc/ansar/template-tags.php';
 		register_default_headers( array(
 			'mypic' => array(
 			'url'   => get_template_directory_uri() . '/images/page-header-bg.jpg',
-			'thumbnail_url' => get_template_directory_uri() . '/images/breadcrumb/background.jpg',
+			'thumbnail_url' => get_template_directory_uri() . '/images/breadcrumb/background.png',
 			'description'   => _x( 'headerPic', 'header image description', 'inspiralia' )),
 		));
 
