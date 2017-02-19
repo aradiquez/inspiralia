@@ -23,3 +23,10 @@
   font-size: 1em;
   line-height: 100%;
 }
+
+fieldset.background {
+  width: 90%;
+  margin: 10px auto;
+  border: 2px solid #cbcbcb;
+  padding: 1rem;
+}

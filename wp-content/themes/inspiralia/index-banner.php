@@ -1,4 +1,4 @@
-<div class="inspiralia-breadcrumb-section" style="<?php echo( has_header_image() ? "background: url(".get_header_image()." repeat fixed center 0;" : '')?>">
+<div class="inspiralia-breadcrumb-section" style="<?php echo( has_header_image() ? "background: url(".get_header_image().") repeat fixed center 0;" : (has_post_thumbnail() ? "background: url(".get_the_post_thumbnail_url($post, 'full').") repeat fixed center 0;  /*opacity: 0.4;filter: alpha(opacity=40); For IE8 and earlier */" : '') ) ?>">
   <div class="overlay"> <!-- get_theme_support( 'custom-header', 'default-image' ) -->
     <div class="container">
       <div class="row">

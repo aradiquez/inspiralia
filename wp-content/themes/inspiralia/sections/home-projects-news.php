@@ -27,7 +27,7 @@
               <?php if ( get_post_meta(get_the_ID(), "projects-box-intro", true) ) { ?>
                 <?php echo get_post_meta(get_the_ID(), "projects-box-intro", true) ?>
               <?php } else { ?>
-                <?php the_excerpt(); ?>
+                <?php the_excerpt(20); ?>
               <? } ?>
             </article>
             <?php if ( has_post_thumbnail() ) { ?>

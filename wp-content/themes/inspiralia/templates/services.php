@@ -19,23 +19,18 @@ get_template_part('index','banner'); ?>
           <main id="main" class="site-main" role="main">
             <?php
       			while ( have_posts() ) : the_post(); ?>
-
-      					<div class="col-md-12">
-      						<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" class="inspiralia-blog-thumb">
-      						<?php if(has_post_thumbnail()): ?>
-      						  <?php $defalt_arg =array('class' => "img-responsive"); ?>
-      						  <?php the_post_thumbnail('', $defalt_arg); ?>
-      						<?php endif; ?>
-      						</a>
-      						<?php the_content(); ?>
-      						<?php wp_link_pages( array( 'before' => '<div class="link">' . __( 'Pages:', 'inspiralia' ), 'after' => '</div>' ) ); ?>
-      					</div>
-      				<?php
-      				// If comments are open or we have at least one comment, load up the comment template.
-      				if ( comments_open() || get_comments_number() ) :
-      					comments_template();
-      				endif;
-
+    					<div class="col-md-12">
+                <div class="page" title="Page 1">
+                  <div class="section">
+                    <div class="layoutArea">
+                      <div class="column">
+    						        <?php the_content(); ?>
+    					        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php
       			endwhile; // End of the loop.
       			?>
           </main>
@@ -45,8 +40,24 @@ get_template_part('index','banner'); ?>
       </div>
     </div>
   </div>
-  <?php get_template_part('sections/services', 'accordion'); ?>
-  <div class="clearfix"></div>
+  <?php if( is_page() && $post->post_parent == 0 ) { # parent ?>
+
+    <?php get_template_part('sections/services', 'accordion'); ?>
+    <div class="clearfix"></div>
+    <?php get_template_part('sections/services', 'leading-markets'); ?>
+    <div class="clearfix"></div>
+    <?php get_template_part('sections/home', 'testimonials'); ?>
+
+  <?php } else { #childs ?>
+
+    <?php get_template_part('sections/services', 'custom-accordion'); ?>
+    <div class="clearfix"></div>
+    <?php get_template_part('sections/services', 'our-value'); ?>
+    <div class="clearfix"></div>
+    <?php get_template_part('sections/services', 'leading-markets'); ?>
+
+  <?php } ?>
+
 </main>
 <?php
 get_footer();

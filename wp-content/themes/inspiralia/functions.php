@@ -40,7 +40,11 @@
 	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-map-image-widget.php');
 
 	// SERVICES
-	require( $inspiralia_theme_custom_widgets_path . 'services-accordion-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'services/services-accordion-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'services/services-extra-fields-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'services/services-leading-markets-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'services/services-our-value-widget.php');
+
 
 if ( ! function_exists( 'inspiralia_setup' ) ) :
 /**
@@ -113,6 +117,17 @@ function inspiralia_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'inspiralia_setup' );
+
+add_action( 'admin_enqueue_scripts', 'wptuts_add_color_picker' );
+
+function wptuts_add_color_picker( $hook ) {
+	if( is_admin() ) {
+    // Add the color picker css file
+    wp_enqueue_style( 'wp-color-picker' );
+    // Include our custom jQuery file with WordPress Color Picker dependency
+    wp_enqueue_script( 'custom-script-handle', plugins_url( 'custom-script.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
+	}
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -210,4 +225,15 @@ class Footer_Area_Menu_Widget extends WP_Widget {
 		);
 		parent::__construct( 'footer_area_menu_widget', 'Footer Address Information', $widget_ops );
 	}
+}
+
+function add_background_when_need() {
+		global $post;
+		if (get_post_meta($post->ID, "leading-markets-imagen", true )) {
+			return "background: url(".get_post_meta($post->ID, "leading-markets-imagen", true ).") no-repeat;";
+		} else {
+			if(get_post_meta($post->ID, "leading-markets-background-color", true )) {
+				return "background-color: ".get_post_meta($post->ID, "leading-markets-background-color", true ).";";
+			}
+		}
 }

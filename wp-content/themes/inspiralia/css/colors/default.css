@@ -125,6 +125,11 @@ a, .inspiralia-view-detail-content a, .inspiralia-blog-category a:hover, .inspir
 .inspiralia-heading-bor-bt h5::before, .inspiralia-skills h5::before  {
 	border-bottom-color: #00b1dd;
 }
+
+.page .section .layoutArea .column h2, .page .section .layoutArea .column p {
+	color: #58595b;
+}
+
 /*=== theme hover background ===*/
 .btn.btn-tislider-two:hover, .btn.btn-tislider-two:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, footer .inspiralia-widget.widget_search .btn:hover, footer .inspiralia-widget.widget_search .btn:focus, .inspiralia-sidebar .widget_search .btn:hover, .inspiralia-sidebar .widget_search .btn:focus, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn:hover, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn:focus {
 	background: #222;
@@ -276,6 +281,41 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-wi
 .btn-theme-two {
 	color: #f5f5f5;
 }
+
+#accordion li.active, #accordion_custom li.active {
+	background: #00b1dd;
+	color: #FFF;
+}
+
+#accordion li h2, #accordion_custom li h2 {
+	color: #FFF;
+}
+
+#accordion li a, #accordion_custom li a {
+	border: 1px solid #fff;
+}
+
+#accordion li:nth-child(odd), #accordion_custom li:nth-child(odd){
+	background: #00b1dd;
+	color: #FFF;
+}
+
+#accordion li:nth-child(odd) h2, #accordion_custom li:nth-child(odd) h2 {
+	color: #FFF;
+}
+
+#accordion li:nth-child(even), #accordion_custom li:nth-child(even) {
+	background: #F1F2F1;
+	color: #00b1dd;
+}
+
+#accordion li:nth-child(even) h2, #accordion_custom li:nth-child(even) h2{
+	color: #00b1dd;
+}
+#accordion li:nth-child(even) a, #accordion_custom li:nth-child(even) a{
+	color: #00b1dd;
+	border-color: #00b1dd;
+}
 /*==================== Body & Global ====================*/
 .form-control, .inspiralia-contact .inspiralia-widget-address > li, .woocommerce-cart table.cart td.actions .coupon .input-text, .wpcf7-form .wpcf7-form-control, input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"] {
 	border-color: #ebebeb;
@@ -378,32 +418,45 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: #fff;
 }
 
-.projects-news-header .row h3, .inspiralia-section.inspiralia-sourcing h3, .map-information .title-information {
+.projects-news-header .row h3, .inspiralia-section.inspiralia-sourcing h3, .map-information .title-information, .inspiralia-section.inspiralia-leading-market h3 {
 	color: #00b1dd;
 }
-.inspiralia-testimonial-section .row .item {
+.inspiralia-testimonial-section .row .item, .inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn, .inspiralia-section.inspiralia-leading-market.inspiralia-internal h2, .inspiralia-section.inspiralia-leading-market.inspiralia-internal h3  {
 	color: #FFF;
 }
 
-.inspiralia-testimonial-section .row .item, .map-information .button-information, .inspiralia-section.inspiralia-sourcing a.btn {
+.inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn {
+	background: transparent;
+	border-color: #FFF;
+}
+
+.map-information .button-information, .inspiralia-section.inspiralia-sourcing a.btn, .inspiralia-section.inspiralia-leading-market a.btn {
 	background: #00b1dd;
 }
 
-.inspiralia-testimonial-section .row .item:nth-child(2) {
+.inspiralia-testimonial-section .owl-item:nth-child(n+1) .row .item {
+	background: #00b1dd;
+}
+
+.inspiralia-testimonial-section .owl-item:nth-child(2n+0) .row .item {
 	background: #a1a4a6;
 }
 
-.inspiralia-testimonial-section .row .item:nth-child(3) {
-	background-color: transparent;
+.inspiralia-testimonial-section .owl-item:nth-child(3n+0) .row .item {
+	color: #58595b;
+	background-color: white;
+}
+
+.inspiralia-testimonial-section .owl-item:nth-child(3n+0) .row .item .inspiralia-testimonial-contact h4,
+.inspiralia-testimonial-section .owl-item:nth-child(3n+0) .row .item .inspiralia-testimonial-contact h5,
+.inspiralia-testimonial-section .owl-item:nth-child(3n+0) .row .item .inspiralia-testimonial-contact a {
+	color: #58595b;
 }
 
 .inspiralia-testimonial-section .inspiralia-testimonial-post-box article .inspiralia-testimonial-contact h4,
 .inspiralia-testimonial-section .inspiralia-testimonial-post-box article .inspiralia-testimonial-contact h5,
 .inspiralia-testimonial-section .inspiralia-testimonial-post-box article .inspiralia-testimonial-contact a {
 	color: #FFF;
-}
-.inspiralia-testimonial-section .row .item {
-  background: #0BADDC;
 }
 
 .inspiralia-project-news-section .row .item article.large h4, .inspiralia-project-news-section .row .item a {

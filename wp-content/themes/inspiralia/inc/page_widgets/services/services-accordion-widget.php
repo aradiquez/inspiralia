@@ -10,12 +10,6 @@ function accordion_meta_box_markup($page) { ?>
     <label for="accordion-box-description-<?php echo $i ?>" class="post-attributes-label">Description</label><br/>
     <textarea name="accordion-box-description-<?php echo $i ?>" class="thick_field" rows='3' cols="20" class="e"><?php echo get_post_meta($page->ID, "accordion-box-description-$i", true); ?></textarea>
     <br />
-    <label for="accordion-box-button-title-<?php echo $i ?>" class="post-attributes-label">Action Button Title</label><br/>
-    <input name="accordion-box-button-title-<?php echo $i ?>" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "accordion-box-button-title-$i", true); ?>">
-    <br />
-    <label for="accordion-box-button-url-<?php echo $i ?>" class="post-attributes-label">Action Button URL</label><br/>
-    <input name="accordion-box-button-url-<?php echo $i ?>" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "accordion-box-button-url-$i", true); ?>">
-    <br />
     <?php $image_url = (get_post_meta($page->ID, "accordion-box-img-$i", true )) ? get_post_meta($page->ID, "accordion-box-img-$i", true ) : ''; ?>
     <img src="<?php echo $image_url ?>" width="150" id="accordion-box-img-preview-<?php echo $i ?>"/><br/>
     <label for="accordion-box-button-<?php echo $i ?>" class="post-attributes-label">Action Button Image</label><br/>
@@ -28,7 +22,8 @@ function accordion_meta_box_markup($page) { ?>
 
 function add_accordion_meta_box() {
   global $post;
-  if ( 'templates/services.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+  print_r($post->post_parent );
+  if ( 'templates/services.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && ( $post->post_parent != 0 ) ) {
     add_meta_box("accordion_meta_box", "Accordion Box", "accordion_meta_box_markup", "page", "normal", "high", null);
   }
 }
@@ -54,16 +49,6 @@ function save_accordion_meta_box($post_id, $post, $update)
           $meta_box_description_value = $_POST["accordion-box-description-$i"];
       }
       update_post_meta($post_id, "accordion-box-description-$i", $meta_box_description_value);
-
-      if(isset($_POST["accordion-box-button-title-$i"])) {
-          $meta_box_action_button_title_value = $_POST["accordion-box-button-title-$i"];
-      }
-      update_post_meta($post_id, "accordion-box-button-title-$i", $meta_box_action_button_title_value);
-
-      if(isset($_POST["accordion-box-button-url-$i"])) {
-          $meta_box_action_button_url_value = $_POST["accordion-box-button-url-$i"];
-      }
-      update_post_meta($post_id, "accordion-box-button-url-$i", $meta_box_action_button_url_value);
 
       if(isset($_POST["accordion-box-img-$i"])) {
           $meta_box_action_img_value = $_POST["accordion-box-img-$i"];
