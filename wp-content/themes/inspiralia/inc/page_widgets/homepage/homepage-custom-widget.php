@@ -1,8 +1,15 @@
 <?php
 
-function needs_meta_box_markup($page) { ?>
- <?php wp_nonce_field( basename( __FILE__ ), 'needs_meta_box_nonce' ); ?>
- <?php for($i=1; $i<=3; $i++) { ?>
+function needs_meta_box_markup($page) {
+  wp_nonce_field( basename( __FILE__ ), 'needs_meta_box_nonce' ); ?>
+  <?php for($i=1; $i<=3; $i++) {
+    $args = array(
+      'depth'                 => 2,
+      'child_of'              => $page->post_parent,
+      'selected'              => get_post_meta($page->ID, "meta-box-button-url-$i", true),
+      'name'                  => "meta-box-button-url-$i"
+    );
+  ?>
   <div style="float: left; width: 33.3%; display: block;">
     <label for="meta-box-title-<?php echo $i ?>" class="post-attributes-label">Title</label><br/>
     <input name="meta-box-title-<?php echo $i ?>" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "meta-box-title-$i", true); ?>">
@@ -13,8 +20,8 @@ function needs_meta_box_markup($page) { ?>
     <label for="meta-box-button-title-<?php echo $i ?>" class="post-attributes-label">Action Button Title</label><br/>
     <input name="meta-box-button-title-<?php echo $i ?>" class="thick_small" type="text" value="<?php echo get_post_meta($page->ID, "meta-box-button-title-$i", true); ?>">
     <br />
-    <label for="meta-box-button-url-<?php echo $i ?>" class="post-attributes-label">Action Button URL</label><br/>
-    <input name="meta-box-button-url-<?php echo $i ?>" class="thick_small" type="text" value="<?php echo get_post_meta($page->ID, "meta-box-button-url-$i", true); ?>">
+    <label for="meta-box-button-url-<?php echo $i ?>" class="post-attributes-label">Action Button Related to</label><br/>
+    <?php wp_dropdown_pages($args); ?>
   </div>
   <?php } ?>
   <div style="clear: both;"></div>

@@ -1,15 +1,21 @@
 <?php
 
-function home_sourcing_meta_box_markup($page) { ?>
- <?php wp_nonce_field( basename( __FILE__ ), 'home-sourcing_meta_box_nonce' ); ?>
+function home_sourcing_meta_box_markup($page) {
+    $args = array(
+      'depth'                 => 2,
+      'child_of'              => $page->post_parent,
+      'selected'              => get_post_meta($page->ID, "home-sourcing-action-url", true),
+      'name'                  => 'home-sourcing-action-url'
+    );
+    wp_nonce_field( basename( __FILE__ ), 'home-sourcing_meta_box_nonce' ); ?>
   <div style="display: block;">
     <label for="home-sourcing-box-title" class="post-attributes-label">Title</label><br/>
-    <input name="home-sourcing-box-title" type="text" value="<?php echo get_post_meta($page->ID, "home-sourcing-box-title", true); ?>" class="thick_field">
+    <input name="home-sourcing-box-title" type="text" value="<?php echo get_post_meta($page->ID, "home-sourcing-box-title", true); ?>" class="thick_field"><br/>
 
     <label for="home-sourcing-action" class="post-attributes-label">Action Button Label</label><br/>
-    <input name="home-sourcing-action" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "home-sourcing-action", true); ?>">
-    <label for="home-sourcing-action-url" class="post-attributes-label">Action Button URL</label><br/>
-    <input name="home-sourcing-action-url" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "home-sourcing-action-url", true); ?>">
+    <input name="home-sourcing-action" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "home-sourcing-action", true); ?>"><br/>
+    <label for="home-sourcing-action-url" class="post-attributes-label">Action Button Related to</label><br/>
+    <?php wp_dropdown_pages($args); ?>
   </div>
   <div style="clear: both;"></div>
 <?php }

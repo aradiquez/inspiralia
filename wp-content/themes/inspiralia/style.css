@@ -113,7 +113,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%
+  width: 100%;
 }
 .inspiralia-cart {
 	position: relative;
@@ -143,6 +143,7 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 .wrapper {
 	max-width: 1024px;
 	margin: 0 auto;
+  position: relative;
 }
 
 /*---------------------------------------
@@ -154,6 +155,7 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 	border: none;
 	border-radius: 0;
 	z-index: 1000;
+  position: fixed;
 }
 .navbar-brand {
 	font-size: 26px;
@@ -265,6 +267,7 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 	box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
 	z-index: 999;
 }
+
 .is-sticky .navbar-brand {
 	padding: 8px 0 0 15px;
 	transition: all 0.25s ease-out 0s;
@@ -316,6 +319,24 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 	border-bottom: none;
 }
 
+
+ul#menu-main li.menu-item  {
+  font-weight: bold;
+}
+ul#menu-main li.menu-item a {
+  padding: 1rem 0 0.4rem 0;
+  margin: 0 1.5rem;
+}
+ul#menu-main li.menu-item a:hover {
+  border-bottom: 0.2rem solid #FFF;
+}
+
+.current-page-ancestor a, .current-menu-item a {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+
 /*---------------------------------------
 	Body & Global
 -----------------------------------------*/
@@ -323,7 +344,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'gothamregular', sans-serif;
-	font-size: 14px;
+	font-size: 1.125rem;
 	font-weight: 400;
 	line-height: 24px;
 }
@@ -413,23 +434,41 @@ mark, .mark {
 	border: none;
 }
 
-.page {
-  margin-bottom: 12rem;
-}
-.page .section .layoutArea .column {
-  width: 80%;
-  margin: 5% auto;
+/*---------------------------------------
+  Blog post
+-----------------------------------------*/
+
+section.hero-blog-title {
+  padding: 4rem 0;
 }
 
-.page .section .layoutArea .column h2 {
-  font-family: 'gothambold', sans-serif;
-  font-size: 3.4rem;
-  text-align: center;
-  padding: 5.5rem 0;
+section.hero-blog-title h2.inspiralia-blog-title {
+  width: 70%;
+  margin: 0 auto;
+  font-weight: normal;
+  font-size: 4rem;
 }
-.page .section .layoutArea .column p {
-  font-size: 1.9rem;
-  text-align: center;
+
+main#content .blog_post {
+  position: relative;
+}
+
+main#content .blog_post article {
+}
+
+main#content .blog_post article .introduction {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+main#content .blog_post article .small .inspiralia-blog-date span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+main#content .blog_post aside {
+  position: absolute;
+  margin: 1rem 0 0 -10rem;
 }
 /*---------------------------------------
 	Typography
@@ -979,12 +1018,12 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
   margin: 0px auto;
 }
 .inspiralia-section .need-item.need-information .need-information-content {
-  width: 80%;
+  width: 100%;
   margin: 5% auto;
   display: block;
 }
 .inspiralia-section .need-item.need-information .need-information-content .h2-header {
-  font-size: 3rem;
+  font-size: 2.941rem;
   margin: 3.5rem auto 2rem auto;
   width: 50%;
   word-break: normal;
@@ -992,7 +1031,7 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
 .inspiralia-section .need-item.need-information .need-information-content .content {
   margin: 10px auto;
   width: 90%;
-  font-size: 130%;
+  font-size: 1.961rem;
 }
 .inspiralia-section .need-item.need-information .need-information-content .button {
   margin: 5% auto;
@@ -1003,6 +1042,14 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
   border-style: solid;
   line-height: 38px;
 }
+.inspiralia-section.inspiralia-leading-market .middle_box {
+  width: 50%;
+  margin: 0 auto;
+}
+.inspiralia-section.inspiralia-leading-market .middle_box h3 {
+  width: 80%;
+}
+
 /*---------------------------------------
 	inspiralia-heading
 -----------------------------------------*/
@@ -1150,7 +1197,7 @@ p.heading {
 	text-align: center;
 	display: block;
 	padding: 0;
-  height: 41rem;
+  height: 360px;
 }
 
 #product .row .needs-section-arrow.need-arrow-1 {
@@ -1182,17 +1229,14 @@ ul#accordion {
   padding: 4rem 0 0 0;
 }
 #accordion li h2 {
-  font-size: 1.6rem;
-  font-family: 'gothambold', sans-serif;
+  font-size: 1.46rem;
+  font-family: 'gotham_mediumregular', sans-serif;
   width: 50%;
   margin: 2rem auto;
   text-align: center;
   line-height: 15px;
 }
 
-#accordion li p {
-  width: 100;
-}
 #accordion li img {
   border: none;
   margin: 15% auto;
@@ -1202,7 +1246,7 @@ ul#accordion {
 #accordion li a {
   margin: 0 auto;
   display: block;
-  width: 25%;
+  width: 28%;
   border-radius: 3rem;
 }
 
@@ -1210,7 +1254,7 @@ ul#accordion {
   width: 60%;
 }
 #accordion li.active h2 {
-  font-size: 2.6rem;
+  font-size: 2.5625rem;
   text-align: center;
   line-height: 35px;
   width: 60%;
@@ -1219,7 +1263,7 @@ ul#accordion {
 
 }
 #accordion li.active p {
-  width: 70%;
+  width: 71%;
   text-align: center;
   margin: 2rem auto;
   font-size: 1.9rem;
@@ -1329,15 +1373,13 @@ ul#accordion_custom {
 /*---------------------------------------
   inspiralia-leading-market
 -----------------------------------------*/
-.inspiralia-section.inspiralia-leading-market {
-  margin: 10rem 0 0 0;
-}
 .inspiralia-section.inspiralia-leading-market h3 {
   font-size: 8.8rem;
-  line-height: 90px;
+  line-height: 8.49rem;
+  letter-spacing: 0.1rem;
   font-family: 'Debby', sans-serif;
   width: 50%;
-  margin: 0 auto;
+  margin: 10rem auto 0 auto;
   font-weight: normal;
 }
 
@@ -1348,12 +1390,6 @@ ul#accordion_custom {
   border-radius: 21px;
   font-family: 'gotham_mediumregular', sans-serif;
 }
-
-
-.inspiralia-section.inspiralia-leading-market.inspiralia-internal {
-  padding-top: 10rem;
-}
-
 
 /*---------------------------------------
   inspiralia-our-value
@@ -1374,6 +1410,31 @@ ul#accordion_custom {
 }
 
 .inspiralia-section.inspiralia-our-value .row .inspiralia-icon img {
+  width: 50%;
+  height: 100%;
+}
+
+/*---------------------------------------
+  inspiralia-specialization
+-----------------------------------------*/
+.inspiralia-section.inspiralia-specialization {
+  margin: 5rem 0 0 0;
+  font-size: 1.3rem;
+}
+.inspiralia-section.inspiralia-specialization h2, .inspiralia-section.inspiralia-specialization h3 {
+  font-family: 'gothambold', sans-serif;
+  font-weight: normal;
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+.inspiralia-section.inspiralia-specialization .row .text-center .centering-text {
+  margin-left: 8rem;
+  text-align: left;
+  font-family: 'gotham', sans-serif;
+}
+
+.inspiralia-section.inspiralia-specialization .row .inspiralia-icon img {
   width: 50%;
   height: 100%;
 }
@@ -1514,15 +1575,19 @@ ul#accordion_custom {
 }
 
 .inspiralia-project-news-section .row .item .inspiralia-project-news-post-box img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 180%;
-    height: auto;
-    opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180%;
+  height: auto;
 }
 
-.inspiralia-project-news-section .row .item .inspiralia-project-news-post-box {
+.inspiralia-project-news-section .row .item.projects-news-item .inspiralia-project-news-post-box article.large.text-center.center-block {
+  display: block;
+}
+
+.inspiralia-project-news-section .row .item .inspiralia-project-news-post-box article.large.text-center.center-block {
+  display: none;
   padding: 10% 5%;
 }
 
@@ -1913,9 +1978,9 @@ ul#accordion_custom {
 =========================================
 -----------------------------------------*/
 .inspiralia-breadcrumb-section {
-	background: url(images/breadcrumb/home_hero.png) no-repeat;
+	background-image: url(images/breadcrumb/home_hero.png);
 	background-size: cover;
-	height: 600px;
+	height: 510px;
 	margin: 0 0 0px;
 	overflow: hidden;
 	padding: 0;
@@ -1929,18 +1994,22 @@ ul#accordion_custom {
   top: 0;
   left: 0;
 	width: 100%;
+  filter: opacity(30%);
 }
 .inspiralia-breadcrumb-title {
 	text-align: center;
+  z-index: 1000;
 }
 .inspiralia-breadcrumb-title h1 {
 	font-size: 10.1rem;
 	font-weight: normal;
-	line-height: 150px;
+	line-height: 10.8rem;
 	padding-bottom: 0px;
 	margin: 5rem auto;
   font-family: 'Debby', sans-serif;
   width: 70%;
+  position: relative;
+  filter: opacity(180%);
 }
 .inspiralia-page-breadcrumb {
 	list-style: none outside none;
@@ -2281,17 +2350,24 @@ footer.inspiralia-footer-widget-area {
 	border-top-style: solid;
 	padding-top: 50px;
   font-weight: normal;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
-footer.inspiralia-footer-widget-area .inspiralia-widget h4 {
-  font-size: 1.4rem;
-  font-weight: bold;
+footer.inspiralia-footer-widget-area .inspiralia-widget h4,
+footer .inspiralia-widget .widget_nav_menu a {
+  font-size: 1.258rem;
 }
 footer .inspiralia-widget {
+  font-family: 'gothamregular', sans-serif;
 	float: left;
 	width: 100%;
   padding: 6rem 0;
+  font-size: 1.25rem;
 }
+footer .inspiralia-footer-widget-area .inspiralia-widget h4,
+footer .inspiralia-widget .widget_nav_menu a {
+  font-family: 'gothambold', sans-serif;
+}
+
 footer .inspiralia-widget:nth-child(4n+1) {
 	clear: both;
 }
@@ -2340,11 +2416,9 @@ footer .inspiralia-widget ul li {
 	display: block;
 	letter-spacing: 0.2px;
 	line-height: 22px;
-	margin: 0 0 10px;
 	overflow: hidden;
-	padding: 0;
-	border-width: 0 0 1px 0;
-	border-style: solid;
+	position: relative;
+  padding: 2px 0;
 }
 footer .inspiralia-widget ul li a:hover {
 	transition: all 0.4s ease-in-out 0s;
@@ -2354,11 +2428,6 @@ footer .inspiralia-widget ul li:first-child {
 }
 footer .inspiralia-widget ul li:last-child {
 	border-bottom: none;
-}
-footer .inspiralia-widget ul li {
-	margin: 0;
-	padding: 10px 0;
-	position: relative;
 }
 footer .inspiralia-widget ul li a {
 	transition: all 0.4s ease-in-out 0s;
@@ -2843,8 +2912,14 @@ footer .inspiralia-social li span.icon-soci a {
 	margin: 0 auto;
 	text-align: center;
 }
+
+.navbar-home .navbar-nav li a:hover, .navbar-home .navbar-nav li a:focus,  .navbar-wp .navbar-nav > li > a:focus {
+  text-decoration: underline;
+}
+
 .navbar-wp .navbar-nav > li > a {
 	padding: 12px;
+  font-weight: bold;
 }
 .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus {
 	border-bottom-width: 3px;
@@ -2929,12 +3004,159 @@ footer .inspiralia-social li span.icon-soci a {
   background: #a7a9ac;
 }
 
+
+/*--------------- team_section ---------------*/
+
+section.team-section {
+  margin-bottom: 27%;
+}
+section.team-section header.filters.container {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section.team-section header.filters.container menu.row menuitem {
+  font-family: 'gothamregular', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+section.team-section main.container .item, section.team-section main.container .item_join_us {
+  position: relative;
+  display: inline-block;
+  min-height: 250px;
+  float: left;
+}
+
+section.team-section main.container .item details {
+    display: none;
+    min-height: 250px;
+    padding: 15px 5px 10px 5px;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+section.team-section main.container .item details h3 {
+  font-size: 160%;
+}
+
+details summary::-webkit-details-marker { display:none; }
+
+section.team-section main.container section .item picture {
+  z-index: 100;
+}
+
+section.team-section main.container .item picture img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+section.team-section main.container .item_join_us header h3 {
+  margin: 10% auto 0 auto;
+  text-align: center;
+  font-family: 'gothambold', sans-serif;
+  display: block;
+}
+
+section.team-section main.container .item_join_us section {
+  background: url('images/icon_inspiralia.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  max-width: 100%;
+  height: 200px;
+  display: block;
+}
+
+/* ============================================ */
+
+main#main section.description {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 1.9rem;
+  padding: 11rem 0;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main#main section.description h2 {
+  font-family: 'gothambold', sans-serif;
+  font-size: 3.7rem;
+  margin-bottom: 6rem;
+}
+
+/* ============================================ */
+div.markets_list article {
+  padding: 0;
+}
+div.markets_list article.left,
+div.markets_list article.right {
+  height: 35rem;
+}
+
+div.markets_list article.left div.post_image,
+div.markets_list article.right div.post_image {
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+div.markets_list article span.information {
+  padding: 5rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.markets_list article span.information p {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  font-size: 1.67rem;
+}
+
+div.markets_list article span.information a {
+  border-radius: 3.5rem;
+  font-size: 1.46rem;
+}
+
+div.markets_list article span.information h3 {
+  margin-bottom: 4.5rem;
+}
+
+
+div.markets_list article.left div.post_image,
+div.markets_list article.left span.information {
+  float: left;
+}
+div.markets_list article.right div.post_image,
+div.markets_list article.right span.information {
+  float: right;
+}
+
+div.markets_list article img {
+  height: 100%;
+}
+
+div.markets_list article span.information {
+  width: 65%;
+}
+
 /*--------------- media queries ---------------*/
 
 @media (max-device-width: 480px) {
   .inspiralia-breadcrumb-title h1 {
-    line-height: 8rem;
-    font-size: 8rem;
+    line-height: 10.8rem;
+    font-size: 6rem;
   }
   .inspiralia-sourcing h3, .map-information h3.title-information, .projects-news-header h3, .inspiralia-leading-market h3 {
     font-size: 9rem;
@@ -2978,33 +3200,36 @@ footer .inspiralia-social li span.icon-soci a {
     transform: rotate(0deg);
     transform-origin: left right
   }
-
+  .inspiralia-section.inspiralia-leading-market h3 {
+    margin-top: 1rem;
+  }
 }
 @media (min-width: 768px) {
   .inspiralia-breadcrumb-section .container {
     margin-top: 7rem;
   }
   .inspiralia-breadcrumb-title h1 {
-    line-height: 8rem;
+    line-height: 10.8rem;
     font-size: 9.5rem;
   }
   .inspiralia-sourcing h3, .map-information h3.title-information, .projects-news-header h3, .inspiralia-leading-market h3  {
     font-size: 9rem;
     line-height: 8rem;
   }
-  .inspiralia-section.inspiralia-sourcing, .inspiralia-section.inspiralia-leading-market {
-    margin-top: 5rem;
+  #accordion li.active .btn {
+    font-size: 1.45rem;
   }
 }
+
 @media (min-width: 992px) {
   .inspiralia-breadcrumb-title h1 {
-    line-height: 7rem;
+    line-height: 10.8rem;
     font-size: 9.5rem;
   }
 }
 @media (min-width: 1024px) {
   .inspiralia-breadcrumb-title h1 {
-    line-height: 8rem;
+    line-height: 10.8rem;
     font-size: 9.5rem;
   }
 }

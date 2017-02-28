@@ -3,6 +3,10 @@
 //------------------------------------------
 jQuery(document).ready(function() {
 
+  //------------------------------------------
+  // carousel somewhere
+  //------------------------------------------
+
   jQuery("#inspiralia-slider").owlCarousel({
       navigation : true, // Show next and prev buttons
       slideSpeed : 200,
@@ -18,20 +22,86 @@ jQuery(document).ready(function() {
       ]
     });
 
+  //------------------------------------------
+  // testimonial carousel
+  //------------------------------------------
+
   jQuery("#testimonial").owlCarousel({
     navigation : false, // Show next and prev buttons
-    slideSpeed : 400,
+    slideSpeed : 800,
     pagination : false,
     singleItem: true,
-    video:true,
     autoPlay : true,
-    transitionStyle : "fade",
+    autoWidth: true
   });
 
+  //------------------------------------------
+  // home hover animation
+  //------------------------------------------
+
   jQuery(".inspiralia-project-news-post-box-link").on('mouseover', function(){
-    jQuery(this).find('img').css({ 'opacity': '1' }).css({ 'z-index' : '100' });
+    jQuery(this).find('img').css({ 'opacity': '0.6' });
+    jQuery(this).find('article.text-center.center-block.large').css({ 'display' : 'block' });
   }).on('mouseout', function(){
-    jQuery(this).find('img').css({ 'opacity': '0.6' }).css({ 'z-index' : '0' });
+    jQuery(this).find('img').css({ 'opacity': '1' })
+    jQuery(this).find('article.text-center.center-block.large').css({ 'display' : 'none' });;
+  });
+
+  //------------------------------------------
+  // team member stuff
+  //------------------------------------------
+
+  jQuery('#team .item').on('mouseover', function(){
+    event_handler.show(this);
+  }).on('mouseout', function(){
+    event_handler.hide(this);
+  });
+
+  // for mobile devises
+  jQuery('#team .item').on('click', function(){
+    event_handler.toggle_class(this);
+  });
+
+  var event_handler = {
+    show: function(item) {
+      jQuery(item).find('details').show();
+      jQuery('.item').css({ 'opacity' : '0.6', 'filter': 'grayscale(100%)' });
+      jQuery(item).css({ 'opacity' : '1', 'filter': 'none' });
+    },
+    hide: function(item) {
+      jQuery(item).find('details').hide();
+      jQuery('.item').css({ 'opacity' : '1', 'filter': 'none' });
+    },
+    toggle_class: function(item) {
+      jQuery(item).siblings().removeClass('active');
+      if (jQuery(item).hasClass('active')) {
+        this.hide(item);
+        jQuery(item).removeClass('active');
+      } else {
+        jQuery(item).addClass('active');
+        this.show(item);
+      }
+    }
+  }
+
+  jQuery('#team').on('click', '.filters a.menuitem', function(e){
+    e.preventDefault();
+    var all_elements = jQuery('.item');
+    var filter_item = jQuery(this);
+    var current_class = (filter_item.attr('class').replace('menuitem', '').trim());
+    console.log(current_class);
+    if( filter_item.hasClass('show_all_team') ) {
+      jQuery(all_elements).show();
+    } else {
+      jQuery(all_elements).show();
+      jQuery(all_elements).each(function(index, value){
+        if (!jQuery(value).hasClass(current_class)) {
+          jQuery(value).fadeOut();
+          console.debug(value);
+          console.debug(jQuery(value).hasClass(current_class));
+        }
+      });
+    }
   });
 
 });

@@ -13,6 +13,12 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<meta property="og:url"           content="<?php echo site_url() ?>" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Inspiralia" />
+<meta property="og:description"   content="Your partner of choice for new product development" />
+<meta property="og:image"         content="<?php echo(has_post_thumbnail() ? get_the_post_thumbnail_url($post, 'full') : '') ?>" />
+
 <?php wp_head(); ?>
 </head>
 
@@ -39,11 +45,6 @@
             			<?php else : ?>
             				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
             			<?php endif; ?>
-
-            			<?php $description = get_bloginfo( 'description', 'display' );
-            				if ( $description || is_customize_preview() ) : ?>
-            					<p class="site-description"><?php echo $description; ?></p>
-            				<?php endif; ?>
             		</div><!-- .site-branding-text -->
 
             	</div><!-- .wrap -->
@@ -56,7 +57,7 @@
           <!-- /navbar-toggle -->
 
           <!-- Navigation -->
-          <div class="collapse navbar-collapse" id="navbar-wp">
+          <div class="collapse navbar-collapse <?php echo (is_front_page() ? 'navbar-home' : '') ?>" id="navbar-wp">
               <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right', 'fallback_cb' => 'inspiralia_custom_navwalker::fallback' , 'walker' => new inspiralia_custom_navwalker() ) ); ?>
           </div>
         </div>

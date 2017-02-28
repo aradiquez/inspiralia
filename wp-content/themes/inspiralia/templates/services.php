@@ -20,15 +20,12 @@ get_template_part('index','banner'); ?>
             <?php
       			while ( have_posts() ) : the_post(); ?>
     					<div class="col-md-12">
-                <div class="page" title="Page 1">
-                  <div class="section">
-                    <div class="layoutArea">
-                      <div class="column">
-    						        <?php the_content(); ?>
-    					        </div>
-                    </div>
-                  </div>
-                </div>
+                <section class="description">
+                  <?php if( $post->post_parent != 0 ) { ?>
+                    <h2><?php the_title(); ?></h2>
+                  <?php  } ?>
+    						  <?php the_content(); ?>
+                </section>
               </div>
             <?php
       			endwhile; // End of the loop.

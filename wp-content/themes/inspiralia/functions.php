@@ -7,9 +7,9 @@
  * @package inspiralia
  */
 
-
 	$inspiralia_theme_path = get_template_directory() . '/inc/ansar/';
 	$inspiralia_theme_custom_widgets_path = get_template_directory() . '/inc/page_widgets/';
+	$inspiralia_theme_custom_post_type_widgets_path = get_template_directory() . '/inc/custom_post_type_widgets/';
 
 	require( $inspiralia_theme_path . '/inspiralia-custom-navwalker.php' );
 	require( $inspiralia_theme_path . '/font/font.php');
@@ -32,6 +32,7 @@
 	require( $inspiralia_theme_custom_widgets_path . 'subtitle-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'testimonial-extra-fields-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'projects-extra-fields-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'page-related-widget.php');
 
 	// HOMEPAGE
 	require( $inspiralia_theme_custom_widgets_path . 'homepage/homepage-custom-widget.php');
@@ -45,6 +46,11 @@
 	require( $inspiralia_theme_custom_widgets_path . 'services/services-leading-markets-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'services/services-our-value-widget.php');
 
+	// MARKETS
+	require( $inspiralia_theme_custom_widgets_path . 'markets/markets-extra-fields-widget.php');
+
+	// ========================================================================================/
+	require( $inspiralia_theme_custom_post_type_widgets_path . 'testimonial-extra-fields-widget.php');
 
 if ( ! function_exists( 'inspiralia_setup' ) ) :
 /**
@@ -227,13 +233,13 @@ class Footer_Area_Menu_Widget extends WP_Widget {
 	}
 }
 
-function add_background_when_need() {
+function add_background_when_need($prefix) {
 		global $post;
-		if (get_post_meta($post->ID, "leading-markets-imagen", true )) {
-			return "background: url(".get_post_meta($post->ID, "leading-markets-imagen", true ).") no-repeat;";
+		if (get_post_meta($post->ID, $prefix . "-imagen", true )) {
+			return "background: url(".get_post_meta($post->ID, $prefix . "-imagen", true ).") no-repeat;";
 		} else {
-			if(get_post_meta($post->ID, "leading-markets-background-color", true )) {
-				return "background-color: ".get_post_meta($post->ID, "leading-markets-background-color", true ).";";
+			if(get_post_meta($post->ID, $prefix . "-background-color", true )) {
+				return "background-color: ".get_post_meta($post->ID, $prefix . "-background-color", true ).";";
 			}
 		}
 }

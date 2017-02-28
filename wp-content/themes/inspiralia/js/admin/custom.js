@@ -2,7 +2,7 @@ jQuery(document).ready(function(jQuery) {
 
   //##############################################################################################
 
-  var image_custom_uploader_1, image_custom_uploader_2, image_custom_uploader_3, home_image_map, services_intro_image, leading_markets_image;
+  var image_custom_uploader_1, image_custom_uploader_2, image_custom_uploader_3, home_image_map, services_intro_image, leading_markets_image, markets_intro_image;
 
   jQuery('#accordion-box-img-1-button').on('click', function(e) {
     e.preventDefault();
@@ -159,7 +159,10 @@ jQuery(document).ready(function(jQuery) {
     services_intro_image.open();
   });
 
+
   jQuery('.color-field').wpColorPicker();
+
+
 
   jQuery('#leading-markets-button').on('click', function(e) {
     e.preventDefault();
@@ -188,6 +191,36 @@ jQuery(document).ready(function(jQuery) {
     });
     //Open the uploader dialog
     leading_markets_image.open();
+  });
+
+
+  jQuery('#markets-intro-button').on('click', function(e) {
+    e.preventDefault();
+    //If the uploader object has already been created, reopen the dialog
+    if (markets_intro_image) {
+      markets_intro_image.open();
+      return;
+    }
+
+    //Extend the wp.media object
+    markets_intro_image = wp.media.frames.file_frame = wp.media({
+      title: 'Choose Image',
+      button: {
+        text: 'Choose Image'
+      },
+      multiple: false
+    });
+
+    //When a file is selected, grab the URL and set it as the text field's value
+    markets_intro_image.on('select', function() {
+      attachment = markets_intro_image.state().get('selection').first().toJSON();
+      var url = '';
+      url = attachment['url'];
+      jQuery('#markets-intro-imagen').val(url);
+      jQuery('#markets-intro-preview').attr("src",url);
+    });
+    //Open the uploader dialog
+    markets_intro_image.open();
   });
 
 });

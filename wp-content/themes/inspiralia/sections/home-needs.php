@@ -8,7 +8,7 @@
             <div class="need-information-content">
               <h2 class="h2-header"><?php echo get_post_meta(get_the_ID(), "meta-box-title-$i", true); ?></h2>
               <p class="content"><?php echo get_post_meta(get_the_ID(), "meta-box-description-$i", true); ?></p>
-              <a class="button btn btn-lg" href="<?php echo get_post_meta(get_the_ID(), "meta-box-button-url-$i", true); ?>" title="<?php echo get_post_meta(get_the_ID(), "meta-box-button-title-$i", true); ?>"><?php echo get_post_meta(get_the_ID(), "meta-box-button-title-$i", true); ?></a>
+              <a class="button btn btn-lg" href="<?php echo get_page_link(get_post_meta(get_the_ID(), "meta-box-button-url-$i", true)); ?>" title="<?php echo get_post_meta(get_the_ID(), "meta-box-button-title-$i", true); ?>"><?php echo get_post_meta(get_the_ID(), "meta-box-button-title-$i", true); ?></a>
             </div>
           </div>
       <?php } ?>

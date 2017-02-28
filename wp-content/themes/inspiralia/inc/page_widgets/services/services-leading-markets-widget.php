@@ -1,7 +1,13 @@
 <?php
 
-function services_leading_markets_meta_box_markup($page) { ?>
- <?php wp_nonce_field( basename( __FILE__ ), 'leading_markets_meta_box_nonce' ); ?>
+function services_leading_markets_meta_box_markup($page) {
+  $args = array(
+      'depth'                 => 2,
+      'child_of'              => $page->post_parent,
+      'selected'              => get_post_meta($page->ID, "leading-markets-action-url", true),
+      'name'                  => 'leading-markets-action-url'
+  );
+  wp_nonce_field( basename( __FILE__ ), 'leading_markets_meta_box_nonce' ); ?>
   <div style="display: block;">
     <label for="leading-markets-box-title" class="post-attributes-label">Title</label><br/>
     <input name="leading-markets-box-title" type="text" value="<?php echo get_post_meta($page->ID, "leading-markets-box-title", true); ?>" class="thick_field"><br/>
@@ -21,8 +27,8 @@ function services_leading_markets_meta_box_markup($page) { ?>
 
     <label for="leading-markets-action" class="post-attributes-label">Action Button Label</label><br/>
     <input name="leading-markets-action" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "leading-markets-action", true); ?>"><br/>
-    <label for="leading-markets-action-url" class="post-attributes-label">Action Button URL</label><br/>
-    <input name="leading-markets-action-url" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "leading-markets-action-url", true); ?>">
+    <label for="leading-markets-action-url" class="post_attributes_related">Related to</label><br/>
+    <?php wp_dropdown_pages($args); ?>
   </div>
   <div style="clear: both;"></div>
 <?php }

@@ -3,90 +3,39 @@
 ============================== -->
 <?php get_header();
 get_template_part('index','banner'); ?>
-<div class="clearfix"></div>
 <!-- =========================
      Page Content Section
 ============================== -->
-<main id="content">
-  <div class="container">
+<?php if(have_posts()) { ?>
+  <section class='hero-blog-title'>
+    <h2 class="inspiralia-blog-title"><?php the_title(); ?></h2>
+  </section>
+
+  <main id="content">
     <div class="row">
-      <div class="col-md-<?php echo ( !is_active_sidebar( 'sidebar_primary' ) ? '12' :'9' ); ?> col-md-9 col-sm-8">
-        <div class="row">
-		      <?php if(have_posts())
-		        {
-		      while(have_posts()) { the_post(); ?>
-          <div class="col-md-12">
-            <div class="inspiralia-blog-post-box white">
-            <?php if(has_post_thumbnail()): ?>
-            <a href="#" class="inspiralia-blog-thumb">
-			         <?php $defalt_arg =array('class' => "img-responsive"); ?>
-			         <?php the_post_thumbnail('', $defalt_arg); ?>
-			      </a>
-              <?php endif; ?>
-              <article class="small">
-                <span class="inspiralia-blog-date">
-                    <i class="fa fa-clock-o"></i>
-                    <span><?php echo get_the_date('j'); ?></span>
-                    <span><?php echo get_the_date('M'); ?></span>
-                  </span>
-                <h2 class="inspiralia-blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <?php the_content(); ?>
-                <div class="inspiralia-blog-category">
-                  <?php $cat_list = get_the_category_list();
-				          if(!empty($cat_list)) { ?> <?php the_category(', '); ?>
-                  <?php } ?>
-                  <a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>">
-                    <?php the_author(); ?>
-                  </a>
-                </div>
-              </article>
+      <?php while(have_posts()) { the_post(); ?>
+        <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 col-sm-12 blog_post">
+          <aside>
+            <a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-text="custom share text" data-url="https://dev.twitter.com/web/tweet-button" data-hashtags="example,demo" data-via="twitterdev" data-related="twitterapi,twitter"> Tweet</a>
+            <br/>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://developer.linkedin.com&title=LinkedIn%20Developer%20Network
+  &summary=My%20favorite%20developer%20program&source=LinkedIn" class="linkedin-share-button">LinkedIn</a>
+            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Compartir</a></div>
+          </aside>
+          <article>
+            <div class="introduction">
+              <?php echo get_post_meta(get_the_ID(), "projects-box-intro", true) ?>
             </div>
-          </div>
-		      <?php } ?>
-          <div class="col-md-12 inspiralia-card-box">
-            <div class="media inspiralia-info-author-block"> <a href="<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>" class="inspiralia-author-pic"> <?php echo get_avatar( get_the_author_meta( 'ID') , 150); ?> </a>
-              <div class="media-body">
-                <h4 class="media-heading"><span><i class="fa fa-user"></i><?php _e('By','inspiralia'); ?></span><a href "<?php echo esc_url(get_author_posts_url( get_the_author_meta( 'ID' ) ));?>"><?php the_author(); ?></a></h4>
-                <p><?php the_author_meta( 'description' ); ?></p>
-                <div class="row">
-                  <div class="col-md-6 col-pad7">
-                    <ul class="list-inline info-author-social">
-          					<?php
-          					$facebook_profile = get_the_author_meta( 'facebook_profile' );
-          					if ( $facebook_profile && $facebook_profile != '' ) {
-          					echo '<li class="facebook"><a href="' . esc_url($facebook_profile) . '"><i class="fa fa-facebook-square"></i></a></li>';
-          					}
-
-          					$twitter_profile = get_the_author_meta( 'twitter_profile' );
-          					if ( $twitter_profile && $twitter_profile != '' )
-          					{
-          					echo '<li class="twitter"><a href="' . esc_url($twitter_profile) . '"><i class="fa fa-twitter-square"></i></a></li>';
-          					}
-
-          					$google_profile = get_the_author_meta( 'google_profile' );
-          					if ( $google_profile && $google_profile != '' ) {
-          					echo '<li class="googleplus"><a href="' . esc_url($google_profile) . '" rel="author"><i class="fa fa-google-plus-square"></i></a></li>';
-          					}
-          					$linkedin_profile = get_the_author_meta( 'linkedin_profile' );
-          					if ( $linkedin_profile && $linkedin_profile != '' ) {
-          					   echo '<li class="linkedin"><a href="' . esc_url($linkedin_profile) . '"><i class="fa fa-linkedin-square"></i></a></li>';
-          					}
-          					?>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div class="small">
+              <span class="inspiralia-blog-date">
+                <span><?php echo get_the_date('j F, Y'); ?>, Madrid, Spain</span>
+              </span>
             </div>
-          </div>
-		      <?php } ?>
-         <?php comments_template('',true); ?>
+            <?php the_content(); ?>
+          </article>
         </div>
-      </div>
-      <div class="col-md-3 col-sm-4">
-      <?php get_sidebar(); ?>
-      </div>
+      <?php } ?>
     </div>
-    <!--/ Row end -->
-  </div>
-</main>
+  </main>
+<?php } ?>
 <?php get_footer(); ?>

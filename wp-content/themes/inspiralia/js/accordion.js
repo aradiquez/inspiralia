@@ -10,11 +10,11 @@ jQuery(document).ready(function(){
 
 
   jQuery("#accordion li").on('click', function(){
-    jQuery(activeItem).animate({width: "20%"}, {duration: 300, queue: false });
+    jQuery(activeItem).animate({width: "20%"}, {duration: 1000, queue: false });
     jQuery(activeItem).find('p').hide();
     jQuery(activeItem).find('a').hide();
     jQuery(activeItem).find('img').show();
-    jQuery(this).animate({width: "60%"}, {duration: 300, queue: false });
+    jQuery(this).animate({width: "60%"}, {duration: 1000, queue: false });
     jQuery(this).find('img').hide();
     jQuery(this).find('p').show();
     jQuery(activeItem).removeClass('active');
@@ -34,12 +34,12 @@ jQuery(document).ready(function(){
   jQuery(activeCustomItem).find('p').show();
 
   jQuery("#accordion_custom li").on('click', function(){
-    jQuery(allCustomItems).animate({width: "20%"}, {duration: 300, queue: false });
+    jQuery(allCustomItems).animate({width: "20%"}, {duration: 1000, queue: false });
     jQuery(allCustomItems).find('p').hide();
     jQuery(allCustomItems).find('.responsive-img').show();
     jQuery(allCustomItems).find('.active_image').hide();
     jQuery(allCustomItems).removeClass('active');
-    jQuery(this).animate({width: "60%"}, {duration: 300, queue: false });
+    jQuery(this).animate({width: "60%"}, {duration: 1000, queue: false });
     jQuery(this).find('.responsive-img').hide();
     jQuery(this).find('.active_image').css({ 'width' : '10%', 'margin' : '5% auto', 'display' : 'block'});
     jQuery(this).find('p').show();
