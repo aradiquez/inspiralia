@@ -31,12 +31,12 @@
   <header class="inspiralia-trhead">
     <!--==================== MAIN MENU ====================-->
     <div class="inspiralia-main-nav">
-      <nav class="navbar navbar-default navbar-wp">
+      <nav class="navbar navbar-default navbar-wp"  style="z-index='100'">
         <div class="container">
           <div class="navbar-header col-md-2">
             <!-- Logo -->
             <div class="site-branding">
-            	<div class="wrap">
+            	<div class="wrap" style="z-index='1000'">
 
             		<?php the_custom_logo(); ?>
             		<div class="site-branding-text">

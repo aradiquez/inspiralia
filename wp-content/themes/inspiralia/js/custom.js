@@ -22,6 +22,27 @@ jQuery(document).ready(function() {
       ]
     });
 
+  // -----------------------------------------
+  // carrousel del blog
+  // -----------------------------------------
+
+  jQuery('.inspiralia-slider-section').owlCarousel({
+      items: 3,
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 500,
+      pagination : true,
+      paginationSpeed : 1200,
+      singleItem: false,
+      video: true,
+      autoPlay: true,
+      transitionStyle : "fade",
+      navigationText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+      ]
+  });
+
+
   //------------------------------------------
   // testimonial carousel
   //------------------------------------------

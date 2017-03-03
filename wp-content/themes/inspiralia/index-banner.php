@@ -1,4 +1,4 @@
-<div class="inspiralia-breadcrumb-section" style="width: 100%;<?php echo(has_post_thumbnail() ? "background-image: url(".get_the_post_thumbnail_url($post, 'full').");" : ( has_header_image() ? "background-image: url(".get_header_image().");" : '')) ?>">
+<div class="inspiralia-breadcrumb-section" style="width: 100%;<?php echo(has_post_thumbnail() ? "background-image: url(".get_the_post_thumbnail_url($post, 'full').");" : ( has_header_image() ? "background-image: url(".get_header_image().");" : '')) ?> z-index: 500; ">
   <?php echo (is_front_page() ? '' : '<div class="overlay"></div>') ?>
   <div class="container">
     <div class="row">

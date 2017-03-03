@@ -42,7 +42,8 @@ body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .nav
 }
 /*=== navbar Header background ===*/
 .navbar-wp {
-	background-color: rgba(0,0,0,0);
+	/*background-color: rgba(0,0,0,0);*/
+	background-color: #FFF;
 }.navbar-wp .dropdown-menu {
 	background-color: #fff;
 }
@@ -135,7 +136,7 @@ a, .inspiralia-view-detail-content a, .inspiralia-blog-category a:hover, .inspir
 	background-color: #00b1dd;
 }
 
-#product .row .need-item,
+.inspiralia-section.inspiralia-our-value, #product .row .need-item,
 #product .row .need-item h2 {
 	color: #58595b;
 }
@@ -263,7 +264,6 @@ footer .inspiralia-widget.widget_search .btn:hover, footer .inspiralia-widget.wi
 .inspiralia-specialization {
 	background-color: #00b1dd;
 	color: #FFF;
-	padding: 4rem 0;
 }
 
 .inspiralia-section.inspiralia-specialization h3 {
@@ -351,6 +351,10 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-wi
 
 #accordion li a, #accordion_custom li a {
 	border: 1px solid #fff;
+}
+
+#accordion li:nth-child(odd) img, #accordion_custom li:nth-child(odd) img {
+	filter: grayscale(100%) brightness(200%) contrast(100%);
 }
 
 #accordion li:nth-child(odd), #accordion_custom li:nth-child(odd){

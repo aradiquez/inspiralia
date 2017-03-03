@@ -11,7 +11,7 @@
  */
 
 get_header();
-get_template_part('index','banner'); ?>
+get_template_part('index','banner'); ?>A
 <main id="content">
     <div class="container">
       <div class="row">
