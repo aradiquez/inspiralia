@@ -263,8 +263,8 @@ function renderGridCustomSpaceCss( $contentID, $space = 0 )
 function lgElapsedTimeString( $start, $end = null, $limit = null, $filter = true, $suffix = 'ago', $format = 'Y-m-d', $separator = ' ', $minimum = 1 )
 {
     $dates = (object) array(
-        'start' => new DateTime($start ? : __( 'now', TB_NAME ) ),
-        'end' => new DateTime($end ? : __( 'now', TB_NAME ) ),
+        'start' => new DateTime($start ? __( 'now', TB_NAME ) : '' ),
+        'end' => new DateTime($end ? __( 'now', TB_NAME ) : ''  ),
         'intervals' => array('y' => __( 'year', TB_NAME ), 'm' => __( 'month', TB_NAME ), 'd' => __( 'day', TB_NAME ), 'h' => __( 'hour', TB_NAME ), 'i' => __( 'minute', TB_NAME ), 's' => __( 'second', TB_NAME ) ),
         'periods' => array()
     );
@@ -278,7 +278,7 @@ function lgElapsedTimeString( $start, $end = null, $limit = null, $filter = true
     if (false === empty($limit)) {
         $dates->limit = new DateTime($limit);
         if (date_create()->add($elapsed->interval) > $dates->limit) {
-            return $dates->start->format($format) ? : $elapsed->unknown;
+            return $dates->start->format($format) ? $elapsed->unknown : '';
         }
     }
     if (true === is_array($filter)) {
@@ -298,7 +298,7 @@ function lgElapsedTimeString( $start, $end = null, $limit = null, $filter = true
         return trim(vsprintf('%1$s %2$s', array(implode($separator, $dates->periods), $suffix)));
     }
 
-    return $dates->start->format($format) ? : $elapsed->unknown;
+    return $dates->start->format($format) ? $elapsed->unknown : '';
 }
 
 function lgCustomNumberFormat( $num ) 

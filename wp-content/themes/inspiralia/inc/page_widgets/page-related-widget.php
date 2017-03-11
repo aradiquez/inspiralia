@@ -1,35 +1,36 @@
 <?php
 
-function linked_page_meta_box_markup($page) { ?>
- <?php wp_nonce_field( basename( __FILE__ ), 'linked_page_meta_box_nonce' );
+function market_page_meta_box_markup($post) { ?>
+ <?php wp_nonce_field( basename( __FILE__ ), 'market_page_meta_box_nonce' );
   $args = array(
       'depth'                 => 2,
-      'child_of'              => $page->post_parent,
-      'selected'              => get_post_meta($page->ID, "linked_page_meta_page_id", true),
+      'child_of'              => $post->post_parent,
+      'selected'              => get_post_meta($post->ID, "linked_page_meta_page_id", true),
       'name'                  => 'linked_page_meta_page_id'
   );
  ?>
   <div style="display: block;">
     <label for="linked_page_box_title" class="post_attributes_label">Title</label><br/>
-    <input name="linked_page_box_title" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "linked_page_box_title", true); ?>"><br/>
+    <input name="linked_page_box_title" class="thick_field" type="text" value="<?php echo get_post_meta($post->ID, "linked_page_box_title", true); ?>"><br/>
     <label for="linked_page_box_name" class="post_attributes_label">Button Name</label><br/>
-    <input name="linked_page_box_name" class="thick_field" type="text" value="<?php echo get_post_meta($page->ID, "linked_page_box_name", true); ?>"><br/>
+    <input name="linked_page_box_name" class="thick_field" type="text" value="<?php echo get_post_meta($post->ID, "linked_page_box_name", true); ?>"><br/>
     <label for="linked_page_box_related" class="post_attributes_related">Related to</label><br/>
     <?php wp_dropdown_pages($args); ?>
   </div>
   <div style="clear: both;"></div>
 <?php }
 
-function add_linked_page_meta_box() {
-  if ( 'post' != get_post_type() )  {
-    add_meta_box("linked_page_meta_box", "Hero Related Element Box", "linked_page_meta_box_markup", "page", "normal", "high", null);
+function add_market_page_meta_box() {
+  global $post;
+  if (  'templates/markets.php' != get_post_meta( $post->ID, '_wp_page_template', true ) && 'post' != get_post_type() )  {
+    add_meta_box("market_page_meta_box", "Hero Related Element Box", "market_page_meta_box_markup", "page", "normal", "high", null);
   }
 }
 
-  add_action("add_meta_boxes", "add_linked_page_meta_box");
+  add_action("add_meta_boxes", "add_market_page_meta_box");
 
 
-function save_linked_page_meta_box($post_id, $post, $update)
+function save_market_page_meta_box($post_id, $post, $update)
 {
     if(!current_user_can("edit_post", $post_id))
         return $post_id;
@@ -54,6 +55,6 @@ function save_linked_page_meta_box($post_id, $post, $update)
     update_post_meta($post_id, "linked_page_meta_page_id", $linked_page_meta_page);
 }
 
-add_action("save_post", "save_linked_page_meta_box", 10, 3);
+add_action("save_post", "save_market_page_meta_box", 10, 3);
 
 ?>

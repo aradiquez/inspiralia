@@ -13,17 +13,32 @@
 }
 /*=== navbar hover color ===*/
 .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-header .navbar-brand , .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-header .navbar-brand  {
-	color: #FFF;
-	text-transform: underline;
+	color: #58595b;
 }
 /*=== navbar hover border-color ===
 .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus,  .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
 	border-color: #00b1dd;
 }
 */
+.inspiralia-slider-section .item a,
+.inspiralia-slider-section .item a h2,
+.inspiralia-slider-section .item  {
+	color: #FFF;
+}
 
+.inspiralia-trhead.blog-header .inspiralia-main-nav ul#menu-main li.menu-item a {
+	color: #58595b;
+}
+.inspiralia-trhead.blog-header .inspiralia-main-nav ul#menu-main li.menu-item a:hover {
+	color: #58595b;
+	border-bottom: 2px solid #58595b;
+}
+
+.owl-controls .owl-buttons {
+	color: #FFF;
+}
 .current-page-ancestor a, .current-menu-item a {
-	border-bottom-color: #FFF;
+	border-bottom-color: #58595b;
 }
 
 body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .navbar-toggle {
@@ -49,17 +64,17 @@ body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .nav
 }
 /*=== navbar drop down hover color ===*/
 .inspiralia-search-box .inspiralia-search .btn, .navbar-base .navbar-nav > .open > a, .navbar-base .navbar-nav > .open > a:hover, .navbar-base .navbar-nav > .open > a:focus, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > .active > a:focus, .navbar-wp .dropdown-menu > li > a:hover, .navbar-base .navbar-nav > li >a.dropdown-form-toggle, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
-	color: #212121;
+	color: #58595b;
 }
 .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li >a:focus {
 	background-color: rgba(0,0,0,0);
 }
 /*=== navbar text color ===*/
 .navbar-wp .navbar-nav > li > a {
-	color: #FFF;
+	color: #58595b;
 }
 .navbar-toggle, .navbar-wp .dropdown-menu > li > a, .navbar-wp .navbar-nav > li > a.dropdown-form-toggle {
-	color: #333;
+	color: #58595b;
 }
 
 .navbar-toggle .icon-bar {
@@ -148,11 +163,11 @@ a, .inspiralia-view-detail-content a, .inspiralia-blog-category a:hover, .inspir
 .testimonials-section .sub-qute::before {
     border-top-color: #00b1dd;
 }
-.inspiralia-section .need-item.need-information .need-information-content .button, .testimonials-section .inspiralia-client:before {
+.inspiralia-section .need-item.need-information .button, .testimonials-section .inspiralia-client:before {
 	background-color: #fff;
 	color: #00b1dd;
 }
-.inspiralia-section .need-item.need-information .need-information-content .button, .testimonials-section .inspiralia-client img {
+.inspiralia-section .need-item.need-information .button, .testimonials-section .inspiralia-client img {
 	border-color: #00b1dd;
 }
 .inspiralia-heading-bor-bt h5::before, .inspiralia-skills h5::before  {
@@ -350,7 +365,7 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-wi
 }
 
 #accordion li a, #accordion_custom li a {
-	border: 1px solid #fff;
+	border-color: #fff;
 }
 
 #accordion li:nth-child(odd) img, #accordion_custom li:nth-child(odd) img {
@@ -383,13 +398,13 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-wi
 	border-color: #ebebeb;
 }
 
-.inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn:hover {
+.inspiralia-section.inspiralia-markets-intro a.btn:hover {
 	background-color: #FFF;
-  border-color: #00b1dd;
-  color: #00b1dd;
+  border-color: #58595b;
+  color: #58595b;
 }
 
-.map-information .button-information:hover, .inspiralia-section.inspiralia-sourcing a.btn:hover, .inspiralia-section.inspiralia-leading-market a.btn:hover,
+.inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn:hover, .map-information .button-information:hover, .inspiralia-section.inspiralia-sourcing a.btn:hover, .inspiralia-section.inspiralia-leading-market a.btn:hover,
 .btn:hover, .btn:hover {
     background-color: #FFF;
     border-color: #00b1dd;
@@ -496,11 +511,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .projects-news-header .row h3, .inspiralia-section.inspiralia-sourcing h3, .map-information .title-information, .inspiralia-section.inspiralia-leading-market h3 {
 	color: #00b1dd;
 }
-.inspiralia-testimonial-section .row .item, .inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn, .inspiralia-section.inspiralia-leading-market.inspiralia-internal h2, .inspiralia-section.inspiralia-leading-market.inspiralia-internal h3  {
+.inspiralia-testimonial-section .row .item, .inspiralia-section.inspiralia-markets-intro a.btn, .inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn, .inspiralia-section.inspiralia-leading-market.inspiralia-internal h2, .inspiralia-section.inspiralia-leading-market.inspiralia-internal h3, .inspiralia-section.inspiralia-markets-intro h2, .inspiralia-section.inspiralia-markets-intro h3 {
 	color: #FFF;
 }
 
-.inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn {
+.inspiralia-section.inspiralia-markets-intro a.btn, .inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn {
 	background-color: transparent;
 	border-color: #FFF;
 }

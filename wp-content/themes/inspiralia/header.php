@@ -28,12 +28,12 @@
       <?php esc_html_e( 'Skip to content', 'inspiralia' ); ?>
     </a>
 
-  <header class="inspiralia-trhead">
+  <header class="inspiralia-trhead blog-header">
     <!--==================== MAIN MENU ====================-->
     <div class="inspiralia-main-nav">
       <nav class="navbar navbar-default navbar-wp"  style="z-index='100'">
         <div class="container">
-          <div class="navbar-header col-md-2">
+          <div class="navbar-header col-md-3">
             <!-- Logo -->
             <div class="site-branding">
             	<div class="wrap" style="z-index='1000'">
@@ -57,7 +57,7 @@
           <!-- /navbar-toggle -->
 
           <!-- Navigation -->
-          <div class="collapse navbar-collapse <?php echo (is_front_page() ? 'navbar-home' : '') ?>" id="navbar-wp">
+          <div class="collapse navbar-collapse <?php echo (is_front_page() ? '' : '') ?>" id="navbar-wp">
               <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right', 'fallback_cb' => 'inspiralia_custom_navwalker::fallback' , 'walker' => new inspiralia_custom_navwalker() ) ); ?>
           </div>
         </div>

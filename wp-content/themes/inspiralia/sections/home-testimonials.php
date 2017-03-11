@@ -10,8 +10,8 @@
     if ( $inspiralia_latest_loop->have_posts() ) :
     while ( $inspiralia_latest_loop->have_posts() ) : $inspiralia_latest_loop->the_post();?>
       <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 item">
-          <div <?php if ( has_post_thumbnail() ) : ?> class="inspiralia-testimonial-post-box" style="background-image: url(<?php the_post_thumbnail_url(); ?>);" <?php else:?> class="inspiralia-testimonial-post-box white" <?php endif; ?>>
+        <div class="col-sm-12 col-md-12 col-lg-12 item" <?php if ( has_post_thumbnail() ) : ?> style="background-image: url(<?php the_post_thumbnail_url(); ?>);" <?php else:?> <?php endif; ?>>
+          <div class="inspiralia-testimonial-post-box white">
             <article class="large">
               <div class="post_content <?php echo ( has_post_thumbnail() ) ? "image" : '' ?>">
                 <?php the_content(); ?>

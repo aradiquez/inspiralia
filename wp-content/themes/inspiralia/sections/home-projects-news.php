@@ -17,7 +17,7 @@
     <?php
     $post_number = 0;
     $inspiralia_project_news_category = array(get_cat_ID('Projects'), get_cat_ID('News'));
-    $inspiralia_latest_loop = new WP_Query( array( 'post_type' => 'post', 'order' => 'DESC','ignore_sticky_posts' => true, 'category__in' => $inspiralia_project_news_category, 'limit' => 5 ) ); if ( $inspiralia_latest_loop->have_posts() ) :
+    $inspiralia_latest_loop = new WP_Query( array( 'post_type' => 'post', 'order' => 'DESC','ignore_sticky_posts' => true, 'category__in' => $inspiralia_project_news_category, 'posts_per_page' => 5 ) ); if ( $inspiralia_latest_loop->have_posts() ) :
     while ( $inspiralia_latest_loop->have_posts() ) : $inspiralia_latest_loop->the_post();?>
       <div class="col-md-4 col-sm-6 col-lg-4 item <?php echo (($post_number % 2) != 0 ? 'projects-news-item' : '') ?>">
         <a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>" <?php echo (($post_number % 2) == 0 ? 'class="inspiralia-project-news-post-box-link"' : '') ?>>

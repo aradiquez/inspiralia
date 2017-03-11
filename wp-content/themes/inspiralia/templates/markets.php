@@ -45,7 +45,7 @@ get_template_part('index','banner'); ?>
 
     <?php get_template_part('sections/markets', 'specialization_area'); ?>
     <div class="clearfix"></div>
-    <?php get_template_part('sections/markets', 'random_page'); ?>
+    <?php get_template_part('sections/markets', 'random_market'); ?>
 
   <?php } ?>
 

@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
   // -----------------------------------------
 
   jQuery('.inspiralia-slider-section').owlCarousel({
-      items: 3,
+      items: 2,
       navigation : true, // Show next and prev buttons
       slideSpeed : 500,
       pagination : true,

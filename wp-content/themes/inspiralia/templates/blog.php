@@ -11,7 +11,7 @@
  */
 get_header('blog');
 get_template_part('index','blog'); ?>
-<main id="content">
+<main id="content" class="blog_content">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -25,6 +25,15 @@ get_template_part('index','blog'); ?>
           endwhile; // End of the loop.
           ?>
         </main>
+	          <div class="col-md-12 text-center">
+							<?php
+							//Previous / next page navigation
+							the_posts_pagination( array(
+								'prev_text'          => __( '<i class="fa fa-long-arrow-left"></i>', 'inspiralia' ),
+								'next_text'          => __( '<i class="fa fa-long-arrow-right"></i>', 'inspiralia' ),
+							) );
+							?>
+	          </div>
         <!-- #main -->
       </div>
     </div>

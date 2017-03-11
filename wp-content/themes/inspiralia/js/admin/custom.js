@@ -2,7 +2,7 @@ jQuery(document).ready(function(jQuery) {
 
   //##############################################################################################
 
-  var image_custom_uploader_1, image_custom_uploader_2, image_custom_uploader_3, home_image_map, services_intro_image, leading_markets_image, markets_intro_image;
+  var image_custom_uploader_1, image_custom_uploader_2, image_custom_uploader_3, home_image_map, services_intro_image, leading_markets_image, markets_intro_image, markets_intro_background_image;
 
   jQuery('#accordion-box-img-1-button').on('click', function(e) {
     e.preventDefault();
@@ -194,7 +194,7 @@ jQuery(document).ready(function(jQuery) {
   });
 
 
-  jQuery('#markets-intro-button').on('click', function(e) {
+  jQuery('#markets_intro_button').on('click', function(e) {
     e.preventDefault();
     //If the uploader object has already been created, reopen the dialog
     if (markets_intro_image) {
@@ -216,11 +216,40 @@ jQuery(document).ready(function(jQuery) {
       attachment = markets_intro_image.state().get('selection').first().toJSON();
       var url = '';
       url = attachment['url'];
-      jQuery('#markets-intro-imagen').val(url);
-      jQuery('#markets-intro-preview').attr("src",url);
+      jQuery('#markets_intro_imagen').val(url);
+      jQuery('#markets_intro_preview').attr("src",url);
     });
     //Open the uploader dialog
     markets_intro_image.open();
+  });
+
+  jQuery('#markets-intro-background-imagen-button').on('click', function(e) {
+    e.preventDefault();
+    //If the uploader object has already been created, reopen the dialog
+    if (markets_intro_background_image) {
+      markets_intro_background_image.open();
+      return;
+    }
+
+    //Extend the wp.media object
+    markets_intro_background_image = wp.media.frames.file_frame = wp.media({
+      title: 'Choose Image',
+      button: {
+        text: 'Choose Image'
+      },
+      multiple: false
+    });
+
+    //When a file is selected, grab the URL and set it as the text field's value
+    markets_intro_background_image.on('select', function() {
+      attachment = markets_intro_background_image.state().get('selection').first().toJSON();
+      var url = '';
+      url = attachment['url'];
+      jQuery('#markets-intro-background-imagen').val(url);
+      jQuery('#markets-intro-background-preview').attr("src",url);
+    });
+    //Open the uploader dialog
+    markets_intro_background_image.open();
   });
 
 });

@@ -1,16 +1,16 @@
 <?php
-function markets_extra_fields_box_markup($page) { ?>
+function markets_extra_fields_box_markup($post) { ?>
  <?php wp_nonce_field( basename( __FILE__ ), 'markets_extra_fields_box_nonce' ); ?>
   <div>
     <label for="markets-intro" class="post-attributes-label">Introduction</label><br/>
-    <textarea name="markets-intro" class="thick_textarea"><?php echo get_post_meta($page->ID, "markets-intro", true); ?></textarea><br/><br/>
-    <?php $image_url = (get_post_meta($page->ID, "markets-intro-imagen", true )) ? get_post_meta($page->ID, "markets-intro-imagen", true ) : ''; ?>
+    <textarea name="markets-intro" class="thick_textarea"><?php echo get_post_meta($post->ID, "markets-intro", true); ?></textarea><br/><br/>
+    <?php $image_url = (get_post_meta($post->ID, "markets-intro-imagen", true )) ? get_post_meta($post->ID, "markets-intro-imagen", true ) : ''; ?>
     <img src="<?php echo $image_url ?>" width="150" id="markets-intro-preview"/><br/>
     <label for="accordion-box-button" class="post-attributes-label">Image</label><br/>
     <input id="markets-intro-imagen" type="text" name="markets-intro-imagen" value="<?php echo $image_url ?>" />
     <input id="markets-intro-button" class="button" type="button" value="Upload Image" /><br/>
     <label for="markets-intro-text" class="post-attributes-label">Aditional Text</label><br/>
-    <?php wp_editor( get_post_meta($page->ID, "markets-intro-text", true), 'markets-intro-text', array() ); ?> <br/>
+    <?php wp_editor( get_post_meta($post->ID, "markets-intro-text", true), 'markets-intro-text', array() ); ?> <br/>
   </div>
   <div style="clear: both;"></div>
 <?php }

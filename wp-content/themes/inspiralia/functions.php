@@ -48,6 +48,8 @@
 
 	// MARKETS
 	require( $inspiralia_theme_custom_widgets_path . 'markets/markets-extra-fields-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'markets/markets-related-widget.php');
+	require( $inspiralia_theme_custom_widgets_path . 'markets/markets-parent-related-widget.php');
 
 	// ========================================================================================/
 	require( $inspiralia_theme_custom_post_type_widgets_path . 'testimonial-extra-fields-widget.php');
@@ -236,7 +238,7 @@ class Footer_Area_Menu_Widget extends WP_Widget {
 function add_background_when_need($prefix) {
 		global $post;
 		if (get_post_meta($post->ID, $prefix . "-imagen", true )) {
-			return "background: url(".get_post_meta($post->ID, $prefix . "-imagen", true ).") no-repeat;";
+			return "background-image: url(".get_post_meta($post->ID, $prefix . "-imagen", true )."); background-repeat: no-repeat;";
 		} else {
 			if(get_post_meta($post->ID, $prefix . "-background-color", true )) {
 				return "background-color: ".get_post_meta($post->ID, $prefix . "-background-color", true ).";";

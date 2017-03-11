@@ -54,10 +54,14 @@ get_template_part('index','banner'); ?>
             <?php endwhile; // End of the loop. ?>
 
             <div class="item_join_us col-xs-6 col-sm-4 col-md-3 col-lg-3">
-              <header><h3>Join us!</h3></header>
-              <section>
-                &nbsp;
-              </section>
+              <a href="<?php echo get_permalink(239); ?>">
+                <header>
+                  <h3>Join us!</h3>
+                </header>
+                <section>
+                  &nbsp;
+                </section>
+              </a>
             </div>
           </main>
         </section>
