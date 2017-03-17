@@ -114,7 +114,7 @@
 }
 
 .inspiralia-trhead.blog-header {
-	height: 85px;
+	height: 65px;
 }
 
 .inspiralia-cart {
@@ -495,15 +495,151 @@ main#content.blog_content {
 	margin: 20px 0;
 }
 /*---------------------------------------
+  case studies post
+-----------------------------------------*/
+
+section.hero-case-studies-title {
+  padding: 4rem 0;
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-case-studies-title h1.inspiralia-case-studies-title {
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+
+.hero-case-studies-title span.inspiralia.case_studies-date span {
+  font-family: 'gothambold', sans-serif;
+  font-size: 1.4rem;
+}
+
+.case_studies_post {
+  position: relative;
+}
+
+.case_studies_post article {
+  font-family: 'clavobook', sans-serif;
+  font-size: 1.885rem;
+}
+
+.case_studies_post article article {
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.case_studies_post article h2.header-2 {
+  text-align: center;
+  font-size: 2.515rem;
+  line-height: 9rem;
+}
+
+.case_studies_post article .introduction {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 2.514rem;
+  margin: 2rem 0;
+}
+
+
+.case_studies_post article .services_provided h3.header-3 {
+  text-align: center;
+  font-size: 2.515rem;
+  line-height: 9rem;
+}
+
+.case_studies_post aside > div {
+  text-align: center;
+  min-height: 21rem;
+}
+
+.case_studies_post aside .markets_relation {
+  background-position: center;
+  background-size: cover;
+}
+
+.case_studies_post aside .markets_relation h2 {
+  font-size: 1.886rem;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 0 3rem 0;
+}
+
+.case_studies_post aside .markets_relation img {
+  width: 35%;
+  margin: 6rem auto 2rem auto;
+  min-height: 8.8rem;
+}
+
+
+.case_studies_post aside .shared_links {
+  padding: 16rem 0;
+}
+
+.case_studies_post aside .shared_links a {
+  border-radius: 2.5rem;
+  border-width: 2px;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+  display: block;
+  padding-top: 5px;
+  margin: 0 auto; 
+}
+
+.case_studies_post aside .newsletter {
+  min-height: 150px;
+  padding: 2.3rem 1.2rem;
+}
+.case_studies_post aside .title {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 1.886rem;
+  text-align: center;
+  display: block;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.case_studies_post aside .newsletter .row form div input {
+  width: 100%;
+  border-radius: 2.5rem;
+  float: right;
+}
+
+.case_studies_post aside .newsletter .row form div input.submit {
+  width: 100%;
+  box-shadow: none;
+}
+
+.case_studies_post .members_of {
+  padding: 5rem 0;
+}
+
+.case_studies_post .members_of .row > div img {
+  height: 8rem;
+}
+
+.case_studies_post .members_of .row .un img {
+  float: right;
+}
+.case_studies_post .members_of .row .seventh img {
+  float: left;
+}
+/*---------------------------------------
   Blog post
 -----------------------------------------*/
 
 section.hero-blog-title {
   padding: 4rem 0;
+  background-image: url('images/blog/blog_post_title.png');
+  background-repeat: repeat-x;
 }
 
 section.hero-blog-title h2.inspiralia-blog-title {
-  width: 70%;
+  width: 85%;
   margin: 0 auto;
   font-weight: normal;
   font-size: 4rem;
@@ -514,15 +650,18 @@ main#content .blog_post {
 }
 
 main#content .blog_post article {
+  font-family: 'clavobook', sans-serif;
+  font-size: 1.885rem
 }
 
 main#content .blog_post article .introduction {
-  font-size: 2rem;
+  font-family: 'gothamregular', sans-serif;
+  font-size: 2.514rem;
   margin: 2rem 0;
 }
 
 main#content .blog_post article .small .inspiralia-blog-date span {
-  font-weight: bold;
+  font-family: 'gothambold', sans-serif;
   font-size: 1.4rem;
 }
 
@@ -530,6 +669,55 @@ main#content .blog_post aside {
   position: absolute;
   margin: 1rem 0 0 -10rem;
 }
+
+main#content .blog_post aside.share_links {
+  margin-top: 15rem;
+}
+
+main#content .blog_post aside.share_links a {
+  border-radius: 2.5rem;
+  border-width: 2px;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+  display: block;
+  padding-top: 5px;
+}
+
+
+main#content .blog_post .newsletter {
+  min-height: 150px;
+  padding: 1.2rem;
+  margin-top: 2.3rem;
+}
+main#content .blog_post .newsletter .title {
+  font-family: 'Debby', sans-serif;
+  font-size: 3.35rem;
+  text-align: center;
+  display: block;
+  line-height: 6rem;
+}
+
+main#content .blog_post .newsletter .row div input {
+  width: 100%;
+  float: right;
+}
+
+main#content .blog_post .newsletter .row div input.submit {
+  width: 60%;
+  margin-right: 30px;
+  box-shadow: none;
+}
+
+.bottom_separator {
+  background-image: url('images/blog/blog_post_bottom.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4rem 0;
+}
+
 /*---------------------------------------
 	Typography
 -----------------------------------------*/
@@ -1574,6 +1762,10 @@ ul#accordion, ul#accordion_custom {
   font-size: 1.716rem;
 }
 
+#map {
+  min-height: 620px;
+  width: 100%;
+}
 /*---------------------------------------
   inspiralia-testimonial-section
 -----------------------------------------*/
@@ -2115,6 +2307,12 @@ proud-member-logos
 	text-align: center;
   z-index: 1000;
 }
+
+.inspiralia-breadcrumb-title.contact {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .inspiralia-breadcrumb-title h1 {
 	font-size: 10.1rem;
 	font-weight: normal;
@@ -2436,6 +2634,62 @@ proud-member-logos
 	border-radius: 0 3px 3px 0;
 	margin-left: -1px;
 }
+main.contact_content {
+  padding: 11.5rem 10rem;
+}
+
+main.contact_content section.description h2 {
+  text-align: center;
+  font-family: 'gothambold', sans-serif;
+  font-size: 3.77rem;
+  margin-bottom: 5rem;
+}
+main.contact_content .row section.description .content {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 1.885rem;
+  line-height: 2.5rem;
+}
+
+main.contact_content .row section.description .content > p {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+main.contact_content .row section.description aside {
+  margin-left: 2rem;
+  padding: 7rem 2rem;
+}
+
+main.contact_content .row section.description aside h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+main.contact_content .row section.description aside img {
+  margin: 0 auto;
+  display: block;
+}
+
+.wpcf7 {
+  width: 79%;
+  float: left;
+}
+
+.wpcf7 .wpcf7-form .wpcf7-form-control.wpcf7-submit {
+  float: right;
+}
+
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap.name input {
+  width: 49%;
+  float: left;
+}
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap.email input {
+  width: 49%;
+  float: right;
+}
+
+
 /* --------------------------------------
 =========================================
 	inspiralia-error page

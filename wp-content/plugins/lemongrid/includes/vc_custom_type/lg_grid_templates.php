@@ -19,4 +19,3 @@ function lgShortcodeGridTemplate( $settings, $value )
    
     return $output;
 }
-?>

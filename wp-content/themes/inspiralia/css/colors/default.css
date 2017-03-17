@@ -20,6 +20,7 @@
 	border-color: #00b1dd;
 }
 */
+
 .inspiralia-slider-section .item a,
 .inspiralia-slider-section .item a h2,
 .inspiralia-slider-section .item  {
@@ -196,8 +197,89 @@ main#content .blog_post article hr {
 	padding: 3px;
 }
 
+
+main#content .blog_post .newsletter {
+	background-color: #00b1dd;
+}
+
+main#content .blog_post .newsletter .title {
+	color: #FFF;
+}
+
+main#content .blog_post .newsletter .row div input.submit {
+	background-color: #00b1dd;
+	border-color: #fff;
+	color: #FFF;
+}
+
+main#content .blog_post .newsletter .row div input.submit:hover {
+	background-color: #FFF;
+	border-color: #00b1dd;
+	color: #00b1dd;
+}
+
+main#content .blog_post aside.share_links a {
+	color: #e5e5e5;
+}
+
 main#main section.description, main#main section.description h2 {
 	color: #58595b;
+}
+
+/* =============================================== */
+.hero-case-studies-title .inspiralia-case-studies-title {
+	color: #00b1dd;
+}
+
+.hero-case-studies-title .inspiralia-case-studies-date span {
+	color: #e5e5e5;
+}
+
+.case_studies_post article .services_provided h3.header-3,
+.case_studies_post article h2.header-2 {
+	color: #00b1dd;
+}
+
+.case_studies_post aside .title {
+	color: #00b1dd;
+}
+
+.case_studies_post aside .markets_relation {
+	background-color: #f2f2f2;
+}
+.case_studies_post aside .markets_relation h2 {
+	color: #00b1dd;
+}
+.case_studies_post aside .markets_relation img {
+	border-color: #00b1dd;
+}
+.case_studies_post aside .shared_links {
+	background-color: #00b1dd;
+}
+
+.case_studies_post aside .shared_links a {
+	color: #FFF;
+}
+
+.case_studies_post aside .newsletter {
+	background-color: #f2f2f2;
+}
+
+.case_studies_post aside .newsletter .row form div input {
+  border: none;
+  text-align: center;
+}
+
+.case_studies_post aside .newsletter .row form div input.submit {
+  background-color: transparent !important;
+  border-color: #00b1dd;
+  border-width: 1px;
+  border-style: solid;
+  color: #00b1dd;
+}
+
+.case_studies_post .members_of .row > div img:hover {
+	filter: grayscale(100%);
 }
 
 /*=== theme hover background ===*/
@@ -553,6 +635,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	color: #58595b;
 }
 
+
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap input,
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap textarea {
+	border-color: #00b1dd;
+}
+
+
+main.contact_content section.description h2{
+	color: #58595b;
+}
+
+main.contact_content .row section.description aside {
+	background-color: #f2f2f2;
+}
 
 /*==================== footer color ====================*/
 /*=== footer heading color ===*/

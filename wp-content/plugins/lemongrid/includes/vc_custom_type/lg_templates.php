@@ -21,4 +21,3 @@ function lgShortcodeTemplate( $settings, $value )
    
     return $output;
 }
-?>

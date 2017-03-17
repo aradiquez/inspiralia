@@ -7,6 +7,10 @@ $lemongrid_options = json_encode( array(
 	'animate'			=> true,
 	) );
 
+	function is_video_post() {
+		return false;
+	}
+
 /**
  * lgItemPostTemp
  *
@@ -26,13 +30,13 @@ if( ! class_exists( 'lgItemPostTemp' ) ) :
 			$posts->the_post();
 
 			if( has_post_thumbnail() ):
-                $thumbnail_data = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' );
-            	$thumbnail = $thumbnail_data[0];
-            else:
-                $thumbnail = '';
-            endif;
+				$thumbnail_data = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+				$thumbnail = $thumbnail_data[0];
+			else:
+				$thumbnail = '';
+			endif;
 			$style = implode( ';', array( 
-				"background: url({$thumbnail}) no-repeat center center / cover, #333", 
+				"background: url('" . $thumbnail . "') no-repeat center center / cover, #333", 
 				) );
 
 			/**
@@ -43,34 +47,50 @@ if( ! class_exists( 'lgItemPostTemp' ) ) :
 			/**
 			 * Data
 			 */
-			$_date = '<p class=\'date\'>'. get_the_date( 'M d Y' ) .'</p>';
+			$_topic = '';
+			$categories = get_the_category();
+			if ( ! empty( $categories ) ) {
+			    $_topic = '<span class=\'topic\'>'.( $categories[0]->name ).'</span>';   
+			}
 
 			/**
 			 * Icon Comment & Author
 			 */
 			$comments_count = wp_count_comments( get_the_ID() );
-			$_comment_author = '
-				<div class=\'comment-author\'>
-					<span class=\'comment\'><i class=\'ion-android-chat\'></i> '. $comments_count->total_comments .'</span>
-					<span class=\'author\'><i class=\'ion-person\'></i> '. get_the_author() .'</span>
+			$_comment_author = '';
+
+			# <a title=\''. get_the_title() .'\' href=\''. get_permalink() .'\'><i class=\'fa fa-link\'></i></a>
+			
+			$play_button = '
+				<div class=\'lemongrid-icon\'>
+					<a href=""><i class="fa fa-play-circle" aria-hidden="true"></i></a>
 				</div>';
+				
+			$info_text = '
+				<div class=\'info-text\'>
+					<a title=\''. get_the_title() .'\' href=\''. get_permalink() .'\'>'. $_title .'</a>
+					'. $_topic .'
+				</div>';
+				
+			$lemon_icon = '
+				<div class=\'lemongrid-icon\'>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=' . the_permalink() .'" class="linkedin-share-button" target="_blank">
+						<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+          <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+				</div>';
+
+			$info_content = (is_video_post() ? $play_button : $lemon_icon) . '<br/>' . $info_text;
 
 			$info = '
 			<div class=\'lemongrid-info\'>
-				<div class=\'lemongrid-icon\'>
-					<a title=\''. get_the_title() .'\' href=\''. get_permalink() .'\'><i class=\'fa fa-link\'></i></a>
-				</div>
-				<div class=\'info-text\'>
-					'. $_title .'
-					'. $_date .'
-					'. $_comment_author .'
-				</div>
+				' . $info_content . '
 			</div>';
 
 			$output .= '
 				<div class=\'lemongrid-item lg-animate-fadein grid-stack-item\' data-gs-x=\''. esc_attr( $grid[$k]['x'] ) .'\' data-gs-y=\''. esc_attr( $grid[$k]['y'] ) .'\' data-gs-width=\''. esc_attr( $grid[$k]['w'] ) .'\' data-gs-height=\''. esc_attr( $grid[$k]['h'] ) .'\'>
 					<div class=\'grid-stack-item-content\' style=\''. esc_attr( $style ) .'\'>
-						'. $info .'
+						'. esc_attr( $info ).'
 					</div>
 				</div>';
 
