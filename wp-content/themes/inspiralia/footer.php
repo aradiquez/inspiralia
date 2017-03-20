@@ -11,18 +11,16 @@
 
   <footer>
     <div class="inspiralia-footer-widget-area">
-      <div class="container">
-        <div class="row">
-          <div class="inspiralia-widget">
-            <!--Start inspiralia-footer-widget-area-->
-            <?php if ( is_active_sidebar( 'footer_widget_area_contact_information' ) ) { ?>
-              <?php  dynamic_sidebar( 'footer_widget_area_contact_information' ); ?>
-            <?php } ?>
+      <div class="row">
+        <div class="inspiralia-widget">
+          <!--Start inspiralia-footer-widget-area-->
+          <?php if ( is_active_sidebar( 'footer_widget_area_contact_information' ) ) { ?>
+            <?php  dynamic_sidebar( 'footer_widget_area_contact_information' ); ?>
+          <?php } ?>
 
-            <?php if ( is_active_sidebar( 'footer_widget_area_menu' ) ) { ?>
-              <?php  dynamic_sidebar( 'footer_widget_area_menu' ); ?>
-            <?php } ?>
-          </div>
+          <?php if ( is_active_sidebar( 'footer_widget_area_menu' ) ) { ?>
+            <?php  dynamic_sidebar( 'footer_widget_area_menu' ); ?>
+          <?php } ?>
         </div>
       </div>
     </div>

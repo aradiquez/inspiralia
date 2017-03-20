@@ -23,6 +23,15 @@ get_template_part('index','banner'); ?>
 			<!--Sidebar Area-->
 			</div>
 		</div>
+		<div class="col-md-12 text-center">
+			<?php
+			//Previous / next page navigation
+			the_posts_pagination( array(
+			'prev_text'          => __( '<i class="fa fa-long-arrow-left"></i>', 'inspiralia' ),
+			'next_text'          => __( '<i class="fa fa-long-arrow-right"></i>', 'inspiralia' ),
+			) );
+			?>
+    </div>
 	</div>
 </main>
 <?php

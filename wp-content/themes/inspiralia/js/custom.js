@@ -48,12 +48,16 @@ jQuery(document).ready(function() {
   //------------------------------------------
 
   jQuery("#testimonial").owlCarousel({
-    navigation : false, // Show next and prev buttons
+    navigation : true, // Show next and prev buttons
     slideSpeed : 800,
     pagination : false,
     singleItem: true,
     autoPlay : true,
-    autoWidth: true
+    autoWidth: true,
+    navigationText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>"
+      ]
   });
 
   //------------------------------------------
@@ -61,11 +65,11 @@ jQuery(document).ready(function() {
   //------------------------------------------
 
   jQuery(".inspiralia-project-news-post-box-link").on('mouseover', function(){
-    jQuery(this).find('img').css({ 'opacity': '0.6' });
-    jQuery(this).find('article.text-center.center-block.large').css({ 'display' : 'block' });
+    jQuery(this).addClass('active');
+    jQuery(this).find('article').css({ 'display' : 'block' });
   }).on('mouseout', function(){
-    jQuery(this).find('img').css({ 'opacity': '1' })
-    jQuery(this).find('article.text-center.center-block.large').css({ 'display' : 'none' });;
+    jQuery(this).removeClass('active');
+    jQuery(this).find('article').css({ 'display' : 'none' });
   });
 
   //------------------------------------------

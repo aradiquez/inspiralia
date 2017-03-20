@@ -20,6 +20,12 @@
 	border-color: #00b1dd;
 }
 */
+.wrapper .navbar-background.internal {
+	background-color: #CDCECE;
+}
+.wrapper .navbar-background {
+	background-color: #FFF;
+}
 
 .inspiralia-slider-section .item a,
 .inspiralia-slider-section .item a h2,
@@ -27,12 +33,21 @@
 	color: #FFF;
 }
 
-.inspiralia-trhead.blog-header .inspiralia-main-nav ul#menu-main li.menu-item a {
-	color: #58595b;
+.navbar-default {
+	background-color: transparent;
 }
-.inspiralia-trhead.blog-header .inspiralia-main-nav ul#menu-main li.menu-item a:hover {
-	color: #58595b;
-	border-bottom: 2px solid #58595b;
+
+.inspiralia-trhead.blog-header .inspiralia-main-nav #navbar-wp ul#menu-main li.menu-item a {
+	color: #77828c;
+}
+
+.inspiralia-trhead.blog-header .inspiralia-main-nav #navbar-wp.internal img {
+	border: none;
+}
+
+.inspiralia-trhead.blog-header .inspiralia-main-nav #navbar-wp.internal ul#menu-main li.menu-item a {
+	color: #FFF;
+	border-color: #FFF;
 }
 
 .owl-controls .owl-buttons {
@@ -40,6 +55,10 @@
 }
 .current-page-ancestor a, .current-menu-item a {
 	border-bottom-color: #58595b;
+}
+
+ul#menu-main li.menu-item a:hover {
+	border-bottom-color: ;
 }
 
 body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .navbar-toggle {
@@ -59,8 +78,8 @@ body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .nav
 /*=== navbar Header background ===*/
 .navbar-wp {
 	/*background-color: rgba(0,0,0,0);*/
-	background-color: #FFF;
-}.navbar-wp .dropdown-menu {
+}
+.navbar-wp .dropdown-menu {
 	background-color: #fff;
 }
 /*=== navbar drop down hover color ===*/
@@ -171,6 +190,12 @@ a, .inspiralia-view-detail-content a, .inspiralia-blog-category a:hover, .inspir
 .inspiralia-section .need-item.need-information .button, .testimonials-section .inspiralia-client img {
 	border-color: #00b1dd;
 }
+
+.inspiralia-section .need-item.need-information .button:hover {
+	background-color: #00b1dd;
+	color: #fff;
+}
+
 .inspiralia-heading-bor-bt h5::before, .inspiralia-skills h5::before  {
 	border-bottom-color: #00b1dd;
 }
@@ -347,7 +372,7 @@ footer .inspiralia-widget.widget_search .btn:hover, footer .inspiralia-widget.wi
 	border-color: #222;
 }
 
-.inspiralia-service, .inspiralia-service:hover .ser-icon, .navbar-toggle:hover .icon-bar, .navbar-toggle:focus .icon-bar, .inspiralia-link-caption i, .inspiralia-feature, .blog-slider .owl-controls .owl-page span, .inspiralia-clients-section {
+.inspiralia-service, .inspiralia-service:hover .ser-icon, .inspiralia-link-caption i, .inspiralia-feature, .blog-slider .owl-controls .owl-page span, .inspiralia-clients-section {
 	background-color: #fff;
 }
 .inspiralia-service :hover .inspiralia-service-inner i, .inspiralia-service-inner h3, .inspiralia-service-inner h3 a, .inspiralia-service-inner p, .inspiralia-service :hover .inspiralia-service-inner h3, .inspiralia-service-inner .btn-more, footer .inspiralia-widget-payment a:hover, .inspiralia-detail-download .btn-download, .inspiralia-slider-warraper .owl-controls .owl-buttons div, .inspiralia-view-detail-slider .owl-controls .owl-buttons div,footer .inspiralia-social li span.icon-soci:hover i, .btn.btn-tislider, .inspiralia-service:hover .ser-icon, .inspiralia-sidebar .widget_product_search .btn, footer .widget_product_search .btn, .btn-theme-two, .inspiralia-service:hover .inspiralia-service-inner p, footer .inspiralia-widget ul li, footer .inspiralia-widget.widget_search .btn:hover, footer .calendar_wrap table tbody td, footer .inspiralia-widget .inspiralia-opening-hours li:hover, footer .inspiralia-widget .list-unstyled li a:hover, footer .inspiralia-widget ul li a:hover, footer .inspiralia-widget h6, footer a:hover, footer a:focus, footer .inspiralia-widget.widget_search .btn:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, .inspiralia-video .overlay .inspiralia-heading-inner, .inspiralia-video .overlay .subtitile, .inspiralia-calltoaction, .inspiralia-calltoaction h5, .inspiralia-calltoaction .btn-theme, .inspiralia-blog-date, .btn-blog:hover, .blog-slider .owl-controls .owl-buttons div, .blog-slider .owl-controls .owl-buttons div:hover, .inspiralia-contact .inspiralia-widget-address .icon-addr, .inspiralia-contact .inspiralia-widget-address li span.icon-addr i, footer .inspiralia-widget .inspiralia-social li span.icon-soci:hover i, .btn.btn-tislider, .btn.btn-tislider:hover, .btn.btn-tislider:focus, .inspiralia-plans .inspiralia-plan header, .inspiralia-plans .inspiralia-plan h2, .inspiralia-plans .inspiralia-plan .inspiralia-pupular-ribbon, .inspiralia-plans .inspiralia-plan .inspiralia-new-ribbon, .inspiralia-plans .inspiralia-plan .inspiralia-upcoming-ribbon, footer .inspiralia-widget .inspiralia-widget-address li span.icon-addr, footer .inspiralia-widget .inspiralia-social li span .icon-soci:hover, footer .inspiralia-widget .inspiralia-widget-tags a:hover, footer .inspiralia-widget .tagcloud a:hover, footer .calendar_wrap a, footer .calendar_wrap table tbody #today, footer .widget_rss, .pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .pagination > li > a:focus, .inspiralia-feature-box-icon i:hover, .inspiralia-slider-inner h1, .inspiralia-slider-inner h3, .inspiralia-slider-inner p, .inspiralia-breadcrumb-title h1, .inspiralia-page-breadcrumb > li + li:before, .inspiralia-page-breadcrumb > li a, .content-testimonials span.icon-quote, #inspiralia-testimonial .owl-controls .owl-buttons div, #inspiralia-testimonial .owl-controls .owl-buttons div:hover, .testimonials-section .user-designation, .inspiralia-sidebar .inspiralia-widget .inspiralia-widget-address li span.icon-addr, .inspiralia-skills .progress-bar-theme, .btn, .btn-theme:hover, .btn-theme:focus, .btn-theme-two:hover, .btn-theme-two:focus, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci:hover i, .inspiralia-sidebar .inspiralia-widget .inspiralia-social li span.icon-soci:hover, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn, #inspiralia-slider .item .inspiralia-slider-inner .aside-format .aside-icon i, #inspiralia-slider .item .inspiralia-slider-inner .aside-format .aside-format-inner, #inspiralia-slider .item .inspiralia-slider-inner .audio-format .audio-icon i, #inspiralia-slider .item .inspiralia-slider-inner .audio-format .audio-format-inner, #inspiralia-slider .item .inspiralia-slider-inner .quote-format .quote-icon i, #inspiralia-slider .item .inspiralia-slider-inner .quote-format .quote-format-inner, .inspiralia-service:hover .ser-icon, .inspiralia-service:hover h3, .inspiralia-service:hover p, .inspiralia-service:hover a, .inspiralia-service:hover .inspiralia-service-inner h3 span, .inspiralia-service:hover .inspiralia-service-inner .btn-more, .inspiralia-funfact h3.inspiralia-heading-inner, .inspiralia-funfact, .inspiralia-portfolio-box .inspiralia-portfolio-box-caption, .inspiralia-link-caption a, .inspiralia-portfolio-box .inspiralia-portfolio-box-caption .inspiralia-portfolio-box-caption-content .inspiralia-project-category a, .inspiralia-port-modal .modal-title, .inspiralia-sidebar .inspiralia-widget-tags a:hover, .inspiralia-sidebar .inspiralia-widget .tagcloud a:hover, .inspiralia-sidebar .calendar_wrap tbody #today, .inspiralia-sidebar .widget_search .btn, footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit, .wpcf7-form .wpcf7-form-control.wpcf7-submit, .btn.btn-tislider-two, .btn-tislider-two:hover, .btn-tislider-two:focus, .inspiralia-slider-warraper .owl-controls .owl-buttons div, .inspiralia-slider-warraper .owl-controls .owl-buttons div:hover, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus, input[type="submit"], button, .inspiralia-subscriber h4, .inspiralia-subscriber h2, .inspiralia-search-box .inspiralia-search .btn, .inspiralia-search .btn-submit, input[type="submit"]:hover, button:hover, input[type="submit"]:focus, button:focus {
@@ -639,8 +664,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .wpcf7 .wpcf7-form .wpcf7-form-control-wrap input,
 .wpcf7 .wpcf7-form .wpcf7-form-control-wrap textarea {
 	border-color: #00b1dd;
+	color: #e3e3e3;
 }
 
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #e3e3e3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #e3e3e3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #e3e3e3;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #e3e3e3;
+}
 
 main.contact_content section.description h2{
 	color: #58595b;

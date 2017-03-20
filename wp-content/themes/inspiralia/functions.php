@@ -238,10 +238,16 @@ class Footer_Area_Menu_Widget extends WP_Widget {
 function add_background_when_need($prefix) {
 		global $post;
 		if (get_post_meta($post->ID, $prefix . "-imagen", true )) {
-			return "background-image: url(".get_post_meta($post->ID, $prefix . "-imagen", true )."); background-repeat: no-repeat;";
+			return "background-image: url(".get_post_meta($post->ID, $prefix . "-imagen", true )."); background-repeat: no-repeat; filter: grayscale(100%);";
 		} else {
 			if(get_post_meta($post->ID, $prefix . "-background-color", true )) {
 				return "background-color: ".get_post_meta($post->ID, $prefix . "-background-color", true ).";";
 			}
 		}
+}
+
+function get_ID_by_page_name($page_name) {
+   global $wpdb;
+   $page_name_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$page_name."' AND post_type = 'page'");
+   return $page_name_id;
 }

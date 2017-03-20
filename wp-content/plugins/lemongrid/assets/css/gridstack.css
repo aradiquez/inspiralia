@@ -40,7 +40,12 @@
   -ms-touch-action: none;
   touch-action: none;
 }
-.grid-stack > .grid-stack-item.ui-resizable-disabled > .ui-resizable-handle, .grid-stack > .grid-stack-item.ui-resizable-autohide > .ui-resizable-handle {
+
+.grid-stack > .grid-stack-item.ui-resizable-autohide > .ui-resizable-handle {
+  display: inline;
+}
+
+.grid-stack > .grid-stack-item.ui-resizable-disabled > .ui-resizable-handle {
   display: none;
 }
 .grid-stack > .grid-stack-item.ui-draggable-dragging, .grid-stack > .grid-stack-item.ui-resizable-resizing {

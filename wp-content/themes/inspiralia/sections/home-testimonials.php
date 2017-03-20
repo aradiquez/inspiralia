@@ -6,11 +6,17 @@
 <?php } ?>
   <div id="testimonial" class="container">
     <?php
-    $inspiralia_latest_loop = new WP_Query( array( 'post_type' => 'testimonials', 'order' => 'DESC') );
+    $count = 0;
+    $inspiralia_latest_loop = new WP_Query( array( 'post_type' => 'testimonials', 'order' => 'rand') );
     if ( $inspiralia_latest_loop->have_posts() ) :
     while ( $inspiralia_latest_loop->have_posts() ) : $inspiralia_latest_loop->the_post();?>
       <div class="row">
+      <?php if($count % 2 != 0) { ?>
         <div class="col-sm-12 col-md-12 col-lg-12 item" <?php if ( has_post_thumbnail() ) : ?> style="background-image: url(<?php the_post_thumbnail_url(); ?>);" <?php else:?> <?php endif; ?>>
+        <div class="clearfix"></div>
+        </div>
+      <?php } else { ?>
+        <div class="col-sm-12 col-md-12 col-lg-12 item">
           <div class="inspiralia-testimonial-post-box white">
             <article class="large">
               <div class="post_content <?php echo ( has_post_thumbnail() ) ? "image" : '' ?>">
@@ -30,6 +36,7 @@
             <div class="clearfix"></div>
           </div>
         </div>
+      <?php } $count++; ?>
       </div>
     <?php endwhile; endif;	wp_reset_postdata(); ?>
   </div>

@@ -16,7 +16,7 @@ get_template_part('index','banner');
 <main id="content">
   <div class="container">
     <div class="row">
-      <div class="<?php echo ( !is_active_sidebar( 'sidebar_primary' ) ? '12' :'9' ); ?> col-md-9 col-sm-8">
+      <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="row">
       			<?php
         			if( have_posts() ) :
@@ -26,7 +26,7 @@ get_template_part('index','banner');
 
               get_template_part('content','');
       			?>
-          <div class="col-md-12 text-center">
+          <div class="col-lg-12 col-sm-12 col-md-12 text-center">
       			<?php
         			//Previous / next page navigation
         			the_posts_pagination( array(
@@ -37,13 +37,9 @@ get_template_part('index','banner');
           </div>
         </div>
       </div>
-	    <aside class="col-md-3 col-sm-4">
-        <?php get_sidebar(); ?>
-      </aside>
     </div>
   </div>
 </main>
 <?php
-get_sidebar();
 get_footer();
 ?>

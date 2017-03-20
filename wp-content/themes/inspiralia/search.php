@@ -12,7 +12,7 @@ get_template_part('index','banner');
 <main id="content">
   <div class="container">
     <div class="row">
-      <div class="<?php echo ( !is_active_sidebar( 'sidebar_primary' ) ? '12' :'9' ); ?> col-md-9">
+      <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="row">
           <?php
 		global $i;
@@ -30,9 +30,6 @@ get_template_part('index','banner');
 		<?php endif; ?>
          </div>
       </div>
-	  <aside class="col-md-3">
-        <?php get_sidebar(); ?>
-      </aside>
     </div>
   </div>
 </main>
