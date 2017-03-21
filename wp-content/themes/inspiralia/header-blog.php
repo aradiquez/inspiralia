@@ -41,7 +41,12 @@
             <div class="site-branding">
             	<div class="wrap">
 
-            		<?php the_custom_logo(); ?>
+            		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
+                  <span class="custom-logo" alt="<?php bloginfo( 'name' ); ?>" itemprop="logo">
+                    &nbsp;
+                  </span>
+                </a>
+                <?php #the_custom_logo(); ?>
                 <h1 class="blog">Blog</h1>
 
             	</div><!-- .wrap -->

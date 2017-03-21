@@ -54,7 +54,8 @@ get_template_part('index','banner'); ?>
             <?php endwhile; // End of the loop. ?>
 
             <div class="item_join_us col-xs-6 col-sm-4 col-md-3 col-lg-3">
-              <a href="<?php echo get_permalink(get_ID_by_page_name('Careers')); ?>">
+              <?php $page_careers = get_page_by_title('Careers'); ?>
+              <a href="<?php echo get_permalink($page_careers); ?>">
                 <header>
                   <h3>Join us!</h3>
                 </header>

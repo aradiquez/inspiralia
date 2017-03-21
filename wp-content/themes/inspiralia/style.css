@@ -107,6 +107,19 @@
 	Header
 =========================================
 -----------------------------------------*/
+.inspiralia-main-nav .navbar .navbar-header .site-branding .wrap .custom-logo {
+  width: 144px;
+  height: 55px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+.inspiralia-main-nav .navbar .navbar-header button.navbar-toggle.collapsed {
+  margin-top: 20px;
+}
+
 .inspiralia-trhead {
 	z-index: 999;
   width: 100%;
@@ -346,7 +359,7 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 }
 
 ul#menu-main {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-right: 95px;
 }
 
@@ -356,6 +369,7 @@ ul#menu-main li.menu-item a {
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 20px;
   letter-spacing: initial;
 }
 
@@ -1306,7 +1320,7 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
 .inspiralia-section .need-item.need-information .button {
   position: absolute;
   bottom: 5%;
-  right: 28%;
+  right: 27%;
   -webkit-border-radius: 38px;
   -moz-border-radius: 38px;
   border-radius: 38px;
@@ -3342,122 +3356,187 @@ footer .inspiralia-social li span.icon-soci a {
 }
 }
 /* [end] woocommerce */
-@media (min-width: 768px) and (max-width: 991px) {
-.navbar-header {
-	float: none;
-}
-}
+
  @media only screen and (min-width: 240px) and (max-width: 460px) {
 .inspiralia-footer-top-area .inspiralia-app-widget .btn {
 	margin-top: 10px;
 }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-/* Top Details*/
-.inspiralia-head-detail .info-left {
-	float: none;
-	text-align: center;
-	margin: 10px 0 17px;
-	float: none;
-}
-.inspiralia-head-detail .info-right {
-	float: none;
-	text-align: center;
-	margin: 10px 0 17px;
-	float: none;
-}
-.navbar-wp .navbar-nav > li > a {
-	padding: 12px;
-  font-weight: bold;
-}
-.navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus {
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	z-index: 8;
-}
-.navbar-wp .inspiralia-search-box {
-	float: left;
+  /* Top Details*/
+  .inspiralia-head-detail .info-left {
+  	float: none;
+  	text-align: center;
+  	margin: 10px 0 17px;
+  	float: none;
+  }
+  .inspiralia-head-detail .info-right {
+  	float: none;
+  	text-align: center;
+  	margin: 10px 0 17px;
+  	float: none;
+  }
+  .navbar-wp .navbar-nav > li > a {
+  	padding: 12px;
+    font-weight: bold;
+  }
+  .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus {
+  	border-bottom-width: 3px;
+  	border-bottom-style: solid;
+  	z-index: 8;
+  }
+  .navbar-wp .inspiralia-search-box {
+  	float: left;
+  }
+
+  .inspiralia-search {
+  	margin: 0 auto;
+  }
+  .inspiralia-plans .inspiralia-plan.active {
+  	transform: scale(1);
+  }
+  .inspiralia-subscriber .subscription-form .int-box {
+  	width: 100%;
+  }
 }
 
-.inspiralia-search {
-	margin: 0 auto;
+/* MEDIUM SCREEN SIZE */
+
+@media screen and (min-width: 1024px) and (max-width: 1179px) {
+  .boxed {
+  	width: auto;
+  }
+  .inspiralia-slider-inner p {
+  	width: auto;
+  }
+  .inspiralia-section .need-item.need-information .button {
+    width: 50%;
+    right: 28%;
+  }
+
+  .owl-controls .owl-buttons .owl-next {
+    margin: 0 2% 0 0;
+  }
+  footer .inspiralia-footer-widget-area .inspiralia-widget .widget_text {
+    padding: 0;
+    margin: 0;
+  }
+
 }
-.inspiralia-plans .inspiralia-plan.active {
-	transform: scale(1);
-}
-.inspiralia-subscriber .subscription-form .int-box {
-	width: 100%;
-}
-}
-@media screen and (min-width: 1024px) {
-.inspiralia-slider-inner {
-}
-}
-@media screen and (min-width: 240px) and (max-width: 1179px) {
-.boxed {
-	width: auto;
-}
-.inspiralia-slider-inner p {
-	width: auto;
-}
-}
+
+/* 5inch SCREEN SIZE */
+
 @media screen and (min-width: 530px) and (max-width: 1024px) {
-/*--------------- inspiralia-slider ---------------*/
-.inspiralia-slider-inner {
-	min-width: auto !important;
-	width: auto !important;
+  /*--------------- inspiralia-slider ---------------*/
+  .inspiralia-slider-inner {
+  	min-width: auto !important;
+  	width: auto !important;
+  }
+
+  .inspiralia-breadcrumb-title h1 {
+    margin: 14rem auto 0 auto;
+  }
+  .inspiralia-section .need-item.need-information .button {
+    position: initial;
+    margin: 0 auto;
+    display: block;
+    width: 40%;
+    padding: 10px 0;
+  }
+
+  footer .inspiralia-footer-widget-area .inspiralia-widget .widget_text {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer .inspiralia-widget .widget_nav_menu .menu-footer-menu-container ul li a {
+    padding: 10px;
+    display: block;
+  }
 }
-}
+
+
+/* MINIMUM SIZE */
+
 @media screen and (min-width: 481px) and (max-width: 767px) {
-#inspiralia-slider .slide-caption h1{
-	font-size: 450%;
+  #inspiralia-slider .slide-caption h1{
+  	font-size: 450%;
+  }
+
+  .inspiralia-breadcrumb-title h1 {
+    margin: 2rem auto 0 auto;
+  }
+
+  #product .row .need-item {
+    max-height: 300px;
+  }
+  .inspiralia-section .need-item.need-information .button {
+    width: 30%;
+    position: initial;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+  }
+  .owl-controls .owl-buttons .owl-next {
+    margin: 0 6% 0 0;
+  }
+
+  footer .inspiralia-footer-widget-area .inspiralia-widget .widget_text {
+    margin: 0;
+    text-align: center;
+  }
+  #nav_menu-4 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  footer .inspiralia-widget .widget_nav_menu a {
+    padding: 10px;
+  }
 }
-.inspiralia-section .need-item.need-information .button {
-  right: 38%;
-}
-}
-@media screen and (min-width: 240px) and (max-width: 767px) {
-.inspiralia-section .need-item.need-information .button {
-  right: 38%;
-}
+
+
+
+
+
+
 @media screen and (max-width: 481px) {
 
-}
-/*--------------- inspiralia-slider ---------------*/
-.navbar-wp .navbar-nav>.active>a, .navbar-wp .navbar-nav>.active>a:hover, .navbar-wp .navbar-nav>.active>a:focus {
-	border-bottom: none;
-}
-.navbar-wp .navbar-nav > a, .navbar-wp .navbar-nav> a:hover, .navbar-wp .navbar-nav a:focus {
-	border-bottom: none;
-}
-.inspiralia-slider-inner {
-	min-width: auto !important;
-	width: auto !important;
-}
-#inspiralia-slider .slide-caption h1{
-	font-size: 180%;
-	line-height: 40px;
-	letter-spacing: 0;
-}
-#inspiralia-slider .slide-caption .description {
-	font-size: 100%;
-	line-height: 1em;
-	margin: 0 auto;
-	width: 100%;
-}
-.inspiralia-slider-warraper .owl-controls .owl-buttons div {
-	width: 30px;
-	height: 30px;
-	font-size: 200%;
-	line-height: 10px;
-	border-width: 2px;
-	border-style: solid;
-}
+  /*--------------- inspiralia-slider ---------------*/
+  .navbar-wp .navbar-nav>.active>a, .navbar-wp .navbar-nav>.active>a:hover, .navbar-wp .navbar-nav>.active>a:focus {
+  	border-bottom: none;
+  }
+  .navbar-wp .navbar-nav > a, .navbar-wp .navbar-nav> a:hover, .navbar-wp .navbar-nav a:focus {
+  	border-bottom: none;
+  }
+  .inspiralia-slider-inner {
+  	min-width: auto !important;
+  	width: auto !important;
+  }
+  #inspiralia-slider .slide-caption h1{
+  	font-size: 180%;
+  	line-height: 40px;
+  	letter-spacing: 0;
+  }
+  #inspiralia-slider .slide-caption .description {
+  	font-size: 100%;
+  	line-height: 1em;
+  	margin: 0 auto;
+  	width: 100%;
+  }
+  .inspiralia-slider-warraper .owl-controls .owl-buttons div {
+  	width: 30px;
+  	height: 30px;
+  	font-size: 200%;
+  	line-height: 10px;
+  	border-width: 2px;
+  	border-style: solid;
+  }
 
-/*--------------- inspiralia-subscription-form ---------------*/
-.inspiralia-subscriber .subscription-form .int-box {
-	width: 100%;
-}
+  /*--------------- inspiralia-subscription-form ---------------*/
+  .inspiralia-subscriber .subscription-form .int-box {
+  	width: 100%;
+  }
 }
 
 /*--------------- team_section ---------------*/
@@ -3615,7 +3694,11 @@ div.markets_list article span.information {
 /*--------------- media queries ---------------*/
 
 @media (max-device-width: 480px) {
-  
+
+  .navbar-wp .navbar-header .site-branding {
+    margin-top: 12px;
+    padding-left: 32px;
+  }
   .inspiralia-sourcing h3, .map-information h3.title-information, .projects-news-header h3, .inspiralia-leading-market h3 {
     font-size: 8.824rem;
     line-height: 8rem;
@@ -3666,6 +3749,12 @@ div.markets_list article span.information {
   }
 }
 @media (max-width: 768px) {
+
+  .navbar-wp .navbar-header .site-branding {
+    margin-top: 12px;
+    padding-left: 32px;
+  }
+
   .inspiralia-breadcrumb-section .container {
     margin-top: 7rem;
   }
@@ -3673,16 +3762,13 @@ div.markets_list article span.information {
   .navbar-wp {
     width: 100%;
   }
- 
+
   .inspiralia-sourcing h3, .map-information h3.title-information, .projects-news-header h3, .inspiralia-leading-market h3  {
     font-size: 8.824rem;
     line-height: 8rem;
   }
   #accordion li.active .btn {
     font-size: 1.45rem;
-  }
-  .inspiralia-section .need-item.need-information .button {
-    right: 40%;
   }
 }
 
@@ -3704,6 +3790,9 @@ only screen and (min-resolution: 2dppx){
   #product .row .needs-section-arrow.need-arrow-3 {
     background: url(images/homepage/need-arrow-3@2x.png) #00b1dd no-repeat cover;
   }
+  .inspiralia-main-nav .navbar .navbar-header .site-branding .wrap .custom-logo {
+    background-image: url(images/logo@2x.png);
+  }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 768px),
@@ -3720,5 +3809,8 @@ only screen and (min-resolution: 3dppx){
   }
   #product .row .needs-section-arrow.need-arrow-3 {
     background: url(images/homepage/need-arrow-3@3x.png) #00b1dd no-repeat center center;
+  }
+  .inspiralia-main-nav .navbar .navbar-header .site-branding .wrap .custom-logo {
+    background-image: url(images/logo@3x.png);
   }
 }

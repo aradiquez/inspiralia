@@ -34,12 +34,17 @@
     <!--==================== MAIN MENU ====================-->
     <div class="inspiralia-main-nav">
       <nav class="navbar navbar-default navbar-wp" style="z-index: 1000;">
-        <div class="navbar-header col-md-3 col-sm-12 col-lg-3">
+        <div class="navbar-header col-md-4 col-sm-4 col-lg-4">
           <!-- Logo -->
           <div class="site-branding">
           	<div class="wrap">
 
-          		<?php the_custom_logo(); ?>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="custom-logo-link" rel="home" itemprop="url">
+                <span class="custom-logo" alt="<?php bloginfo( 'name' ); ?>" itemprop="logo">
+                  &nbsp;
+                </span>
+              </a>
+          		<?php #the_custom_logo(); ?>
           		<div class="site-branding-text">
           			<?php if ( is_front_page() ) : ?>
           				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -58,7 +63,7 @@
         <!-- /navbar-toggle -->
 
         <!-- Navigation -->
-        <div class="collapse navbar-collapse <?php echo (is_front_page() ? '' : 'internal') ?>" id="navbar-wp">
+        <div class="collapse navbar-collapse col-md-8 col-sm-8 col-lg-8 <?php echo (is_front_page() ? '' : 'internal') ?>" id="navbar-wp">
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right', 'fallback_cb' => 'inspiralia_custom_navwalker::fallback' , 'walker' => new inspiralia_custom_navwalker() ) ); ?>
         </div>
       </nav>
