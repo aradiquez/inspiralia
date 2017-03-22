@@ -1,7 +1,7 @@
 <!-- =========================
      Page Breadcrumb
 ============================== -->
-<?php get_header('blog');
+<?php get_header();
 get_template_part('index','banner'); ?>
 <!-- =========================
      Page Content Section

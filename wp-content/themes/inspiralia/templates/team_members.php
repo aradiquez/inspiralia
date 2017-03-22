@@ -30,7 +30,7 @@ get_template_part('index','banner'); ?>
 
           <main class="container row">
           <?php
-            $args = array( 'post_type' => 'team_member', 'posts_per_page' => 10 );
+            $args = array( 'post_type' => 'team_member', 'posts_per_page' => 100 );
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
 

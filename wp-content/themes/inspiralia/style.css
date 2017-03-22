@@ -125,6 +125,10 @@
   width: 100%;
 }
 
+div#navbar-wp.collapse.navbar-collapse.col-md-8.col-sm-8.col-lg-8 {
+  float: right;
+}
+
 .wrapper .navbar-background.blog,
 .inspiralia-trhead.blog-header {
 	height: 100px;
@@ -1304,8 +1308,8 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
   position: relative;
 }
 .inspiralia-section .need-item.need-information .need-information-content .h2-header {
-  font-size: 29.41px;
-  line-height: 33.09px;
+  font-size: 25.1px;
+  line-height: 28.24px;
   margin: 3.5rem auto 2rem auto;
   width: 50%;
   word-break: normal;
@@ -1956,7 +1960,7 @@ proud-member-logos
 .inspiralia-project-news-section .row .item article.large,
 .inspiralia-project-news-section .row .item article.large p {
   font-family: 'gotham', sans-serif;
-  font-size: 1.9rem;
+  font-size: 16.73px;
   display: block;
   vertical-align: middle;
   position: relative;

@@ -3,7 +3,7 @@ function market_intro_meta_box_markup($post) { ?>
  <?php wp_nonce_field( basename( __FILE__ ), 'market_intro_meta_box_nonce' );
   $args = array(
       'depth'                 => 2,
-      'child_of'              => $post->post_parent,
+      // 'child_of'              => $post->post_parent,
       'selected'              => get_post_meta($post->ID, "markets-intro-meta-page_id", true),
       'name'                  => 'markets-intro-meta-page_id'
   );

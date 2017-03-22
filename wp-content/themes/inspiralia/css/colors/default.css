@@ -1,6 +1,6 @@
 /*==================== Theme Menu ====================*/
 /*=== navbar background color ===*/
-.inspiralia-search-box .inspiralia-search .btn, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > .active > a:focus, .navbar-wp .dropdown-menu > li > a:hover, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus, .inspiralia-search-box .inspiralia-search .btn {
+.inspiralia-search-box .inspiralia-search .btn, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > li > a:hover, .navbar-wp .navbar-toggle:hover, .inspiralia-search-box .inspiralia-search .btn {
 	background-color: #FFF;
 }
 
@@ -12,7 +12,7 @@
 	background-color: rgba(0,0,0,0.9);
 }
 /*=== navbar hover color ===*/
-.navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-header .navbar-brand , .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-header .navbar-brand  {
+.navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > li > a:hover, .navbar-header .navbar-brand , .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > li > a:hover, .navbar-header .navbar-brand  {
 	color: #58595b;
 }
 /*=== navbar hover border-color ===
@@ -83,13 +83,20 @@ body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .nav
 	background-color: #fff;
 }
 /*=== navbar drop down hover color ===*/
-.inspiralia-search-box .inspiralia-search .btn, .navbar-base .navbar-nav > .open > a, .navbar-base .navbar-nav > .open > a:hover, .navbar-base .navbar-nav > .open > a:focus, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > .active > a:focus, .navbar-wp .dropdown-menu > li > a:hover, .navbar-base .navbar-nav > li >a.dropdown-form-toggle, .navbar-wp .navbar-toggle:hover, .navbar-wp .navbar-toggle:focus {
+.inspiralia-search-box .inspiralia-search .btn, .navbar-base .navbar-nav > .open > a, .navbar-base .navbar-nav > .open > a:hover, .navbar-wp .dropdown-menu > .active > a, .navbar-wp .dropdown-menu > .active > a:hover, .navbar-wp .dropdown-menu > li > a:hover, .navbar-base .navbar-nav > li >a.dropdown-form-toggle, .navbar-wp .navbar-toggle:hover {
 	color: #58595b;
 }
-.navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > .active > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li > a:focus, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > .open > a:focus, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > li >a:focus {
+.navbar-wp .navbar-nav > .active > a, .navbar-wp .navbar-nav > .active > a:hover, .navbar-wp .navbar-nav > li > a:hover, .navbar-wp .navbar-nav > .open > a, .navbar-wp .navbar-nav > .open > a:hover, .navbar-wp .navbar-nav > li > a:hover {
 	background-color: rgba(0,0,0,0);
 }
 /*=== navbar text color ===*/
+.navbar-wp .internal .navbar-nav > .active > a:hover,
+.navbar-default .internal .navbar-nav > .active > a:focus,
+.navbar-wp .internal .navbar-nav > li > a {
+	color: #FFF;
+	border-color: #FFF;
+}
+
 .navbar-wp .navbar-nav > li > a {
 	color: #58595b;
 }
@@ -101,7 +108,7 @@ body, .inspiralia-main-nav .navbar.navbar-default .container .navbar-header .nav
 	background-color: #fff;
 }
 
-.navbar-home .navbar-nav > li > a , .navbar-home .navbar-nav > li > a:hover, .navbar-home .navbar-nav > li > a:focus {
+.navbar-home .navbar-nav > li > a , .navbar-home .navbar-nav > li > a:hover {
 	color: #58595b;
 }
 
@@ -121,9 +128,18 @@ div.markets_list article.left span.information a {
 	color: #00b1dd;
 	border-color: #00b1dd;
 }
+div.markets_list article.left span.information a:hover {
+	background-color: #00b1dd;
+	color: #FFF;
+}
 
 div.markets_list article span.information a {
 	border-color: #FFF;
+	color: #FFF;
+}
+
+div.markets_list article span.information a:hover {
+	color: #00b1dd;
 }
 
 /*==================== Body & Global ====================*/
@@ -307,6 +323,10 @@ main#main section.description, main#main section.description h2 {
 	filter: grayscale(100%);
 }
 
+.btn:hover {
+
+}
+
 /*=== theme hover background ===*/
 .btn.btn-tislider-two:hover, .btn.btn-tislider-two:focus, footer .inspiralia-widget .inspiralia-subscribe:hover, footer .inspiralia-widget .inspiralia-subscribe:focus, footer .inspiralia-widget.widget_search .btn:hover, footer .inspiralia-widget.widget_search .btn:focus, .inspiralia-sidebar .widget_search .btn:hover, .inspiralia-sidebar .widget_search .btn:focus, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn:hover, .inspiralia-sidebar .inspiralia-mailchimp-widget .btn:focus {
 	background-color: #222;
@@ -473,7 +493,12 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-wi
 
 #accordion li a, #accordion_custom li a {
 	border-color: #fff;
+	color: #FFF;
 }
+#accordion li a:hover, #accordion_custom li a:hover {
+	color: #00b1dd;
+}
+
 
 #accordion li:nth-child(odd) img, #accordion_custom li:nth-child(odd) img {
 	filter: grayscale(100%) brightness(200%) contrast(100%);
@@ -629,6 +654,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .map-information .button-information, .inspiralia-section.inspiralia-sourcing a.btn, .inspiralia-section.inspiralia-leading-market a.btn {
 	background-color: #00b1dd;
+	color: #FFF;
 }
 
 .inspiralia-testimonial-section .owl-item:nth-child(n+1) .row .item {
