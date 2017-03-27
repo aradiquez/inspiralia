@@ -43,7 +43,13 @@ function inspiralia_scripts() {
 }
 add_action('wp_enqueue_scripts', 'inspiralia_scripts');
 
-
+################################### CLIENTS #########################################
+function add_frontend_ajax_javascript_file()
+{
+    wp_enqueue_script( 'ajax_clients_script', get_template_directory_uri() . '/js/clients_script.js', array('jquery') );
+    wp_localize_script( 'ajax_clients_script', 'clients_ajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+}
+add_action( 'wp_enqueue_scripts', 'add_frontend_ajax_javascript_file' );
 ################################### ADMIN ###########################################
 
 function load_admin_styles() {

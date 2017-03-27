@@ -2,7 +2,18 @@ jQuery(document).ready(function(jQuery) {
 
   //##############################################################################################
 
-  var image_custom_uploader_1, image_custom_uploader_2, image_custom_uploader_3, home_image_map, services_intro_image, leading_markets_image, markets_intro_image, markets_intro_background_image;
+  var image_custom_uploader_1,
+      image_custom_uploader_2,
+      image_custom_uploader_3,
+      home_image_map,
+      services_intro_image,
+      leading_markets_image,
+      markets_intro_image,
+      markets_intro_background_image,
+      case_studies_intro_background_imagen,
+      case_studies_intro_logo_button,
+      case_studies_intro_pdf_button,
+      markets_intro_button;
 
   jQuery('#accordion-box-img-1-button').on('click', function(e) {
     e.preventDefault();
@@ -194,7 +205,7 @@ jQuery(document).ready(function(jQuery) {
   });
 
 
-  jQuery('#markets_intro_button').on('click', function(e) {
+  jQuery('#markets-intro-button').on('click', function(e) {
     e.preventDefault();
     //If the uploader object has already been created, reopen the dialog
     if (markets_intro_image) {
@@ -216,8 +227,8 @@ jQuery(document).ready(function(jQuery) {
       attachment = markets_intro_image.state().get('selection').first().toJSON();
       var url = '';
       url = attachment['url'];
-      jQuery('#markets_intro_imagen').val(url);
-      jQuery('#markets_intro_preview').attr("src",url);
+      jQuery('#markets-intro-imagen').val(url);
+      jQuery('#markets-intro-preview').attr("src",url);
     });
     //Open the uploader dialog
     markets_intro_image.open();
@@ -252,4 +263,91 @@ jQuery(document).ready(function(jQuery) {
     markets_intro_background_image.open();
   });
 
+  jQuery('#case-studies-intro-imagen-button').on('click', function(e) {
+    e.preventDefault();
+    //If the uploader object has already been created, reopen the dialog
+    if (case_studies_intro_background_imagen) {
+      case_studies_intro_background_imagen.open();
+      return;
+    }
+
+    //Extend the wp.media object
+    case_studies_intro_background_imagen = wp.media.frames.file_frame = wp.media({
+      title: 'Choose Image',
+      button: {
+        text: 'Choose Image'
+      },
+      multiple: false
+    });
+
+    //When a file is selected, grab the URL and set it as the text field's value
+    case_studies_intro_background_imagen.on('select', function() {
+      attachment = case_studies_intro_background_imagen.state().get('selection').first().toJSON();
+      var url = '';
+      url = attachment['url'];
+      jQuery('#case-studies-intro-imagen').val(url);
+      jQuery('#case-studies-intro-imagen-preview').attr("src",url);
+    });
+    //Open the uploader dialog
+    case_studies_intro_background_imagen.open();
+  });
+
+
+  jQuery('#case-studies-intro-logo-button').on('click', function(e) {
+    e.preventDefault();
+    //If the uploader object has already been created, reopen the dialog
+    if (case_studies_intro_logo_button) {
+      case_studies_intro_logo_button.open();
+      return;
+    }
+
+    //Extend the wp.media object
+    case_studies_intro_logo_button = wp.media.frames.file_frame = wp.media({
+      title: 'Choose Image',
+      button: {
+        text: 'Choose Image'
+      },
+      multiple: false
+    });
+
+    //When a file is selected, grab the URL and set it as the text field's value
+    case_studies_intro_logo_button.on('select', function() {
+      attachment = case_studies_intro_logo_button.state().get('selection').first().toJSON();
+      var url = '';
+      url = attachment['url'];
+      jQuery('#case-studies-intro-logo').val(url);
+      jQuery('#case-studies-intro-logo-preview').attr("src",url);
+    });
+    //Open the uploader dialog
+    case_studies_intro_logo_button.open();
+  });
+
+
+  jQuery('#case-studies-intro-pdf-button').on('click', function(e) {
+    e.preventDefault();
+    //If the uploader object has already been created, reopen the dialog
+    if (case_studies_intro_pdf_button) {
+      case_studies_intro_pdf_button.open();
+      return;
+    }
+
+    //Extend the wp.media object
+    case_studies_intro_pdf_button = wp.media.frames.file_frame = wp.media({
+      title: 'Choose Image',
+      button: {
+        text: 'Choose Image'
+      },
+      multiple: false
+    });
+
+    //When a file is selected, grab the URL and set it as the text field's value
+    case_studies_intro_pdf_button.on('select', function() {
+      attachment = case_studies_intro_pdf_button.state().get('selection').first().toJSON();
+      var url = '';
+      url = attachment['url'];
+      jQuery('#case-studies-intro-pdf').val(url);
+    });
+    //Open the uploader dialog
+    case_studies_intro_pdf_button.open();
+  });
 });

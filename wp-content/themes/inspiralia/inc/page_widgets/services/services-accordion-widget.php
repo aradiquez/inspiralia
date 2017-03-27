@@ -22,7 +22,6 @@ function accordion_meta_box_markup($page) { ?>
 
 function add_accordion_meta_box() {
   global $post;
-  print_r($post->post_parent );
   if ( 'templates/services.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && ( $post->post_parent != 0 ) ) {
     add_meta_box("accordion_meta_box", "Accordion Box", "accordion_meta_box_markup", "page", "normal", "high", null);
   }

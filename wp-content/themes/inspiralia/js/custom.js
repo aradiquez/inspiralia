@@ -30,7 +30,7 @@ jQuery(document).ready(function() {
       navigation : true, // Show next and prev buttons
       slideSpeed : 800,
       pagination : false,
-      singleItem: true,
+      items: 4,
       autoPlay : true,
       autoWidth: true,
       navigationText: [

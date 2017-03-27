@@ -7,6 +7,14 @@
  * @package inspiralia
  */
 
+
+if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
+  require_once dirname( __FILE__ ) . '/cmb2/init.php';
+} elseif ( file_exists( dirname( __FILE__ ) . '/CMB2/init.php' ) ) {
+  require_once dirname( __FILE__ ) . '/CMB2/init.php';
+}
+
+
 	$inspiralia_theme_path = get_template_directory() . '/inc/ansar/';
 	$inspiralia_theme_custom_widgets_path = get_template_directory() . '/inc/page_widgets/';
 	$inspiralia_theme_custom_post_type_widgets_path = get_template_directory() . '/inc/custom_post_type_widgets/';
@@ -51,8 +59,14 @@
 	require( $inspiralia_theme_custom_widgets_path . 'markets/markets-related-widget.php');
 	require( $inspiralia_theme_custom_widgets_path . 'markets/markets-parent-related-widget.php');
 
+	// CASE STUDIES
+	require( $inspiralia_theme_custom_widgets_path . 'case_studies/case-studies-related-widget.php');
+
 	// ========================================================================================/
 	require( $inspiralia_theme_custom_post_type_widgets_path . 'testimonial-extra-fields-widget.php');
+
+	// ========================================================================================/
+	require( $inspiralia_theme_custom_post_type_widgets_path . 'clients-extra-fields-widget.php');
 
 if ( ! function_exists( 'inspiralia_setup' ) ) :
 /**
@@ -195,7 +209,6 @@ function inspiralia_enqueue_customizer_controls_styles() {
   }
 add_action( 'customize_controls_print_styles', 'inspiralia_enqueue_customizer_controls_styles' );
 
-
 /* Implement the Custom Header feature. */
 
 
@@ -238,7 +251,7 @@ class Footer_Area_Menu_Widget extends WP_Widget {
 function add_background_when_need($prefix) {
 		global $post;
 		if (get_post_meta($post->ID, $prefix . "-imagen", true )) {
-			return "background-image: url(".get_post_meta($post->ID, $prefix . "-imagen", true )."); background-repeat: no-repeat; filter: grayscale(100%);";
+			return "background-image: url(".get_post_meta($post->ID, $prefix . "-imagen", true )."); background-repeat: no-repeat;";
 		} else {
 			if(get_post_meta($post->ID, $prefix . "-background-color", true )) {
 				return "background-color: ".get_post_meta($post->ID, $prefix . "-background-color", true ).";";
@@ -250,4 +263,19 @@ function get_ID_by_page_name($page_name) {
    global $wpdb;
    $page_name_id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$page_name."' AND post_type = 'page'");
    return $page_name_id;
+}
+
+
+add_action( 'wp_ajax_ajax_get_post_information', 'ajax_get_post_information' );
+add_action( 'wp_ajax_nopriv_ajax_get_post_information', 'ajax_get_post_information' );
+
+function ajax_get_post_information() {
+	if( !empty( $_POST['post_id'] ) ) {
+		$information = (array) get_post($_POST['post_id']);
+		$information['logo'] = array_values(get_post_meta($_POST['post_id'], 'inspiralia_clients_file_list', true));
+		$information['logo'] = $information['logo'][0];
+		$information['aside'] = get_post_meta( $_POST['post_id'], 'client_extra_fields_aside_description', true );
+		echo json_encode($information);
+	}
+	die();
 }

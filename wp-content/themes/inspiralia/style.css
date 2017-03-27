@@ -530,9 +530,179 @@ mark, .mark {
 main#content.blog_content {
 	margin: 20px 0;
 }
+
+/*---------------------------------------
+  clients post
+-----------------------------------------*/
+.clients_wrapper {
+  position: relative;
+}
+
+.clients_filter {
+  margin: 40px 0;
+  display: block;
+}
+
+.clients_filter .label {
+  font-size: 14.65px;
+  width: 10%;
+  float: left;
+}
+
+.clients_filter .clients_select {
+  width: 80%;
+  float: left;
+}
+
+.clients_filter .clients_select select:focus,
+.clients_filter .clients_select select {
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.clients_list {
+  margin: 20px 0 100px 0;
+  display: block;
+}
+
+.clients_list .item {
+  max-height: 350px;
+  margin: 25px 0;
+}
+
+.clients_list .item a {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 23.03px;
+  display: block;
+  border-bottom: 1px solid #58595b;
+  padding: 25px 0;
+}
+
+#details_modal {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: -40px;
+  z-index: 10000;
+}
+
+#details_modal .details_modal_close {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 30px auto;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 28px;
+  border-style: solid;
+  border-width: 2px;
+  padding-top: 8px;
+  font-weight: normal;
+}
+
+#details_modal .details_modal_content .details_modal_wrapper {
+  display: block;
+  width: 100%;
+  font-family: 'clavobook', sans-serif;
+  font-size: 18.85px;
+}
+
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left {
+  width: 50%;
+  float: left;
+  padding: 20px 10px 50px 100px;
+}
+
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_title {
+  font-family: 'gothambold', sans-serif;
+  font-size: 25.13px;
+  text-align: center;
+  padding: 20px 0;
+}
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left img {
+  height: 75px;
+  display: block;
+  margin: 0 auto;
+}
+
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_body {
+
+}
+
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_right {
+  width: 50%;
+  float: right;
+  padding: 20px 10px 50px 100px;
+}
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h3,
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h2,
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h1,
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h4 {
+  font-family: 'gothambold', sans-serif;
+  font-size: 14.66px;
+}
+
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body {
+  font-family: 'clavobook', sans-serif;
+  font-size: 14.66px;
+}
+
 /*---------------------------------------
   case studies post
 -----------------------------------------*/
+.case_studies_filter {
+  margin: 40px 0;
+  display: block;
+}
+
+.case_studies_filter .label {
+  font-size: 14.65px;
+}
+
+.cases_studies_list {
+  margin: 20px 0 100px 0;
+  display: block;
+}
+
+.cases_studies_list .item {
+  max-height: 350px;
+  border: 1px solid #fff;
+  margin: 25px 0;
+}
+
+.cases_studies_list .item a {
+  display: block;
+}
+.cases_studies_list .item a .post_image {
+  border-radius: 5px 5px 0 0;
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 210px;
+  margin: 0;
+}
+
+.cases_studies_list .item a .information {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 10px;
+  border-radius: 0 0 5px 5px;
+}
+.cases_studies_list .item a .information h2 {
+  font-family: 'gothambold', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23.15px;
+}
+
+.cases_studies_list .item a .information p {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 14.65px;
+  font-style: normal;
+  font-weight: normal;
+}
 
 section.hero-case-studies-title {
   padding: 4rem 0;
@@ -585,10 +755,40 @@ section.hero-case-studies-title {
   line-height: 9rem;
 }
 
+.case_studies_post article .services_provided .row {
+
+}
+
+.case_studies_post article .services_provided .row .imagen {
+  margin: 55px 0;
+}
+
+.case_studies_post article .services_provided .row .imagen img {
+  max-width: 110px;
+  display: block;
+  margin: 0 auto;
+}
+
+.case_studies_post article .services_provided .row .imagen h4 {
+  font-family: 'gotham_mediumregular', sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+.case_studies_post article .services_provided .row .description .centering-text {
+  font-size: 18.86px;
+}
+
+
+
 .case_studies_post aside > div {
   text-align: center;
   min-height: 21rem;
 }
+
+.case_studies_post aside .client_logo {
+  width: 100%;
+}
+
 
 .case_studies_post aside .markets_relation {
   background-position: center;
@@ -603,9 +803,8 @@ section.hero-case-studies-title {
 }
 
 .case_studies_post aside .markets_relation img {
-  width: 35%;
+  width: 60px;
   margin: 6rem auto 2rem auto;
-  min-height: 8.8rem;
 }
 
 
@@ -614,7 +813,7 @@ section.hero-case-studies-title {
 }
 
 .case_studies_post aside .shared_links a {
-  border-radius: 2.5rem;
+  border-radius: 25px;
   border-width: 2px;
   border-style: solid;
   width: 40px;
@@ -622,8 +821,12 @@ section.hero-case-studies-title {
   text-align: center;
   font-size: 2.5rem;
   display: block;
-  padding-top: 5px;
-  margin: 0 auto; 
+  padding-top: 8px;
+  margin: 0 auto;
+  font-size: 10px;
+}
+.case_studies_post aside .shared_links a i {
+  font-size: 19px;
 }
 
 .case_studies_post aside .newsletter {
@@ -639,15 +842,18 @@ section.hero-case-studies-title {
   margin-bottom: 2rem;
 }
 
-.case_studies_post aside .newsletter .row form div input {
+.case_studies_post aside .newsletter form p input {
   width: 100%;
   border-radius: 2.5rem;
   float: right;
+  border: none;
+  text-align: center;
 }
 
-.case_studies_post aside .newsletter .row form div input.submit {
+.case_studies_post aside .newsletter form p input {
   width: 100%;
   box-shadow: none;
+  font-size: 12.57px;
 }
 
 .case_studies_post .members_of {
@@ -1334,6 +1540,9 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
   font-size: 14.64px;
   font-family: 'gotham_mediumregular', sans-serif;
 }
+.inspiralia-section.inspiralia-leading-market {
+  position: relative;
+}
 .inspiralia-section.inspiralia-leading-market .middle_box {
   width: 50%;
   margin: 0 auto;
@@ -1347,6 +1556,14 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control.wpcf7-submit {
 .inspiralia-section.inspiralia-leading-market .middle_box a {
   font-size: 14.66px;
   font-family: 'gotham_mediumregular', sans-serif;
+}
+
+.inspiralia-section-background  {
+    height: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    filter: opacity(30%);
 }
 
 /*---------------------------------------
@@ -1700,8 +1917,9 @@ ul#accordion, ul#accordion_custom {
   inspiralia-markets-intro
 -----------------------------------------*/
 .inspiralia-section.inspiralia-markets-intro {
-  filter: grayscale(80%);
   background-size: cover;
+  overflow: hidden;
+  position: relative;
 }
 .inspiralia-section.inspiralia-markets-intro h3 {
   line-height: 10.8rem;
@@ -2695,6 +2913,22 @@ proud-member-logos
 	border-radius: 0 3px 3px 0;
 	margin-left: -1px;
 }
+
+main#content .row .container section.description {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 18.85px;
+  line-height: 23px;
+  margin: 110px 0;
+}
+
+main#content .row .container section.description h2 {
+  text-align: center;
+  font-family: 'gothambold', sans-serif;
+  font-size: 37.7px;
+  margin-bottom: 84.83px;
+}
+
+
 main.contact_content {
   padding: 11.5rem 10rem;
 }
@@ -2702,13 +2936,13 @@ main.contact_content {
 main.contact_content section.description h2 {
   text-align: center;
   font-family: 'gothambold', sans-serif;
-  font-size: 3.77rem;
-  margin-bottom: 5rem;
+  font-size: 37.7px;
+  margin-bottom: 84.83px;
 }
 main.contact_content .row section.description .content {
   font-family: 'gothamregular', sans-serif;
-  font-size: 1.885rem;
-  line-height: 2.5rem;
+  font-size: 18.85px;
+  line-height: 23px;
 }
 
 main.contact_content .row section.description .content > p {
@@ -2886,19 +3120,14 @@ footer .inspiralia-widget h4 {
 	padding-bottom: 0px;
 }
 footer .inspiralia-widget ul {
-	padding: 0;
+	padding: 2px 0 2px 10px;
 	list-style: none;
 }
 footer .inspiralia-widget ul li {
 	display: block;
 	letter-spacing: 0.2px;
-	line-height: 22px;
 	overflow: hidden;
 	position: relative;
-  padding: 2px 0;
-}
-footer .inspiralia-widget ul li a:hover {
-	transition: all 0.4s ease-in-out 0s;
 }
 footer .inspiralia-widget ul li:first-child {
 	padding-top: 0;
@@ -2906,12 +3135,12 @@ footer .inspiralia-widget ul li:first-child {
 footer .inspiralia-widget ul li:last-child {
 	border-bottom: none;
 }
-footer .inspiralia-widget ul li a {
-	transition: all 0.4s ease-in-out 0s;
+
+footer .inspiralia-widget ul li a:hover, footer .inspiralia-widget h6, footer a:hover, footer a:focus {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
-footer .inspiralia-widget ul li a:hover {
-	padding-left: 10px;
-}
+
 footer .inspiralia-widget .list-unstyled li:first-child {
 	padding-top: 0;
 }

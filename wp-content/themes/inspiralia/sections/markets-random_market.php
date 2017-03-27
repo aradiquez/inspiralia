@@ -1,8 +1,14 @@
 <!--==================== LEADING MARKETS SECTION ====================-->
 <?php
   $market_id = get_the_ID();
+  $background = add_background_when_need("markets-intro-background")
 ?>
-<section class="inspiralia-section inspiralia-markets-intro" style="<?php echo add_background_when_need("markets-intro-background") ?>">
+<section class="inspiralia-section inspiralia-markets-intro" style="<?php echo $background ?>">
+  <? if ( !empty( $background ) ) { ?>
+    <div class="inspiralia-section-background">
+      &nbsp;
+    </div>
+  <?php } ?>
   <div class="row">
   <div class="col-md-12 text-center">
       <h3><?php echo get_post_meta($market_id, "markets-intro-title", true); ?></h3>

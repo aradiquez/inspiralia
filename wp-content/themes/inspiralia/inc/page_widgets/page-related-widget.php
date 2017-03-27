@@ -22,7 +22,9 @@ function market_page_meta_box_markup($post) { ?>
 
 function add_market_page_meta_box() {
   global $post;
-  if (  'templates/markets.php' != get_post_meta( $post->ID, '_wp_page_template', true ) && 'post' != get_post_type() )  {
+  if ( ('templates/case_studies.php' == get_post_meta( $post->ID, '_wp_page_template', true ) && $post->post_parent == 0) &&
+     'templates/markets.php' != get_post_meta( $post->ID, '_wp_page_template', true ) &&
+      'post' != get_post_type() )  {
     add_meta_box("market_page_meta_box", "Hero Related Element Box", "market_page_meta_box_markup", "page", "normal", "high", null);
   }
 }
