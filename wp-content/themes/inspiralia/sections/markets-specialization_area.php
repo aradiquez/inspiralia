@@ -6,7 +6,7 @@
         <?php echo get_post_meta(get_the_ID(), "markets-intro-text", true); ?>
       </div>
     </div>
-    <div class="col-md-4 col-sm-12 inspiralia-icon">
+    <div class="col-md-4 hidden-sm inspiralia-icon">
       <?php $image_url = (get_post_meta(get_the_ID(), "markets-intro-imagen", true ) ? get_post_meta(get_the_ID(), "markets-intro-imagen", true ) : '' ); ?>
       <img src="<?php echo $image_url ?>" class="responsive-img" alt="<?php echo get_post_meta(get_the_ID(), "markets-intro-title", true); ?>"/>
     </div>

@@ -141,7 +141,7 @@ div#navbar-wp.collapse.navbar-collapse.col-md-8.col-sm-8.col-lg-8 {
 	font-size: 20px;
 }
 .inspiralia-cart-count {
-    background: #e33729;
+    background: #00b1dd;
     border-radius: 20px;
     color: #ffffff;
     display: inline-block;
@@ -156,8 +156,6 @@ div#navbar-wp.collapse.navbar-collapse.col-md-8.col-sm-8.col-lg-8 {
     vertical-align: top;
     width: 16px;
 }
-
-h1.site-title a:hover, p.site-description{color:#B17F53;}
 
 .wrapper {
 	max-width: 1024px;
@@ -202,7 +200,7 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 	padding: 16px 16px;
 	margin-right: 0;
 	font-size: 14px;
-	letter-spacing: 0.5px; 
+	letter-spacing: 0.5px;
 	margin-bottom: 0px;
 }
 .navbar-wp .navbar-nav > li > ul > li > a i {
@@ -352,11 +350,9 @@ h1.site-title a:hover, p.site-description{color:#B17F53;}
 	box-shadow: none;
 	border: none;
 }
-.modal-backdrop {
-	background: #fff;
-}
+
 .modal-backdrop.in {
-    opacity: 0.90;
+    opacity: 0.30;
 }
 .modal-header {
 	border-bottom: none;
@@ -531,11 +527,51 @@ main#content.blog_content {
 	margin: 20px 0;
 }
 
+.blog_content.newsletter {
+  margin-top: 50px;
+  display: block;
+  padding: 75px;
+}
+
+.blog_content.newsletter .title {
+  line-height: 88.89px;
+  font-size: 75.45px;
+  font-family: 'Debby', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  display: block;
+}
+
+.blog_content.newsletter .cpmsg {
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+.blog_content.newsletter form input {
+  display: block;
+  margin: 40px auto;
+  line-height: 50px;
+}
+
+.blog_content.newsletter form input[type='email'] {
+  width: 70%;
+  border-radius: 30rem;
+  border: none;
+  text-align: center;
+  padding: 5px;
+}
+
+.blog_content.newsletter form input[type='submit'] {
+  width: 30%;
+  border-radius: 30rem;
+  text-align: center;
+}
 /*---------------------------------------
   clients post
 -----------------------------------------*/
 .clients_wrapper {
-  position: relative;
 }
 
 .clients_filter {
@@ -570,12 +606,22 @@ main#content.blog_content {
   margin: 25px 0;
 }
 
-.clients_list .item a {
+.clients_list .item .content {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.clients_list .item .content a .details {
+	display: none;
+	font-family: 'gothamregular', sans-serif;
+	font-size: 14.66px;
+}
+
+.clients_list .item .content a {
   font-family: 'gothamregular', sans-serif;
   font-size: 23.03px;
   display: block;
-  border-bottom: 1px solid #58595b;
   padding: 25px 0;
+	
 }
 
 #details_modal {
@@ -583,7 +629,8 @@ main#content.blog_content {
   min-height: 100%;
   overflow: hidden;
   position: absolute;
-  top: -40px;
+  top: 510px;
+  bottom: 0;
   z-index: 10000;
 }
 
@@ -597,7 +644,7 @@ main#content.blog_content {
   border-radius: 28px;
   border-style: solid;
   border-width: 2px;
-  padding-top: 8px;
+  padding-top: 10px;
   font-weight: normal;
 }
 
@@ -648,6 +695,151 @@ main#content.blog_content {
   font-size: 14.66px;
 }
 
+
+ul.sitemap {
+	margin: 50px 0;
+}
+
+ul.sitemap ul li a pre {
+	font-family: 'gothamregular', sans-serif;
+	font-size: 14px;
+}
+
+/*---------------------------------------
+  carreers post
+-----------------------------------------*/
+p.bg-success,
+p.bg-danger{
+  padding: 15px;
+  font-family: 'gothamregular', sans-serif;
+  font-size: 18.86px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.carreers_wrapper {  }
+
+.carreers_wrapper .carreers_list {
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+.carreers_wrapper .carreers_list .content .item a {
+  display: block;
+  font-family: 'gothamregular', sans-serif;
+  font-size: 23.05px;
+  line-height: 65px;
+}
+
+/* --- MODAL --- */
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal a.details_modal_close {
+  float: right;
+  line-height: 30px;
+  margin: -30px -30px 0 0;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal {
+  padding: 50px;
+  display: none;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal h3.details_modal_title {
+  font-family: 'gothambold', sans-serif;
+  font-size: 25.14px;
+  width: 40%;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_left {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 18.86px;
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 14.67px;
+  float: right;
+  width: 50%;
+  margin-top: -30px;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h1,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h2,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h4,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h3,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h5 {
+  font-family: 'gothambold', sans-serif;
+  font-size: 14.67px;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 14.67px;
+}
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .action {
+  float: left;
+  width: 100%;
+}
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .action button {
+  display: block;
+  margin: 30px auto 0 auto;
+  border-radius: 30px;
+  padding: 8px 35px;
+  box-shadow: none;
+}
+
+.carreers_wrapper .modal {
+  top: 30%;
+}
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-header h4.modal-title {
+  font-family: 'gothambold', sans-serif;
+  font-size: 25.14px;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-footer {
+  border: none;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-footer button.btn {
+  box-shadow: none;
+  border-radius: 30px;
+  padding: 8px 35px;
+}
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-header a.close {
+  font-size: 50px;
+  color: #00b1dd;
+  background-color: transparent;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body {}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body label {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 14.67px;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body input {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body .box__file {
+  text-align: center;
+  padding: 30px;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body .box__file .box__file__select {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
 /*---------------------------------------
   case studies post
 -----------------------------------------*/
@@ -1962,7 +2154,7 @@ ul#accordion, ul#accordion_custom {
 }
 
 .inspiralia-section.inspiralia-our-value .row .inspiralia-icon img {
-  width: 70%;
+  width: 60%;
   height: 100%;
 }
 
@@ -2914,6 +3106,30 @@ proud-member-logos
 	margin-left: -1px;
 }
 
+main#content .row section.description.carreers {
+  background-image: url('images/carreers_information_background.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 178px;
+  margin: 10px 0;
+  font-family: 'gothamregular', sans-serif;
+  font-size: 18.85px;
+  line-height: 23px;
+  padding: 105px 200px;
+}
+
+main#content .row section.description.carreers h2 {
+  text-align: center;
+  font-family: 'gothambold', sans-serif;
+  font-size: 37.7px;
+  margin-bottom: 80px;
+}
+
+main#content .row section.description.carreers > p {
+  display: block;
+  margin: 0 auto;
+}
+
 main#content .row .container section.description {
   font-family: 'gothamregular', sans-serif;
   font-size: 18.85px;
@@ -2927,7 +3143,6 @@ main#content .row .container section.description h2 {
   font-size: 37.7px;
   margin-bottom: 84.83px;
 }
-
 
 main.contact_content {
   padding: 11.5rem 10rem;
@@ -3382,7 +3597,7 @@ footer .inspiralia-social li span.icon-soci a {
 	opacity: 1;
 	overflow: hidden;
 	position: fixed;
-	right: 12px;
+	right: 24px;
 	text-align: center;
 	width: 50px;
 	z-index: 9999;
@@ -3590,13 +3805,69 @@ footer .inspiralia-social li span.icon-soci a {
 }
 /* [end] woocommerce */
 
- @media only screen and (min-width: 240px) and (max-width: 460px) {
-.inspiralia-footer-top-area .inspiralia-app-widget .btn {
-	margin-top: 10px;
-}
+
+
+
+
+ @media only screen and (min-width: 240px) and (max-width: 320px) {
+ 	.wrapper .navbar-background {
+ 		min-width: 240px;
+ 		max-width: 320px;
+		height: 80px;
+ 	}
+	 
+	.inspiralia-footer-top-area .inspiralia-app-widget .btn {
+		margin-top: 10px;
+	}
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  /* Top Details*/
+	.wrapper .navbar-background {
+		min-width: 320px;
+		max-width: 480px;
+	}
+	
+	#team header.container.filters a {
+		font-size: 12px;
+	}
+	
+	div#navbar-wp.collapse.navbar-collapse.col-md-8.col-sm-8.col-lg-8 {
+    width: 100%;
+    background: #f2f2f2;
+		float: none;
+	}
+	.clients_filter .clients_select select:focus, .clients_filter .clients_select select {
+		float: right;
+	}
+	#details_modal .details_modal_content .details_modal_wrapper .details_modal_right,
+	#details_modal .details_modal_content .details_modal_wrapper .details_modal_left {
+    width: 100%;
+    float: none;
+		display: block;
+    padding: 20px 20px 50px 20px;
+	}
+	
+	#details_modal .details_modal_content .details_modal_wrapper .details_modal_left img {
+		height: auto;
+		max-width: 90%;
+	}
+	
+	#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_title {
+		font-size: 1.413rem;
+	}
+	
+	#details_modal .details_modal_content .details_modal_wrapper {
+		font-size: 14.85px;
+	}
+	
+	.cases_studies_list .item {
+		max-height: initial;
+	}
+	
+	.inspiralia-breadcrumb-title h1 {
+	  margin: 2rem auto 0 auto;
+	}
+	
+	/* Top Details*/
   .inspiralia-head-detail .info-left {
   	float: none;
   	text-align: center;
@@ -3636,6 +3907,10 @@ footer .inspiralia-social li span.icon-soci a {
 /* MEDIUM SCREEN SIZE */
 
 @media screen and (min-width: 1024px) and (max-width: 1179px) {
+	.wrapper {
+		min-width: 1024px;
+		max-width: 1024px;
+	}
   .boxed {
   	width: auto;
   }
@@ -3660,6 +3935,11 @@ footer .inspiralia-social li span.icon-soci a {
 /* 5inch SCREEN SIZE */
 
 @media screen and (min-width: 530px) and (max-width: 1024px) {
+	.wrapper {
+		min-width: 530px;
+		max-width: 1024px;
+	}
+	
   /*--------------- inspiralia-slider ---------------*/
   .inspiralia-slider-inner {
   	min-width: auto !important;
@@ -3667,7 +3947,7 @@ footer .inspiralia-social li span.icon-soci a {
   }
 
   .inspiralia-breadcrumb-title h1 {
-    margin: 14rem auto 0 auto;
+    margin: 12rem auto 0 auto;
   }
   .inspiralia-section .need-item.need-information .button {
     position: initial;
@@ -3692,6 +3972,11 @@ footer .inspiralia-social li span.icon-soci a {
 /* MINIMUM SIZE */
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
+	.wrapper {
+		min-width: 481px;
+		max-width: 767px;
+	}
+	
   #inspiralia-slider .slide-caption h1{
   	font-size: 450%;
   }
@@ -3734,7 +4019,9 @@ footer .inspiralia-social li span.icon-soci a {
 
 
 @media screen and (max-width: 481px) {
-
+	div.markets_list article span.information {
+		width: 100% !important;
+	}
   /*--------------- inspiralia-slider ---------------*/
   .navbar-wp .navbar-nav>.active>a, .navbar-wp .navbar-nav>.active>a:hover, .navbar-wp .navbar-nav>.active>a:focus {
   	border-bottom: none;
@@ -3778,7 +4065,6 @@ section.team-section {
   margin-bottom: 27%;
 }
 section.team-section header.filters.container {
-  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
@@ -3869,7 +4155,7 @@ div.markets_list article {
 }
 div.markets_list article.left,
 div.markets_list article.right {
-  height: 35rem;
+  min-height: 35rem;
 }
 
 div.markets_list article.left div.post_image,
@@ -3881,7 +4167,7 @@ div.markets_list article.right div.post_image {
 }
 
 div.markets_list article span.information {
-  padding: 5rem 0;
+  padding: 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -3898,13 +4184,13 @@ div.markets_list article span.information a {
   border-radius: 3.5rem;
   font-size: 14.66px;
   font-family: 'gotham_mediumregular', sans-serif;
+	margin: 10px 0;
 }
 
 div.markets_list article span.information h3 {
-  margin-bottom: 4.5rem;
   font-family: 'gothambold', sans-serif;
   font-size: 25.13px;
-  line-height: 28.27px;
+  line-height: 80.27px;
 }
 
 div.markets_list article.left div.post_image,
@@ -3982,7 +4268,11 @@ div.markets_list article span.information {
   }
 }
 @media (max-width: 768px) {
-
+	
+	ul#menu-main {
+		margin-right: 5px;
+	}
+	
   .navbar-wp .navbar-header .site-branding {
     margin-top: 12px;
     padding-left: 32px;
@@ -4000,6 +4290,11 @@ div.markets_list article span.information {
     font-size: 8.824rem;
     line-height: 8rem;
   }
+	
+	#accordion li.active a {
+		width: 35%;
+	}
+	
   #accordion li.active .btn {
     font-size: 1.45rem;
   }
@@ -4024,6 +4319,7 @@ only screen and (min-resolution: 2dppx){
     background: url(images/homepage/need-arrow-3@2x.png) #00b1dd no-repeat cover;
   }
   .inspiralia-main-nav .navbar .navbar-header .site-branding .wrap .custom-logo {
+		margin-top: 10px;
     background-image: url(images/logo@2x.png);
   }
 }

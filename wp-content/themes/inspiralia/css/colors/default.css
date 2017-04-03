@@ -20,6 +20,29 @@
 	border-color: #00b1dd;
 }
 */
+
+h1.site-title a:hover, p.site-description{color:#00B1dd;}
+
+.blog_content.newsletter {
+	/*background-image: url('../images/'); */
+	background-color: #00b1dd;
+}
+
+.blog_content.newsletter .title {
+	color: #fff;
+}
+
+.blog_content.newsletter form input[type='submit'] {
+	background-color: transparent;
+	border: 1px solid #FFF;
+	box-shadow: none;
+}
+.blog_content.newsletter form input[type='submit']:hover {
+	background-color: #FFF;
+	border: 1px solid #00b1dd;
+	color: #00b1dd;
+}
+
 .inspiralia-section-background {
 	background-color: #666;
 }
@@ -739,8 +762,11 @@ main.contact_content .row section.description aside {
 	border-top: 1px solid #f2f2f2;
 }
 
-.clients_list .item a {
+.clients_list .item .content a {
 	color: #58595b;
+}
+.clients_list .item .content a:hover {
+	color: #00b1dd;
 }
 
 #details_modal { 
@@ -754,6 +780,82 @@ main.contact_content .row section.description aside {
 #details_modal .details_modal_content .details_modal_wrapper {
 	color: #56585b;
 }
+.carreers_wrapper .carreers_list .content .item a:hover {
+	color: #00b1dd;
+}
+
+.carreers_wrapper .carreers_list .content .item a {
+	color: #666666;
+	border-top: 2px solid #f2f2f2;
+}
+
+.carreers_wrapper .carreers_list .content .item:last-child a {
+  border-bottom: 2px solid #F2f2f2;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal {
+	background-color: #f2f2f2;
+}
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal a.details_modal_close {
+	color: #00b1dd;
+}
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_left,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h1,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h2,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h4,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h3,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .details_modal_wrapper .details_modal_right .details_modal_body h5,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal h3.details_modal_title {
+	color: #58595b;
+}
+
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .action button.btn:hover,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .action button.btn:focus,
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal .details_modal_content .action button.btn.focus {
+	background-color: #FFF;
+	border: 1px solid #00b1dd;
+	color: #00b1dd;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-header h4.modal-title {
+	color: #58595b;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-footer button.btn.btn-primary:hover,
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-footer button.btn.btn-default {
+	background-color: #FFF;
+	border: 1px solid #00b1dd;
+	color: #00b1dd;
+}
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-footer button.btn.btn-default:hover,
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-footer button.btn.btn-primary {
+	background-color: #00B1dd;
+	border: 1px solid #FFF;
+	color: #FFF;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body .box__file {
+  outline: 2px dashed #00b1dd;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body .box__file.dragover {
+  outline: 2px dashed #FFF;
+  background-color: #00b1dd;
+  color: #fff;
+  outline-offset: -10px;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body input[type=file] {
+	border: none;
+	margin: 5px 0;
+}
+
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body input {
+	border: 2px solid #00b1dd;
+}
+
+
 /*==================== footer color ====================*/
 /*=== footer heading color ===*/
 footer .inspiralia-footer-top-area h6, footer .inspiralia-widget h6 {
@@ -810,4 +912,8 @@ footer .inspiralia-footer-copyright a:hover, footer .inspiralia-footer-copyright
 .inspiralia-trhead {
 	background-color: transparent;
 }
+}
+
+.modal-backdrop {
+	background: #666666;
 }

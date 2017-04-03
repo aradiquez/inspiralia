@@ -41,6 +41,40 @@ function inspiralia_register_clients_extra_fields_metabox() {
     'type'    => 'wysiwyg',
     'options' => array(),
   ) );
+
+  $cmb_about_page->add_field( array(
+    'name'             => esc_html__( 'Page Selector', 'cmb2' ),
+    'desc'             => esc_html__( 'Market relation', 'cmb2' ),
+    'id'               => $prefix . 'market_id',
+    'type'             => 'select',
+    'show_option_none' => true,
+    'options'          => cmb2_get_post_options(),
+  ) );
+}
+
+
+
+/**
+ * Gets a number of posts and displays them as options
+ * @param  array $query_args Optional. Overrides defaults.
+ * @return array             An array of options that matches the CMB2 options array
+ */
+function cmb2_get_post_options() {
+  $args = array(
+    'post_parent'    => get_ID_by_page_name('Markets'),
+    'post_type'   => 'page',
+    'posts_per_page' => -1
+  );
+
+  $posts = new WP_Query( $args );
+  $post_options = array();
+  if ( $posts ) {
+    foreach ( $posts->posts as $post ) {
+          $post_options[ $post->ID ] = $post->post_title;
+    }
+  }
+
+  return $post_options;
 }
 
 ?>

@@ -29,6 +29,12 @@ get_template_part('index','blog'); ?>
         <!-- #main -->
       </div>
     </div>
+  </div>
 </main>
+<div class="blog_content newsletter">
+  <span class="title">Sign up to receive our Newsletter</span>
+  <?php echo do_shortcode('[cp_simple_newsletter]' ); ?>
+  <div class="clearfix"></div>
+</div>
 <?php
 get_footer();

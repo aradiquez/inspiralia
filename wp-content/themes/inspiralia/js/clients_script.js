@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
             jQuery(dom_data['description']).html(response.post_content);
             jQuery(dom_data['img']).attr("src", response.logo);
             jQuery(dom_data['aside']).html(response.aside);
-            jQuery('#details_modal').show();
+            jQuery('#details_modal').animate({ opacity: "show" }, "slow");
           },
           error: function(error) {
             console.log("Error");
@@ -37,12 +37,26 @@ jQuery(document).ready(function() {
 
     jQuery('#details_modal').on('click', '.details_modal_close', function (e) {
       e.preventDefault();
-      jQuery('#details_modal').hide();
+      jQuery('#details_modal').animate({ opacity: "hide" }, "slow");
     });
 
     jQuery('.clients_select').on('change', '#filter_page_id', function(e){
-      var selected = jQuery(this).val();
-      console.log('Still nothing');
-      console.log(selected);
+      e.preventDefault();
+      var all_elements = jQuery('.clients_list .item');
+      var filter_item = jQuery(this);
+      var current_class = (filter_item.val());
+      if( current_class == 0 ) {
+        jQuery(all_elements).animate({ opacity: 'show' }, 'slow');
+				jQuery(all_elements).find('.content a .details').hide();
+      } else {
+        jQuery(all_elements).show();
+        jQuery(all_elements).each(function(index, value){
+          if (!jQuery(value).hasClass(current_class)) {
+            jQuery(value).fadeOut();
+          } else {
+          	jQuery(value).find('.content a .details').show();
+          }
+        });
+      }
     });
 });

@@ -126,7 +126,62 @@ jQuery(document).ready(function() {
     }
   });
 
+  // jQuery('.clients_list').jscroll({
+  //   loadingHtml: '<img src="images/loading.gif" alt="Loading" />',
+  //   padding: 20
+  // });
+
+
+  jQuery('article.item').on('click', '.display_details', function(e) {
+    e.preventDefault();
+    jQuery('.carreers_details_modal').hide();
+    jQuery(this).siblings('.carreers_details_modal').animate({ 'opacity' : 'show'}, 'normal');
+  });
+
+  jQuery('.carreers_details_modal').on('click', '.details_modal_close', function(e) {
+    e.preventDefault();
+    jQuery(this).parent().animate({ 'opacity' : 'hide'}, 'normal');
+  });
+
+  jQuery('.details_modal_wrapper').on('click', '.show_carreer', function(e){
+    e.preventDefault();
+    jQuery('#post_parent').val(jQuery(this).data('post_id'));
+  });
+
+  jQuery('.modal-body').on('click', '.box__file', function(){
+    jQuery('#inspiralia_application_file_list').trigger( "click" );
+  });
+
+  jQuery('.bg-success').on('click', '.close', function(){
+    e.preventDefault();
+    jQuery(this).parent().remove();
+  });
+
+
+	jQuery('.carreers_wrapper').on('click', '.details_modal_close', function(e) {});
+
+
+
+  var droppedFiles = false;
+	form = jQuery('.carreers_wrapper');
+	
+	form.on('drag dragstart dragend dragover dragenter dragleave drop', '#applying_for_carreer', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  })
+  .on('dragover dragenter', function() {
+   	form.addClass('is-dragover');
+  })
+  .on('dragleave dragend drop', function() {
+    form.removeClass('is-dragover');
+  })
+  .on('drop', function(e) {
+    droppedFiles = e.originalEvent.dataTransfer.files;
+  });
+	//form.find('input[type="file"]').prop('files', droppedFiles);
 });
+
+
 
 
 //------------------------------------------

@@ -361,8 +361,7 @@ function tbbs_MasonryLoopItems( $atts, $paged = 1 )
 
         /* get category */
 		$cats = wp_get_post_terms( get_the_ID(), ( ! empty( $atts['template_params']['filter_by_taxonomy'] ) ? $atts['template_params']['filter_by_taxonomy'] : 'category' ) );
-		$blog_post_slug = function( $item ){ return $item->slug; };
-		$cat_filter = array_map( $blog_post_slug($item), $cats );
+		$cat_filter = array_map( function( $item ){ return $item->slug; }, $cats );
 		array_push( $cat_filter, 'all' );
 
         $data = array(
@@ -504,8 +503,10 @@ function tbbs_ShortcodeMasonryItemLayout_default( $output, $atts, $data )
 				<a href='{$link}'><h2 class='title'>{$title}</h2></a>
 				<div class='taxonomy'>{$cats}</div>
 				<div class='handle'>
-					<a href='{$link}' title='". __( 'detail', TBBS_NAME ) ."'><i class='ion-link'></i></a>
-					<a href='{$thumbnail}' data-imagelightbox-thumbnail title='". __( 'view thumbnail', TBBS_NAME ) ."'><i class='ion-ios-search-strong'></i></a>
+					<a href='https://www.linkedin.com/shareArticle?mini=true&url={$link}'
+					class='linkedin-share-button pull-left' target='_blank'>
+						<i class='fa fa-linkedin' aria-hidden='true'></i></a>
+          <a href='mailto:info@inspiralia.com?subject=Inspiralia%20-%20{$title}&body=Hey!%20Check%20this%20out!%20-%20{$link}' class='pull-right'><i class='fa fa-envelope-o' aria-hidden='true'></i></a>
 				</div>
 			</div>
 		</div>
@@ -552,9 +553,10 @@ function tbbs_ShortcodeMasonryItemLayout_woocommerce( $output, $atts, $data )
 				<!--<div class='taxonomy'>{$cats}</div>-->
 				<div class='price'>{$price_html}</div>
 				<div class='handle'>
-					<a href='{$link}' title='". __( 'detail', TBBS_NAME ) ."'><i class='ion-link'></i></a>
-					{$add_to_cart_html}
-					<a href='{$thumbnail}' data-imagelightbox-thumbnail title='". __( 'view thumbnail', TBBS_NAME ) ."'><i class='ion-ios-search-strong'></i></a>
+					<a href='https://www.linkedin.com/shareArticle?mini=true&url={$link}'
+					class='linkedin-share-button' target='_blank'>
+						<i class='fa fa-linkedin' aria-hidden='true'></i></a>
+          <a href='mailto:info@inspiralia.com?subject=Inspiralia%20-%20{$title}&body=Hey!%20Check%20this%20out!%20-%20{$link}'><i class='fa fa-envelope-o' aria-hidden='true'></i></a>
 				</div>
 			</div>
 		</div>

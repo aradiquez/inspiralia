@@ -30,9 +30,9 @@ if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
 	/* Customizer */
 	/* ----------------------------------------------------------------------------------- */
 
-	require( $inspiralia_theme_path . '/customize/ta_customize_copyright.php');
-	require( $inspiralia_theme_path . '/customize/ta_customize_homepage.php');
-	require( $inspiralia_theme_path . '/customize/ta_customize_pro.php');
+	// require( $inspiralia_theme_path . '/customize/ta_customize_copyright.php');
+	// require( $inspiralia_theme_path . '/customize/ta_customize_homepage.php');
+	// require( $inspiralia_theme_path . '/customize/ta_customize_pro.php');
 
 	/* ----------------------------------------------------------------------------------- */
 	/* Custom Widgets  */
@@ -67,6 +67,10 @@ if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
 
 	// ========================================================================================/
 	require( $inspiralia_theme_custom_post_type_widgets_path . 'clients-extra-fields-widget.php');
+	// ========================================================================================/
+	require( $inspiralia_theme_custom_post_type_widgets_path . 'carreers-extra-fields-widget.php');
+	// ========================================================================================/
+	require( $inspiralia_theme_custom_post_type_widgets_path . 'applications-extra-fields-widget.php');
 
 if ( ! function_exists( 'inspiralia_setup' ) ) :
 /**
@@ -279,3 +283,5 @@ function ajax_get_post_information() {
 	}
 	die();
 }
+
+

@@ -19,11 +19,11 @@ get_template_part('index','banner'); ?>
         <section id="team" class="team-section">
           <header class="container filters">
             <menu class="row">
-              <menuitem class="col-xs-4 col-sm-3 col-md-3 col-lg-3"><a href="#" class="menuitem show_all_team">All</a></menuitem>
+              <menuitem class="col-sm-3 col-md-3 col-lg-3"><a href="#" class="menuitem show_all_team">All</a></menuitem>
               <?php $taxonomy = 'departments';
               $tax_terms = get_terms($taxonomy, array('hide_empty' => true));
               foreach($tax_terms as $term_single) { ?>
-                <menuitem class="col-xs-6 col-sm-4 col-md-3 col-lg-3"><a href="#" class="menuitem show_<?php echo $term_single->slug; ?>"><?php echo $term_single->name; ?></a></menuitem>
+                <menuitem class="col-sm-3 col-md-3 col-lg-3"><a href="#" class="menuitem show_<?php echo $term_single->slug; ?>"><?php echo $term_single->name; ?></a></menuitem>
               <?php } ?>
             </menu>
           </header>
@@ -54,8 +54,7 @@ get_template_part('index','banner'); ?>
             <?php endwhile; // End of the loop. ?>
 
             <div class="item_join_us col-xs-6 col-sm-4 col-md-3 col-lg-3">
-              <?php $page_careers = get_page_by_title('Careers'); ?>
-              <a href="<?php echo get_permalink($page_careers); ?>">
+              <a href="<?php echo get_permalink(get_ID_by_page_name('Careers')); ?>">
                 <header>
                   <h3>Join us!</h3>
                 </header>
