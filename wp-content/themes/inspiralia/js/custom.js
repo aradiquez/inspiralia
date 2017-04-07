@@ -4,6 +4,22 @@
 jQuery(document).ready(function() {
 
   //------------------------------------------
+  // navegator
+  //------------------------------------------
+
+    jQuery('.inspiralia-breadcrumb-section')
+      .height('510px')
+      .scrollie({
+        scrollOffset : 0,
+        scrollingInView : function(elem) {
+          jQuery('ul#menu-main li.menu-item a').css('color', 'white');
+        },
+        scrolledOutOfView : function(elem){
+          jQuery('ul#menu-main li.menu-item a').css('color', '#77828c');
+        }
+      });
+
+  //------------------------------------------
   // carousel somewhere
   //------------------------------------------
 

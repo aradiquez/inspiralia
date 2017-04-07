@@ -15,19 +15,13 @@ get_template_part('index','banner'); ?>
 <main class="contact_content">
   <?php
   while ( have_posts() ) : the_post(); ?>
-    <div class="row">
-      <section class="description">
-        <div class="content">
-          <?php the_content(); ?>
-        </div>
-        <aside class="col-lg-2 col-md-2 col-sm-12">
-          <a href="<?php echo get_permalink(get_ID_by_page_name('Careers')); ?>">
-            <h3>Want to join our team?</h3>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/inspiralia_contact_icon.png" alt="inspiralia" />
-          </a>
-        </aside>
-      </section>
-    </div>
+    <section class="description">
+      <div class="content">
+				<div class="row">
+        	<?php the_content(); ?>
+				</div>
+      </div>
+    </section>
   <?php
   endwhile; // End of the loop.
   ?>

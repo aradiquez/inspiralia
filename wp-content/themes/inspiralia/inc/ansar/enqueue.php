@@ -39,6 +39,8 @@ function inspiralia_scripts() {
 
   wp_enqueue_script('inspiralia_drag_and_drop', get_template_directory_uri() . '/js/drag_and_drop.js' , array('jquery'));
 
+  wp_enqueue_script('inspiralia_scrollie', get_template_directory_uri() . '/js/jquery.scrollie.min.js' , array('jquery'));
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

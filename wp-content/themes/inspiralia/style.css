@@ -673,9 +673,21 @@ main#content.blog_content {
   margin: 0 auto;
 }
 
-#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_body {
-
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_body ul {
+  list-style: none;
+  padding: 0;
 }
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_body ul li {
+  padding-left: 1.3em;
+}
+#details_modal .details_modal_content .details_modal_wrapper .details_modal_left .details_modal_body ul li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
 
 #details_modal .details_modal_content .details_modal_wrapper .details_modal_right {
   width: 50%;
@@ -744,6 +756,21 @@ p.bg-danger{
   display: none;
 }
 
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal ul {
+  list-style: none;
+  padding: 0;
+}
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal ul li {
+  padding-left: 1.3em;
+}
+.carreers_wrapper .carreers_list .content .item .carreers_details_modal ul li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
 .carreers_wrapper .carreers_list .content .item .carreers_details_modal h3.details_modal_title {
   font-family: 'gothambold', sans-serif;
   font-size: 25.14px;
@@ -792,7 +819,7 @@ p.bg-danger{
 }
 
 .carreers_wrapper .modal {
-  top: 30%;
+  top: 10%;
 }
 .carreers_wrapper .modal .modal-dialog .modal-content .modal-header h4.modal-title {
   font-family: 'gothambold', sans-serif;
@@ -1905,7 +1932,11 @@ p.heading {
 	text-align: center;
 	display: block;
 	padding: 0;
-  height: 360px;
+  height: 340px;
+}
+
+.col-lg-4.col-md-4.col-sm-12.need-item.need-information.box-2 p.content {
+  margin-top: 50px;
 }
 
 #product .row .needs-section-arrow.need-arrow-1 {
@@ -2040,7 +2071,7 @@ ul#accordion, ul#accordion_custom {
   display: block;
   width: 75%;
   text-align: center;
-  margin: 45px auto;
+  margin: 25px auto;
   font-size: 16.75px;
 }
 #accordion li.active a {
@@ -2210,7 +2241,11 @@ ul#accordion, ul#accordion_custom {
 
 .map-information .map-image {
   width: 100%;
-  height: 100%;
+  height: 555px;
+  background-image: url(images/homepage/possionate-people.png);
+  background-size: 100%;
+  display: block;
+  background-repeat: no-repeat;
 }
 
 .map-information .button-information {
@@ -2329,7 +2364,7 @@ proud-member-logos
 
 .inspiralia-project-news-section .row .item,
 .inspiralia-project-news-section .row .item-more {
-  min-height: 400px;
+  min-height: 340px;
   font-weight: normal;
   position: relative;
   overflow: hidden;
@@ -2342,7 +2377,7 @@ proud-member-logos
 }
 
 .inspiralia-project-news-section .row .inspiralia-project-news-more {
-  margin: 35% 20%;
+  margin: 33% 20%;
   display: block;
   text-align: center;
   font-family: 'gotham_mediumregular', sans-serif;
@@ -2364,7 +2399,7 @@ proud-member-logos
 
 .inspiralia-project-news-section .row .item .inspiralia-project-news-post-box article.large.text-center.center-block {
   display: none;
-  padding: 10% 5%;
+  padding: 5%;
 }
 
 .inspiralia-project-news-section .row .item article.large,
@@ -3145,7 +3180,7 @@ main#content .row .container section.description h2 {
 }
 
 main.contact_content {
-  padding: 11.5rem 10rem;
+  padding: 15% 5%;
 }
 
 main.contact_content section.description h2 {
@@ -3154,36 +3189,32 @@ main.contact_content section.description h2 {
   font-size: 37.7px;
   margin-bottom: 84.83px;
 }
-main.contact_content .row section.description .content {
+main.contact_content section.description .content .row {
   font-family: 'gothamregular', sans-serif;
   font-size: 18.85px;
   line-height: 23px;
 }
 
-main.contact_content .row section.description .content > p {
+main.contact_content section.description .content .row > p {
   width: 80%;
   display: block;
   margin: 0 auto;
   margin-bottom: 5rem;
 }
 
-main.contact_content .row section.description aside {
+main.contact_content section.description .row aside {
   margin-left: 2rem;
   padding: 7rem 2rem;
+	margin-top: -20px;
 }
 
-main.contact_content .row section.description aside h3 {
+main.contact_content section.description .row  aside h3 {
   font-size: 2rem;
   text-align: center;
 }
-main.contact_content .row section.description aside img {
+main.contact_content section.description .row  aside img {
   margin: 0 auto;
   display: block;
-}
-
-.wpcf7 {
-  width: 79%;
-  float: left;
 }
 
 .wpcf7 .wpcf7-form .wpcf7-form-control.wpcf7-submit {
@@ -4155,13 +4186,13 @@ div.markets_list article {
 }
 div.markets_list article.left,
 div.markets_list article.right {
-  min-height: 35rem;
+  min-height: 33rem;
 }
 
 div.markets_list article.left div.post_image,
 div.markets_list article.right div.post_image {
   width: 35%;
-  height: 100%;
+  max-height: 375px;
   overflow: hidden;
   filter: grayscale(100%);
 }
@@ -4190,7 +4221,8 @@ div.markets_list article span.information a {
 div.markets_list article span.information h3 {
   font-family: 'gothambold', sans-serif;
   font-size: 25.13px;
-  line-height: 80.27px;
+  line-height: 27.27px;
+  padding-top: 40px;
 }
 
 div.markets_list article.left div.post_image,
@@ -4203,7 +4235,7 @@ div.markets_list article.right span.information {
 }
 
 div.markets_list article img {
-  height: 100%;
+  width: 750px;
 }
 
 div.markets_list article span.information {
@@ -4310,18 +4342,24 @@ only screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
 only screen and (min-resolution: 2dppx){
   /* retina display. dpr 2 */
   #product .row .needs-section-arrow.need-arrow-1 {
-    background: url(images/homepage/need-arrow-1@2x.png) #00b1dd no-repeat cover;
+    background: url(images/homepage/need-arrow-1@2x.png) #00b1dd no-repeat center center;
+    background-size: 30%;
   }
   #product .row .needs-section-arrow.need-arrow-2 {
-    background: url(images/homepage/need-arrow-2@2x.png) #00b1dd no-repeat cover;
+    background: url(images/homepage/need-arrow-2@2x.png) #00b1dd no-repeat center center;
+    background-size: 30%;
   }
   #product .row .needs-section-arrow.need-arrow-3 {
-    background: url(images/homepage/need-arrow-3@2x.png) #00b1dd no-repeat cover;
+    background: url(images/homepage/need-arrow-3@2x.png) #00b1dd no-repeat center center;
+    background-size: 45%;
   }
   .inspiralia-main-nav .navbar .navbar-header .site-branding .wrap .custom-logo {
-		margin-top: 10px;
     background-image: url(images/logo@2x.png);
   }
+  .map-information .map-image {
+    background-image: url(images/homepage/possionate-people@2x.png);
+  }
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 768px),
@@ -4332,12 +4370,15 @@ only screen and (min-resolution: 3dppx){
   /* dpr 3 */
   #product .row .needs-section-arrow.need-arrow-1 {
     background: url(images/homepage/need-arrow-1@3x.png) #00b1dd no-repeat center center;
+    background-size: 30%;
   }
   #product .row .needs-section-arrow.need-arrow-2 {
     background: url(images/homepage/need-arrow-2@3x.png) #00b1dd no-repeat center center;
+    background-size: 30%;
   }
   #product .row .needs-section-arrow.need-arrow-3 {
     background: url(images/homepage/need-arrow-3@3x.png) #00b1dd no-repeat center center;
+    background-size: 45%;
   }
   .inspiralia-main-nav .navbar .navbar-header .site-branding .wrap .custom-logo {
     background-image: url(images/logo@3x.png);

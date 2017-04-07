@@ -64,7 +64,7 @@
         <!-- /navbar-toggle -->
 
         <!-- Navigation <?php echo (is_front_page() ? '' : 'internal') ?> -->
-        <div class="collapse navbar-collapse col-md-8 col-sm-8 col-lg-8" id="navbar-wp">
+        <div class="collapse navbar-collapse col-md-8 col-sm-8 col-lg-8 <?php echo (is_front_page() ? '' : 'internal')?>" id="navbar-wp">
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right', 'fallback_cb' => 'inspiralia_custom_navwalker::fallback' , 'walker' => new inspiralia_custom_navwalker() ) ); ?>
         </div>
       </nav>

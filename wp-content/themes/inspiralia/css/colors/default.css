@@ -570,8 +570,28 @@ footer .inspiralia-widget .wpcf7-form .wpcf7-form-control, footer .inspiralia-wi
 
 .inspiralia-section.inspiralia-markets-intro a.btn:hover {
 	background-color: #FFF;
-  border-color: #58595b;
-  color: #58595b;
+  border-color: #00b1dd;
+  color: #00b1dd;
+}
+
+.inspiralia-section.inspiralia-markets-intro .market-without-background h5,
+.inspiralia-section.inspiralia-markets-intro .market-without-background h4,
+.inspiralia-section.inspiralia-markets-intro .market-without-background h3,
+.inspiralia-section.inspiralia-markets-intro .market-without-background h2 {
+	color: #00b1dd;
+}
+
+
+.inspiralia-section.inspiralia-markets-intro .market-without-background a.btn {
+	background-color: #00b1dd;
+  border-color: #00b1dd;
+  color: #FFF;
+}
+
+.inspiralia-section.inspiralia-markets-intro .market-without-background a.btn:hover {
+	background-color: #FFF;
+  border-color: #00b1dd;
+  color: #00b1dd;
 }
 
 .inspiralia-section.inspiralia-leading-market.inspiralia-internal a.btn:hover, .map-information .button-information:hover, .inspiralia-section.inspiralia-sourcing a.btn:hover, .inspiralia-section.inspiralia-leading-market a.btn:hover,
@@ -749,7 +769,7 @@ main.contact_content section.description h2{
 	color: #58595b;
 }
 
-main.contact_content .row section.description aside {
+main.contact_content section.description .row aside {
 	background-color: #f2f2f2;
 }
 
@@ -769,7 +789,7 @@ main.contact_content .row section.description aside {
 	color: #00b1dd;
 }
 
-#details_modal { 
+#details_modal {
 	background-color: #f2f2f2;
 }
 

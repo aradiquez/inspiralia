@@ -285,3 +285,19 @@ function ajax_get_post_information() {
 }
 
 
+//contact us sidebar [aside class="Classes"]
+function aside_func( $atts ) {
+    $a = shortcode_atts( array(
+        'class' => 'col-lg-2 col-md-2 col-sm-12'
+    ), $atts );
+
+		$output = "<aside class='".$a['class']."'><a href='".get_permalink(get_ID_by_page_name('Careers'))."'>
+            		<h3>Want to join our team?</h3>
+            		<img src='".get_template_directory_uri()."/images/inspiralia_contact_icon.png' alt='inspiralia' /></a>
+							</aside>";
+
+    return $output;
+}
+add_shortcode( 'aside', 'aside_func' );
+
+

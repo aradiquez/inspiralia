@@ -1,0 +1,1 @@
+<article class="col-lg-4 col-md-4 col-sm-6 item <?php echo get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) ?>"><div class="content"><a href="#" title="<?php the_title(); ?>" data-post_id="<?php the_ID() ?>" class="display_details"><?php the_title(); ?><div class="details"><?php echo wp_trim_words( get_the_content(), 15, '...' ); ?></div></a></div></article>

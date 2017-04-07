@@ -1,6 +1,6 @@
 <?php
 $args = array(
-    'post_type' => 'inspiralia_clients',
+    'post_type' => 'clients',
     'orderby' => 'title',
     'order' => 'ASC',
     'posts_per_page' => -1
@@ -48,14 +48,7 @@ $loop = new WP_Query( $args );
 
     <div class="clients_list row">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-          <article class="col-lg-4 col-md-4 col-sm-6 item <?php echo get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) ?>">
-						<div class="content">
-		            <a href="#" title="<?php the_title(); ?>" data-post_id="<?php the_ID() ?>" class="display_details">
-		                <?php the_title(); ?>
-										<div class="details"><?php echo wp_trim_words( get_the_content(), 15, '...' ); ?></div>
-		            </a>
-						</div>
-          </article>
+          <article class="col-lg-4 col-md-4 col-sm-6 item <?php echo get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) ?>"><div class="content"><a href="#" title="<?php the_title(); ?>" data-post_id="<?php the_ID() ?>" class="display_details"><?php the_title(); ?><div class="details"><?php echo wp_trim_words( get_the_content(), 15, '...' ); ?></div></a></div></article>
         <?php endwhile; wp_reset_postdata(); ?>
     </div>
 </div>
