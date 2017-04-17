@@ -36,7 +36,7 @@ get_template_part('index','banner'); ?>
 
     					<div class="<?php
                 $categories = get_the_terms( get_the_ID(), 'departments' );
-                foreach( $categories as $category ) { ?>show_<?php echo $category->slug; ?> <?php } ?> item col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                foreach( $categories as $category ) { ?>show_<?php echo $category->slug; ?> <?php } ?> item col-xs-12 col-sm-4 col-md-3 col-lg-3">
                 <picture>
     						<?php if(has_post_thumbnail()): ?>
     						  <?php $defalt_arg =array('class' => "img-responsive"); ?>
@@ -53,7 +53,7 @@ get_template_part('index','banner'); ?>
 
             <?php endwhile; // End of the loop. ?>
 
-            <div class="item_join_us col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="item_join_us col-xs-12 col-sm-4 col-md-3 col-lg-3">
               <a href="<?php echo get_permalink(get_ID_by_page_name('Careers')); ?>">
                 <header>
                   <h3>Join us!</h3>

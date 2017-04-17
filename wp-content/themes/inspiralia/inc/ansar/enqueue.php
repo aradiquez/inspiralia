@@ -19,6 +19,9 @@ function inspiralia_scripts() {
 
 	wp_enqueue_style('animate',get_template_directory_uri().'/css/animate.css');
 
+  wp_enqueue_style('jquery-ui.min',get_template_directory_uri().'/css/jquery-ui.min.css');
+  wp_enqueue_style('jquery-ui.structure.min',get_template_directory_uri().'/css/jquery-ui.structure.min.css');
+  wp_enqueue_style('jquery-ui.theme.min',get_template_directory_uri().'/css/jquery-ui.theme.min.css');
 
 
 	/* Js script */
@@ -40,6 +43,8 @@ function inspiralia_scripts() {
   wp_enqueue_script('inspiralia_drag_and_drop', get_template_directory_uri() . '/js/drag_and_drop.js' , array('jquery'));
 
   wp_enqueue_script('inspiralia_scrollie', get_template_directory_uri() . '/js/jquery.scrollie.min.js' , array('jquery'));
+
+  wp_enqueue_script('inspiralia_jqueryUI', get_template_directory_uri() . '/js/jquery-ui.min.js' , array('jquery'));
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

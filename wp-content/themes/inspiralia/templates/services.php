@@ -43,7 +43,7 @@ get_template_part('index','banner'); ?>
     <div class="clearfix"></div>
     <?php get_template_part('sections/services', 'leading-markets'); ?>
     <div class="clearfix"></div>
-    <?php get_template_part('sections/home', 'testimonials'); ?>
+    <?php get_template_part('sections/services', 'testimonials'); ?>
 
   <?php } else { #childs ?>
 

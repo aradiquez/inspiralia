@@ -492,7 +492,7 @@ mark, .mark {
 .owl-controls {
 	position: absolute;
 	top: 45%;
-	width: 97.5%;
+	width: 100%;
 }
 .owl-controls .owl-buttons {
 	font-size: 4.5rem;
@@ -579,21 +579,30 @@ main#content.blog_content {
   display: block;
 }
 
+.clients_filter .filters {
+  width: 100%;
+  height: 20px;
+}
+
+.clients_filter .filters .single_filter {
+  float: left;
+  display: block;
+  width: 30%;
+}
+
+.clients_filter .filters .single_filter .label {
+  font-size: 12.65px;
+  float: left;
+}
+
+.clients_filter .filters .single_filter .clients_select select {
+  width: 71%;
+  float: right;
+}
+
 .clients_filter .label {
   font-size: 14.65px;
-  width: 10%;
   float: left;
-}
-
-.clients_filter .clients_select {
-  width: 80%;
-  float: left;
-}
-
-.clients_filter .clients_select select:focus,
-.clients_filter .clients_select select {
-    border: 1px solid #fff;
-    background-color: transparent;
 }
 
 .clients_list {
@@ -877,6 +886,28 @@ p.bg-danger{
 
 .case_studies_filter .label {
   font-size: 14.65px;
+  float: left;
+}
+
+.case_studies_filter .filters {
+  width: 100%;
+  height: 20px;
+}
+
+.case_studies_filter .filters .single_filter {
+  float: left;
+  display: block;
+  width: 30%;
+}
+
+.case_studies_filter .filters .single_filter .label {
+  font-size: 12.65px;
+  float: left;
+}
+
+.case_studies_filter .filters .single_filter .case_studies_select select {
+  width: 71%;
+  float: right;
 }
 
 .cases_studies_list {
@@ -2269,7 +2300,7 @@ ul#accordion, ul#accordion_custom {
   width: 100%;
 }
 
-.inspiralia-testimonial-section .container .row {
+.inspiralia-testimonial-section .row {
   margin: 0;
   position: relative;
   z-index: 1;
@@ -2277,24 +2308,31 @@ ul#accordion, ul#accordion_custom {
   width: 100%;
   min-height: 469px;
 }
-.inspiralia-testimonial-section .container .row .item {
+.inspiralia-testimonial-section .row .item {
   width: 100%;
   min-height: 469px;
-  border: 6px solid #fff;
   left: 0;
   right: 0;
   bottom: 0;
   position: absolute;
   top: 0;
   z-index: 3;
-  padding: 10%;
   height: 100%;
 }
 
 .inspiralia-testimonial-section .inspiralia-testimonial-post-box  {
   height: 100%;
-  width: 100%;
+  width: 66.66%;
+  padding: 13% 3% 5% 5%;
+  float: left;
 }
+.inspiralia-testimonial-section .inspiralia-testimonial-post-image  {
+  height: 100%;
+  width: 33%;
+  position: absolute;
+  right: 0;
+}
+
 
 .inspiralia-testimonial-section .inspiralia-testimonial-post-box article .post_content {
   font-family: 'clavolight_italic', sans-serif;
@@ -3837,30 +3875,31 @@ footer .inspiralia-social li span.icon-soci a {
 /* [end] woocommerce */
 
 
-
-
-
  @media only screen and (min-width: 240px) and (max-width: 320px) {
  	.wrapper .navbar-background {
  		min-width: 240px;
  		max-width: 320px;
 		height: 80px;
  	}
-	 
+
 	.inspiralia-footer-top-area .inspiralia-app-widget .btn {
 		margin-top: 10px;
 	}
+
+  main#content .row section.description.carreers {
+    padding: 2%;
+  }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 	.wrapper .navbar-background {
 		min-width: 320px;
 		max-width: 480px;
 	}
-	
+
 	#team header.container.filters a {
 		font-size: 12px;
 	}
-	
+
 	div#navbar-wp.collapse.navbar-collapse.col-md-8.col-sm-8.col-lg-8 {
     width: 100%;
     background: #f2f2f2;
@@ -3876,7 +3915,7 @@ footer .inspiralia-social li span.icon-soci a {
 		display: block;
     padding: 20px 20px 50px 20px;
 	}
-	
+
 	#details_modal .details_modal_content .details_modal_wrapper .details_modal_left img {
 		height: auto;
 		max-width: 90%;
@@ -3970,7 +4009,6 @@ footer .inspiralia-social li span.icon-soci a {
 		min-width: 530px;
 		max-width: 1024px;
 	}
-	
   /*--------------- inspiralia-slider ---------------*/
   .inspiralia-slider-inner {
   	min-width: auto !important;
@@ -4007,7 +4045,7 @@ footer .inspiralia-social li span.icon-soci a {
 		min-width: 481px;
 		max-width: 767px;
 	}
-	
+
   #inspiralia-slider .slide-caption h1{
   	font-size: 450%;
   }
@@ -4041,6 +4079,10 @@ footer .inspiralia-social li span.icon-soci a {
 
   footer .inspiralia-widget .widget_nav_menu a {
     padding: 10px;
+  }
+
+  main#content .row section.description.carreers {
+    padding: 2%;
   }
 }
 

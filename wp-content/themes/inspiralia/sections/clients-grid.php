@@ -1,6 +1,6 @@
 <?php
 $args = array(
-    'post_type' => 'clients',
+    'post_type' => 'inspiralia_clients',
     'orderby' => 'title',
     'order' => 'ASC',
     'posts_per_page' => -1
@@ -32,16 +32,52 @@ $loop = new WP_Query( $args );
 
     <div class="clients_filter">
         <span class="label">Sort By:</span>
-        <div class="clients_select">
-            <?php
-            $args = array(
-                  'depth'                 => 2,
-                  'child_of'              => get_ID_by_page_name('Markets'),
-                  'selected'              => 0,
-                  'name'                  => 'filter_page_id'
-              );
-                wp_dropdown_pages($args);
-             ?>
+        <div class="filters">
+            <div class="single_filter">
+                <span class="label">Markets:</span>
+                <div class="clients_select">
+                    <?php
+                    $args = array(
+                          'depth'                 => 2,
+                          'child_of'              => get_ID_by_page_name('Markets'),
+                          'selected'              => 0,
+                          'name'                  => 'markets_filter_page_id',
+                          'class'                 => 'markets'
+                      );
+                        wp_dropdown_pages($args);
+                     ?>
+                </div>
+            </div>
+
+            <div class="single_filter">
+                <span class="label">Services:</span>
+                <div class="clients_select">
+                    <?php
+                    $args = array(
+                          'depth'                 => 2,
+                          'child_of'              => get_ID_by_page_name('Services'),
+                          'selected'              => 0,
+                          'name'                  => 'services_filter_page_id'
+                      );
+                        wp_dropdown_pages($args);
+                     ?>
+                </div>
+            </div>
+
+            <div class="single_filter">
+                <span class="label">Country:</span>
+                <div class="clients_select">
+                     <?php $args = array(
+                                        'show_option_all'    => '',
+                                        'hide_empty'         => 0,
+                                        'name'               => 'country_filter_page_id',
+                                        'id'                 => '',
+                                        'depth'              => 2,
+                                        'taxonomy'           => 'country'
+                                    ); ?>
+                <?php wp_dropdown_categories( $args ); ?>
+                </div>
+            </div>
         </div>
         <div class="clearfix"></div>
     </div>

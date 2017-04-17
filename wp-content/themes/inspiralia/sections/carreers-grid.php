@@ -46,6 +46,7 @@ $loop = new WP_Query( $args );
                         <input type="hidden" name="post_type" id="post_type" value="applications" />
                         <input type="hidden" name="action" value="post" />
                         <input type="hidden" name="post_parent" id="post_parent" value="" />
+                        <input type="hidden" name="related_to" id="inspiralia_application_related" value="" />
                         <?php wp_nonce_field( 'inspiralia_application_file_list', 'inspiralia_application_file_list_nonce' ); ?>
 
                         <button type="reset" class="btn btn-default" data-dismiss="modal">Cancel</button>
