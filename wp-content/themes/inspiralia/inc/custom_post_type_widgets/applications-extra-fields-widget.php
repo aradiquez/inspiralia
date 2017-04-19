@@ -59,6 +59,7 @@ function inspiralia_register_application_metabox() {
       'readonly' => 'readonly',
     ),
   ) );
+
 }
 
 function show_human_name($post_id) {

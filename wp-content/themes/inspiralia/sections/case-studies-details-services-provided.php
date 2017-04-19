@@ -11,12 +11,12 @@
     $case_studies_intro_services = get_page($case_studies_intro_services_related);
   ?>
   <div class="row">
-    <div class="col-md-4 col-lg-3 hidden-sm hidden-xs imagen">
+    <div class="col-md-3 col-lg-3 hidden-sm hidden-xs imagen">
       <?php $image_url = (get_post_meta($case_studies_intro_services->ID, "services-intro-imagen", true ) ? get_post_meta($case_studies_intro_services->ID, "services-intro-imagen", true ) : '' ); ?>
       <img src="<?php echo $image_url ?>" class="responsive-img" alt=""/>
       <h4><?php echo $case_studies_intro_services->post_title ?></h4>
     </div>
-    <div class="col-sm-12 col-md-10 col-lg-9 description">
+    <div class="col-sm-12 col-md-9 col-lg-9 description">
       <div class="centering-text">
           <?php echo get_post_meta($case_studies_intro_services->ID, "services-our-value", true); ?>
       </div>

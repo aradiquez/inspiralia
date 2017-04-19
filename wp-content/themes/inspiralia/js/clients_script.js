@@ -40,6 +40,55 @@ jQuery(document).ready(function() {
       jQuery('#details_modal').animate({ opacity: "hide" }, "slow");
     });
 
+
+    // Clients filter
+
+    jQuery('.filters .single_filter').on('change', '.tri_filter', function() {
+        var all_elements = ( jQuery('.clients_list .item').size() > 0 ? jQuery('.clients_list .item') : jQuery('.cases_studies_list .item') );
+
+        var all_filters = jQuery('.tri_filter');
+
+        var filter_elements = new Array();
+
+        all_filters.each(function(index, element) {
+          var this_filter = jQuery(element);
+          var classes_names =  element.className.split(' ');
+          if (element.value != "") {
+              switch(classes_names[1]){
+                  case 'services':
+                      filter_elements.push(".service_" + this_filter.val());
+                  break;
+                  case 'markets':
+                      filter_elements.push(".market_" + this_filter.val());
+                  break;
+                  case 'countries':
+                      filter_elements.push(".country_" + this_filter.val());
+                  break;
+                  default:
+                      console.log('Default');
+              }
+              // console.log(filter_elements);
+              jQuery(all_elements).each(function(index, value){
+                  var single_class = filter_elements.join('');
+                  if (!jQuery(value).is(single_class)) {
+                      jQuery(value).fadeOut();
+                  } else {
+                      jQuery(value).show()
+                      jQuery('.clients_list').find('.content a .details').show();
+                  }
+              });
+          }
+        });
+        if (jQuery(filter_elements).size() <= 0) {
+          jQuery(all_elements).show();
+        }
+    });
+
+    // funtion conditional_filter(markets, services, countries, all_elements){
+
+    // }
+
+
     jQuery('.clients_select').on('change', '#filter_page_id', function(e){
       e.preventDefault();
       var all_elements = jQuery('.clients_list .item');
@@ -47,14 +96,14 @@ jQuery(document).ready(function() {
       var current_class = (filter_item.val());
       if( current_class == 0 ) {
         jQuery(all_elements).animate({ opacity: 'show' }, 'slow');
-				jQuery(all_elements).find('.content a .details').hide();
+        jQuery(all_elements).find('.content a .details').hide();
       } else {
         jQuery(all_elements).show();
         jQuery(all_elements).each(function(index, value){
           if (!jQuery(value).hasClass(current_class)) {
             jQuery(value).fadeOut();
           } else {
-          	jQuery(value).find('.content a .details').show();
+            jQuery(value).find('.content a .details').show();
           }
         });
       }

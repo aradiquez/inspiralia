@@ -18,8 +18,10 @@ get_template_part('index','banner'); ?>
           <aside class="share_links">
             <a class="twitter-share-button" href="https://twitter.com/share" data-size="large" data-text="Shared from: <?php the_permalink(); ?>" data-url="https://dev.twitter.com/web/tweet-button" data-via="twitterdev" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <br/>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>" class="linkedin-share-button" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a><br/>
-            <div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>" class="linkedin-share-button" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <br/>
+
+            <div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
           </aside>
           <article>
             <div class="introduction">

@@ -12,10 +12,10 @@ jQuery(document).ready(function() {
       .scrollie({
         scrollOffset : 0,
         scrollingInView : function(elem) {
-          jQuery('ul#menu-main li.menu-item a').css('color', 'white');
+          jQuery('.internal ul#menu-main li.menu-item a').css('color', 'white');
         },
         scrolledOutOfView : function(elem){
-          jQuery('ul#menu-main li.menu-item a').css('color', '#77828c');
+          jQuery('.internal ul#menu-main li.menu-item a').css('color', '#77828c');
         }
       });
 
@@ -85,6 +85,19 @@ jQuery(document).ready(function() {
     jQuery(this).find('article').css({ 'display' : 'none' });
   });
 
+
+  //------------------------------------------
+  // blog slider
+  //------------------------------------------
+  jQuery('.inspiralia-slider-section .item').hover(
+    function() {
+    jQuery(this).addClass('active');
+    jQuery(this).find('.item_overlay').show();
+  }, function() {
+    jQuery('.inspiralia-slider-section .item').removeClass('active');
+    jQuery('.inspiralia-slider-section .item .item_overlay').hide();
+  });
+
   //------------------------------------------
   // team member stuff
   //------------------------------------------
@@ -142,16 +155,33 @@ jQuery(document).ready(function() {
     }
   });
 
+  jQuery('#team_search').on('keyup', '#search_team', function(e){
+    e.preventDefault();
+    var serch_criteria = jQuery(this);
+    var all_elements = jQuery('.item');
+    jQuery(all_elements).each(function(index, element){
+      var search_element = new RegExp(serch_criteria.val(), 'i');
+      if(jQuery(element.children[1]).find('summary h3').html().search(search_element) == -1) { // too tricky need to find a better way
+        jQuery(element).hide();
+      } else {
+        jQuery(element).show();
+      }
+
+    });
+  });
+
   // jQuery('.clients_list').jscroll({
   //   loadingHtml: '<img src="images/loading.gif" alt="Loading" />',
   //   padding: 20
   // });
 
+// ================================================================================================
 
   jQuery('article.item').on('click', '.display_details', function(e) {
     e.preventDefault();
     jQuery('.carreers_details_modal').hide();
     jQuery(this).siblings('.carreers_details_modal').animate({ 'opacity' : 'show'}, 'normal');
+    jQuery('#inspiralia_application_related').val(this.title);
   });
 
   jQuery('.carreers_details_modal').on('click', '.details_modal_close', function(e) {
@@ -180,7 +210,7 @@ jQuery(document).ready(function() {
 
   var droppedFiles = false;
 	form = jQuery('.carreers_wrapper');
-	
+
 	form.on('drag dragstart dragend dragover dragenter dragleave drop', '#applying_for_carreer', function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -195,6 +225,17 @@ jQuery(document).ready(function() {
     droppedFiles = e.originalEvent.dataTransfer.files;
   });
 	//form.find('input[type="file"]').prop('files', droppedFiles);
+
+  jQuery('#apply').on('change', '#inspiralia_application_file_list', function() {
+    var file_size = (this.files[0].size / 1048576).toFixed(2);
+    if (file_size >= 5) {
+      jQuery('.box__file').before('<span class="red">File too big</span>');
+      jQuery(this).val('');
+    } else {
+      jQuery('span.red').remove();
+    }
+  });
+
 });
 
 

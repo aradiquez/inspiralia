@@ -1,7 +1,7 @@
 <?php
 
-#require $_SERVER['DOCUMENT_ROOT'] . "/inspiralia/wp-load.php";
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/wordpress/wp-load.php"); #LOCAL
+require $_SERVER['DOCUMENT_ROOT'] . "/inspiralia/wp-load.php";
+#require_once ($_SERVER['DOCUMENT_ROOT'] . "/wordpress/wp-load.php"); #LOCAL
 session_start();
 $_SESSION['apply'] = [];
 if( 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['post_type'] == 'applications') {
@@ -10,14 +10,14 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['post_type'] == 'applications
     if (isset ($_POST['email'])) {
         $email =  $_POST['email'];
     } else {
-        echo 'Please enter a title';
+        error_redirect();
     }
     if (isset ($_POST['phone'])) {
         $phone = $_POST['phone'];
     } else {
-        echo 'Please enter the phone';
+        error_redirect();
     }
-    $inspiralia_application_related = $_POST['inspiralia_application_related'];
+    $inspiralia_application_related = $_POST['related_to'];
 
     // Add the content of the form to $post as an array
     $post = array(
@@ -53,19 +53,23 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['post_type'] == 'applications
     if ($attachment_id > 0){
         //and if you want to set that image as Post  then use:
         update_post_meta($new_post,'inspiralia_application_file_list',$attachment_id);
-        $attachments = array( get_post_meta($new_post, "inspiralia_application_file_list", true ) );
+        $attachments = wp_get_attachment_url( $attachment_id );
     }
 
     $to = get_bloginfo( 'admin_email' );
     $subject = 'New Application for: '.$inspiralia_application_related;
-    $body = inspiralia_email_body($inspiralia_application_related, $email, $phone);
-    $headers = array('Content-Type: text/html; charset=UTF-8');
+    $body = inspiralia_email_body($inspiralia_application_related, $email, $phone, $attachments);
+    add_filter( 'wp_mail_content_type', 'my_custom_email_content_type' );
     $headers[] = 'From: Inspiralia Application <'.$email.'>';
 
-    wp_mail( $to, $subject, $body, $headers, $attachments );
-
+    wp_mail( $to, $subject, $body, $headers, $attachments);
+    remove_filter( 'wp_mail_content_type', 'my_custom_email_content_type' );
     success_redirect();
 } // end IF
+
+function my_custom_email_content_type() {
+    return 'text/html';
+}
 
 function success_redirect() {
     $_SESSION['apply']['success']  = "Thanks for applying to this Career, we will be contacting you very soon!";
@@ -77,11 +81,15 @@ function error_redirect(){
     wp_redirect( get_permalink(get_ID_by_page_name('Careers')) );
 }
 
-function inspiralia_email_body($inspiralia_application_related, $email, $phone) {
-    $body_inspiralia = "<p>You have received a new application for the position: ".$inspiralia_application_related."</p>";
-    $body_inspiralia .= "<p>Email: ".$email."<br/>";
-    $body_inspiralia .= "Phone: ".$phone."<br/>";
-    $body_inspiralia .= "CV: attachment </p>";
+function inspiralia_email_body($inspiralia_application_related, $email, $phone, $attachments) {
+    $body_inspiralia = "<html>
+                        <body>
+                            <p>You have received a new application for the position: ".$inspiralia_application_related."</p>";
+    $body_inspiralia .= "   <p>Email: ".$email."<br/>";
+    $body_inspiralia .= "   Phone: ".$phone."<br/>";
+    $body_inspiralia .= "   CV: <a href='".$attachments."' target='_blank'>check attachment</a> </p>
+                        </body>
+                        </html>";
     return $body_inspiralia;
 }
 

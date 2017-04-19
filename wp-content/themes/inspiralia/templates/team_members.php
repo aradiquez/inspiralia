@@ -19,11 +19,23 @@ get_template_part('index','banner'); ?>
         <section id="team" class="team-section">
           <header class="container filters">
             <menu class="row">
-              <menuitem class="col-sm-3 col-md-3 col-lg-3"><a href="#" class="menuitem show_all_team">All</a></menuitem>
-              <?php $taxonomy = 'departments';
+              <?php
+              $taxonomy = 'departments';
               $tax_terms = get_terms($taxonomy, array('hide_empty' => true));
+              $items_count = floor(12/(count($tax_terms)+2));
+              ?>
+              <menuitem class="col-sm-<?php echo $items_count ?> col-md-<?php echo $items_count ?> col-lg-<?php echo $items_count ?>">
+                <form id="team_search" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="search_team" placeholder="Search">
+                    <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i></label>
+                  </div>
+                </form>
+              </menuitem>
+              <menuitem class="col-sm-<?php echo $items_count ?> col-md-<?php echo $items_count ?> col-lg-<?php echo $items_count ?>"><a href="#" class="menuitem show_all_team">All</a></menuitem>
+              <?php
               foreach($tax_terms as $term_single) { ?>
-                <menuitem class="col-sm-3 col-md-3 col-lg-3"><a href="#" class="menuitem show_<?php echo $term_single->slug; ?>"><?php echo $term_single->name; ?></a></menuitem>
+                <menuitem class="col-sm-<?php echo $items_count ?> col-md-<?php echo $items_count ?> col-lg-<?php echo $items_count ?>"><a href="#" class="menuitem show_<?php echo $term_single->slug; ?>"><?php echo $term_single->name; ?></a></menuitem>
               <?php } ?>
             </menu>
           </header>

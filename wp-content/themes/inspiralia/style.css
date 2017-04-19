@@ -490,8 +490,6 @@ mark, .mark {
 }
 
 .owl-controls {
-	position: absolute;
-	top: 45%;
 	width: 100%;
 }
 .owl-controls .owl-buttons {
@@ -499,28 +497,77 @@ mark, .mark {
 }
 
 .owl-controls .owl-buttons .owl-prev {
-		float: left;
-		margin: 0 0 0 2%;
+  position: absolute;
+  top: 45%;
+  float: left;
+  left: 2%;
 }
 
 .owl-controls .owl-buttons .owl-next {
-	float: right;
-	margin: 0 2% 0 0;
+  float: right;
+  right: 2%;
+  position: absolute;
+  top: 45%;
 }
 
 .inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item {
 	text-align: center;
 }
-.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item a.title {
-  display: block;
+
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item.active {
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item p,
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item a h2 {
+  display: none;
+}
+
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item .item_overlay {
+  background-color: #666;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  -webkit-filter: contrast(30%);
+  filter: contrast(30%);
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item.active a {
   margin: 40% 0 0 0;
+  display: block;
 }
 
-.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item a.title h2 {
-	font-size: 2.3rem;
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item.active a h2 {
+  font-family: 'gothambold', sans-serif;
+	font-size: 18.86px;
+  line-height: 22px;
+  display: block;
 }
 
-.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item p.category {
+.inspiralia-slider-section .owl-wrapper-outer .owl-wrapper .owl-item .item.active p.category {
+  display: block;
+  font-family: 'gothamregular', sans-serif;
+  font-size: 12.57px;
 }
 
 main#content.blog_content {
@@ -591,6 +638,7 @@ main#content.blog_content {
 }
 
 .clients_filter .filters .single_filter .label {
+  margin: 3px 0;
   font-size: 12.65px;
   float: left;
 }
@@ -630,7 +678,6 @@ main#content.blog_content {
   font-size: 23.03px;
   display: block;
   padding: 25px 0;
-	
 }
 
 #details_modal {
@@ -863,6 +910,13 @@ p.bg-danger{
   margin: 0 auto;
 }
 
+.carreers_wrapper .modal .modal-dialog .modal-content .modal-body span.red {
+  margin: 10px 0;
+  text-align: center;
+  display: block;
+  font-size: 16.8px;
+}
+
 .carreers_wrapper .modal .modal-dialog .modal-content .modal-body .box__file {
   text-align: center;
   padding: 30px;
@@ -901,6 +955,7 @@ p.bg-danger{
 }
 
 .case_studies_filter .filters .single_filter .label {
+  margin: 3px 0;
   font-size: 12.65px;
   float: left;
 }
@@ -1050,6 +1105,7 @@ section.hero-case-studies-title {
   width: 60%;
   margin: 0 auto;
   padding: 0 0 3rem 0;
+  line-height: 26.2px;
 }
 
 .case_studies_post aside .markets_relation img {
@@ -2331,6 +2387,9 @@ ul#accordion, ul#accordion_custom {
   width: 33%;
   position: absolute;
   right: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 
@@ -2884,6 +2943,189 @@ proud-member-logos
 	font-family: "Fontawesome";
 	padding: 0 5px;
 }
+
+/* --------------------------------------
+=========================================
+  team_section
+=========================================
+-----------------------------------------*/
+
+section.team-section {
+  margin-bottom: 27%;
+}
+section.team-section header.filters.container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+section.team-section header.filters.container menu.row menuitem {
+  font-family: 'gothamregular', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+section.team-section header.filters.container menu.row menuitem #team_search .form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+
+section.team-section header.filters.container menu.row menuitem #team_search .form-group input {
+  margin-bottom: 0;
+}
+
+section.team-section header.filters.container menu.row menuitem #team_search .form-group label {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+
+section.team-section main.container .item, section.team-section main.container .item_join_us {
+  position: relative;
+  display: inline-block;
+  min-height: 250px;
+  float: left;
+}
+
+section.team-section main.container .item details {
+    display: none;
+    min-height: 250px;
+    padding: 15px 5px 10px 5px;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+section.team-section main.container .item details h3 {
+  font-size: 160%;
+}
+
+details summary::-webkit-details-marker { display:none; }
+
+section.team-section main.container section .item picture {
+  z-index: 100;
+}
+
+section.team-section main.container .item picture img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+section.team-section main.container .item_join_us header h3 {
+  margin: 10% auto 0 auto;
+  text-align: center;
+  font-family: 'gothambold', sans-serif;
+  display: block;
+}
+
+section.team-section main.container .item_join_us section {
+  background: url('images/icon_inspiralia.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  max-width: 100%;
+  height: 200px;
+  display: block;
+}
+
+
+/* --------------------------------------
+=========================================
+  main section
+=========================================
+-----------------------------------------*/
+
+main#main section.description {
+  font-family: 'gothamregular', sans-serif;
+  font-size: 18.86px;
+  padding: 11rem 0;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main#main section.description h2 {
+  font-family: 'gothambold', sans-serif;
+  font-size: 37.73px;
+  line-height: 84.82px;
+  margin-bottom: 6rem;
+}
+
+
+/* --------------------------------------
+=========================================
+  markets list
+=========================================
+-----------------------------------------*/
+div.markets_list article {
+  padding: 0;
+}
+div.markets_list article.left,
+div.markets_list article.right {
+  min-height: 33rem;
+}
+
+div.markets_list article.left div.post_image,
+div.markets_list article.right div.post_image {
+  width: 35%;
+  max-height: 375px;
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
+div.markets_list article span.information {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+div.markets_list article span.information p {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  font-size: 16.75px;
+  font-family: 'gothamregular', sans-serif;
+}
+
+div.markets_list article span.information a {
+  border-radius: 3.5rem;
+  font-size: 14.66px;
+  font-family: 'gotham_mediumregular', sans-serif;
+  margin: 10px 0;
+}
+
+div.markets_list article span.information h3 {
+  font-family: 'gothambold', sans-serif;
+  font-size: 25.13px;
+  line-height: 27.27px;
+  padding-top: 40px;
+}
+
+div.markets_list article.left div.post_image,
+div.markets_list article.left span.information {
+  float: left;
+}
+div.markets_list article.right div.post_image,
+div.markets_list article.right span.information {
+  float: right;
+}
+
+div.markets_list article img {
+  width: 750px;
+}
+
+div.markets_list article span.information {
+  width: 65%;
+}
+
 /* --------------------------------------
 =========================================
 	inspiralia-sidebar
@@ -3267,12 +3509,12 @@ main.contact_content section.description .row  aside img {
   font-size: 12.57px;
   font-family: 'gothambold', sans-serif;
 }
-.wpcf7 .wpcf7-form .wpcf7-form-control-wrap.name input {
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap:first-child input {
   width: 49%;
   float: left;
 
 }
-.wpcf7 .wpcf7-form .wpcf7-form-control-wrap.email input {
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap:nth-child(2) input {
   width: 49%;
   float: right;
 }
@@ -3688,192 +3930,6 @@ footer .inspiralia-social li span.icon-soci a {
 	inspiralia-Responsive Part
 =========================================
 -----------------------------------------*/
-@media (max-width: 992px) {
-.woocommerce-page .woocommerce .cart-collaterals .cart_totals {
-	width: 100%;
-}
-.woocommerce-page .products .product > a:first-child {
-/*		min-height: 325px; */
-}
-}
-@media (max-width: 767px) {
-.inspiralia-calltoaction {
-	text-align: center;
-}
-.inspiralia-calltoaction .btn{
-	margin-bottom: 20px;
-}
-
-.woocommerce-page .upsells.products ul li.product, .woocommerce-page .upsells.products ul.products li.product {
-	width: 48%;
-	float: left;
-	clear: both;
-	margin: 0 0 2.992em;
-}
-.woocommerce .upsells.products ul li.product:nth-child(4), .woocommerce-page ul.products li.product:nth-child(4) {
-	margin: 0 0 2.992em;
-}
-.woocommerce .upsells.products ul li.product:nth-child(4+1), .woocommerce-page ul.products li.product:nth-child(4+1) {
-	clear: none;
-}
-.woocommerce .upsells.products ul li.product:nth-child(even), .woocommerce-page ul.products li.product:nth-child(even) {
-	margin-right: 0;
-	float: right;
-}
-.woocommerce .upsells.products ul li.product:nth-child(odd), .woocommerce-page ul.products li.product:nth-child(odd) {
-	clear: left;
-}
-}
-@media (max-width: 600px) {
-.woocommerce-page .product .images {
-	width: 100%;
-}
-.woocommerce-page .product .entry-summary {
-	width: 100%;
-	padding-left: 0%;
-	margin-top: 50px;
-}
-.woocommerce-page .woocommerce-tabs .tabs li a {
-	font-size: 14px;
-}
-.woocommerce-page .woocommerce-tabs .tabs li {
-	padding: 10px 10px;
-}
-.listpost-content-wrap-large {
-	position: relative;
-}
-.listpost-content-wrap-large {
-	padding: 20px 0px 0px 0px;
-}
-.entry-meta-large {
-	position: relative;
-	float: left;
-	width: 100%;
-}
-.entry-footer-large {
-	padding-right: 0;
-}
-}
-@media (max-width: 480px) {
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-	width: 100%;
-}
-.woocommerce-page .woocommerce-result-count {
-	text-align: center;
-	width: 100%;
-	margin-bottom: 0px;
-}
-.woocommerce-page .woocommerce-ordering {
-	float: none;
-}
-.woocommerce-page .products .product > a:first-child {
-	width: 240px;
-}
-.woocommerce-page .woocommerce-tabs .tabs li {
-	width: 100%;
-}
-.woocommerce-page .woocommerce-tabs .tabs li {
-	width: 100%;
-	border-bottom: 2px solid #CCC;
-}
-.woocommerce-page .woocommerce-tabs .tabs {
-	border-bottom: 0;
-}
-.woocommerce-page .woocommerce-tabs .comment_container {
-	position: relative;
-	padding-left: 0px;
-	padding-top: 50px;
-}
-.woocommerce-page .products .product > a:first-child {
-	width: 100%;
-}
-/* cart page */
-.woocommerce table.shop_table th {
-	padding: 5px 5px;
-	font-size: 8px;
-}
-.woocommerce-page .woocommerce .product-name a {
-	font-size: 12px;
-	line-height: 16px;
-	float: left;
-}
-.woocommerce table.shop_table td {
-	padding: 20px 12px;
-}
-.woocommerce table.shop_table td, .woocommerce table.shop_table td span, .woocommerce table.shop_table td a, .woocommerce table.shop_table td strong {
-	font-size: 12px;
-}
-.woocommerce table.shop_table td .amount {
-	font-size: 12px;
-}
-.woocommerce-page .woocommerce .product-quantity input.qty {
-	width: 45px;
-}
-.woocommerce td.product-quantity {
-	min-width: 40px;
-}
-.woocommerce-page .woocommerce input[type="submit"] {
-	font-size: 10px;
-}
-.woocommerce-page .woocommerce .cart_totals tr.cart-subtotal th {
-	font-size: 12px;
-}
-.woocommerce-cart .cart-collaterals .cart_totals tr th {
-	font-size: 12px;
-}
-.woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table td span, .woocommerce-cart .cart-collaterals .cart_totals table td a {
-	font-size: 12px;
-}
-.woocommerce form .form-row label {
-	font-size: 12px;
-}
-.woocommerce-page .woocommerce .woocommerce-info, .woocommerce-page .woocommerce .woocommerce-info a {
-	font-size: 12px;
-}
-.woocommerce-checkout-payment label {
-	font-size: 14px;
-}
-.woocommerce-page .woocommerce #payment div.payment_box p {
-	font-size: 12px;
-	line-height: 16px;
-	text-align: justify;
-}
-.woocommerce form .form-row {
-	width: 100%;
-}
-.woocommerce-page .woocommerce .order_details li {
-	width: 100%;
-	border-bottom: 1px dashed #d3ced2;
-	border-right: none;
-	padding: 0 0 5px 0;
-	margin-bottom: 5px;
-	margin-top: 5px
-}
-.woocommerce-page address {
-	font-size: 12px;
-}
-.woocommerce-page .woocommerce-error, .woocommerce-page .woocommerce-message, .woocommerce-page .woocommerce-error li {
-	font-size: 12px;
-}
-.woocommerce-page .woocommerce .cart-collaterals .cart_totals a {
-	width: 100%;
-	margin-right: 0;
-}
-.woocommerce-page .woocommerce .checkbox {
-	font-size: 16px;
-}
-.woocommerce-page .myaccount_address {
-	font-size: 12px;
-}
-.woocommerce-page #content .quantity input.minus, .woocommerce-page #content .quantity input.plus {
-	display: none;
-}
-.woocommerce-page .upsells.products ul li.product, .woocommerce-page .upsells.products ul.products li.product {
-	width: 100%;
-}
-}
-/* [end] woocommerce */
-
 
  @media only screen and (min-width: 240px) and (max-width: 320px) {
  	.wrapper .navbar-background {
@@ -3888,6 +3944,10 @@ footer .inspiralia-social li span.icon-soci a {
 
   main#content .row section.description.carreers {
     padding: 2%;
+  }
+  .case_studies_filter .filters .single_filter,
+  .clients_filter .filters .single_filter {
+    width: 100%;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -3932,11 +3992,11 @@ footer .inspiralia-social li span.icon-soci a {
 	.cases_studies_list .item {
 		max-height: initial;
 	}
-	
+
 	.inspiralia-breadcrumb-title h1 {
 	  margin: 2rem auto 0 auto;
 	}
-	
+
 	/* Top Details*/
   .inspiralia-head-detail .info-left {
   	float: none;
@@ -3971,6 +4031,19 @@ footer .inspiralia-social li span.icon-soci a {
   }
   .inspiralia-subscriber .subscription-form .int-box {
   	width: 100%;
+  }
+  main.contact_content section.description .row aside {
+    margin: 0;
+  }
+  .case_studies_filter .filters .single_filter,
+  .clients_filter .filters .single_filter {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .clients_filter .label {
+    float: none;
   }
 }
 
@@ -4132,158 +4205,6 @@ footer .inspiralia-social li span.icon-soci a {
   }
 }
 
-/*--------------- team_section ---------------*/
-
-section.team-section {
-  margin-bottom: 27%;
-}
-section.team-section header.filters.container {
-  text-align: center;
-  margin: 0 auto;
-}
-
-section.team-section header.filters.container menu.row menuitem {
-  font-family: 'gothamregular', sans-serif;
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-
-section.team-section main.container .item, section.team-section main.container .item_join_us {
-  position: relative;
-  display: inline-block;
-  min-height: 250px;
-  float: left;
-}
-
-section.team-section main.container .item details {
-    display: none;
-    min-height: 250px;
-    padding: 15px 5px 10px 5px;
-    position: absolute;
-    top: 250px;
-    left: 0;
-    z-index: 2;
-    background-color: white;
-    width: 100%;
-    text-align: center;
-}
-
-section.team-section main.container .item details h3 {
-  font-size: 160%;
-}
-
-details summary::-webkit-details-marker { display:none; }
-
-section.team-section main.container section .item picture {
-  z-index: 100;
-}
-
-section.team-section main.container .item picture img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-section.team-section main.container .item_join_us header h3 {
-  margin: 10% auto 0 auto;
-  text-align: center;
-  font-family: 'gothambold', sans-serif;
-  display: block;
-}
-
-section.team-section main.container .item_join_us section {
-  background: url('images/icon_inspiralia.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  max-width: 100%;
-  height: 200px;
-  display: block;
-}
-
-/* ============================================ */
-
-main#main section.description {
-  font-family: 'gothamregular', sans-serif;
-  font-size: 18.86px;
-  padding: 11rem 0;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-main#main section.description h2 {
-  font-family: 'gothambold', sans-serif;
-  font-size: 37.73px;
-  line-height: 84.82px;
-  margin-bottom: 6rem;
-}
-
-/* ============================================ */
-div.markets_list article {
-  padding: 0;
-}
-div.markets_list article.left,
-div.markets_list article.right {
-  min-height: 33rem;
-}
-
-div.markets_list article.left div.post_image,
-div.markets_list article.right div.post_image {
-  width: 35%;
-  max-height: 375px;
-  overflow: hidden;
-  filter: grayscale(100%);
-}
-
-div.markets_list article span.information {
-  padding: 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-div.markets_list article span.information p {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-  font-size: 16.75px;
-  font-family: 'gothamregular', sans-serif;
-}
-
-div.markets_list article span.information a {
-  border-radius: 3.5rem;
-  font-size: 14.66px;
-  font-family: 'gotham_mediumregular', sans-serif;
-	margin: 10px 0;
-}
-
-div.markets_list article span.information h3 {
-  font-family: 'gothambold', sans-serif;
-  font-size: 25.13px;
-  line-height: 27.27px;
-  padding-top: 40px;
-}
-
-div.markets_list article.left div.post_image,
-div.markets_list article.left span.information {
-  float: left;
-}
-div.markets_list article.right div.post_image,
-div.markets_list article.right span.information {
-  float: right;
-}
-
-div.markets_list article img {
-  width: 750px;
-}
-
-div.markets_list article span.information {
-  width: 65%;
-}
-
 /*--------------- media queries ---------------*/
 
 @media (max-device-width: 480px) {
@@ -4342,11 +4263,11 @@ div.markets_list article span.information {
   }
 }
 @media (max-width: 768px) {
-	
+
 	ul#menu-main {
 		margin-right: 5px;
 	}
-	
+
   .navbar-wp .navbar-header .site-branding {
     margin-top: 12px;
     padding-left: 32px;
@@ -4364,13 +4285,18 @@ div.markets_list article span.information {
     font-size: 8.824rem;
     line-height: 8rem;
   }
-	
+
 	#accordion li.active a {
 		width: 35%;
 	}
-	
+
   #accordion li.active .btn {
     font-size: 1.45rem;
+  }
+
+  .case_studies_filter .filters .single_filter .case_studies_select select,
+  .clients_filter .filters .single_filter .clients_select select {
+      width: 51%;
   }
 }
 
