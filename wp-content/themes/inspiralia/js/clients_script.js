@@ -84,10 +84,6 @@ jQuery(document).ready(function() {
         }
     });
 
-    // funtion conditional_filter(markets, services, countries, all_elements){
-
-    // }
-
 
     jQuery('.clients_select').on('change', '#filter_page_id', function(e){
       e.preventDefault();
@@ -108,4 +104,5 @@ jQuery(document).ready(function() {
         });
       }
     });
+
 });

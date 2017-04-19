@@ -3509,16 +3509,15 @@ main.contact_content section.description .row  aside img {
   font-size: 12.57px;
   font-family: 'gothambold', sans-serif;
 }
-.wpcf7 .wpcf7-form .wpcf7-form-control-wrap:first-child input {
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap:first-child {
   width: 49%;
   float: left;
 
 }
-.wpcf7 .wpcf7-form .wpcf7-form-control-wrap:nth-child(2) input {
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap:nth-child(2) {
   width: 49%;
   float: right;
 }
-
 
 .inspiralia-project-news-post-box-link img {
   opacity: 1;

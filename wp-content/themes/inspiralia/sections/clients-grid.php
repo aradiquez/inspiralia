@@ -249,7 +249,7 @@ $args = array(
     'post_type' => 'clients',
     'orderby' => 'title',
     'order' => 'ASC',
-    'posts_per_page' => -1
+    'posts_per_page' => 18
 );
 
 $loop = new WP_Query( $args );
@@ -339,3 +339,26 @@ $loop = new WP_Query( $args );
         <?php endwhile; wp_reset_postdata(); ?>
     </div>
 </div>
+<script type="text/javascript">
+  // infinite scroll thing
+  var win = jQuery(window);
+  var page = 1; // What page we are on.
+  var ppp = 18; // Post per page
+
+  // Each time the user scrolls
+  win.scroll(function() {
+    // End of the document reached?
+    if ( ( ( jQuery(document).height() - win.height() ) - 50) < win.scrollTop() ) {
+      jQuery('#loading').show();
+
+      jQuery.post(clients_ajax.ajaxurl, {
+          action:"more_post_ajax",
+          offset: (page * ppp) + 1,
+          ppp: ppp
+      }).success(function(posts){
+          page++;
+          jQuery(".clients_list").append(posts);
+      });
+    }
+  });
+</script>

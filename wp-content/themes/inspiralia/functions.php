@@ -284,6 +284,33 @@ function ajax_get_post_information() {
 	die();
 }
 
+function more_post_ajax(){
+  $offset = $_POST["offset"];
+  $ppp = $_POST["ppp"];
+  header("Content-Type: text/html");
+
+  $args = array(
+      'post_type' => 'clients',
+      'posts_per_page' => $ppp,
+      'offset' => $offset,
+  );
+
+  $loop = new WP_Query($args);
+  while ($loop->have_posts()) { $loop->the_post(); ?>
+    <article class="col-lg-4 col-md-4 col-sm-6 item
+    	<?php
+        echo (get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) ? " market_".get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) : '');
+        echo (get_post_meta(get_the_ID(), 'inspiralia_clients_service_id', true ) ? " service_".get_post_meta(get_the_ID(), 'inspiralia_clients_service_id', true ) : '');
+        echo (get_post_meta(get_the_ID(), 'inspiralia_clients_country_id', true ) ? " country_".get_post_meta(get_the_ID(), 'inspiralia_clients_country_id', true ) : '');
+      ?>"><div class="content"><a href="#" title="<?php the_title(); ?>" data-post_id="<?php the_ID() ?>" class="display_details"><?php the_title(); ?><div class="details"><?php echo wp_trim_words( get_the_content(), 15, '...' ); ?></div></a></div></article><?php
+  }
+  wp_reset_postdata();
+  exit;
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
 
 //contact us sidebar [aside class="Classes"]
 function aside_func( $atts ) {

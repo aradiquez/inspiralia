@@ -21,6 +21,12 @@
 }
 */
 
+
+.wpcf7 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-not-valid {
+  color: red;
+  border-color: red;
+}
+
 h1.site-title a:hover, p.site-description{color:#00B1dd;}
 
 .blog_content.newsletter {
