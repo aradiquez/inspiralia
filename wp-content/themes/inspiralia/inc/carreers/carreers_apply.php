@@ -1,7 +1,7 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . "/inspiralia/wp-load.php";
-#require_once ($_SERVER['DOCUMENT_ROOT'] . "/wordpress/wp-load.php"); #LOCAL
+#require $_SERVER['DOCUMENT_ROOT'] . "/inspiralia/wp-load.php";
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/wordpress/wp-load.php"); #LOCAL
 session_start();
 $_SESSION['apply'] = [];
 if( 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['post_type'] == 'applications') {
@@ -53,7 +53,9 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['post_type'] == 'applications
     if ($attachment_id > 0){
         //and if you want to set that image as Post  then use:
         update_post_meta($new_post,'inspiralia_application_file_list',$attachment_id);
-        $attachments = wp_get_attachment_url( $attachment_id );
+        #$attachments = wp_get_attachment_url( $attachment_id );
+        #$attachments = array(WP_CONTENT_DIR . '/uploads/2017/04/Kafka-1.pdf');
+        $attachments = get_attached_file( $attachment_id );
     }
 
     $to = get_bloginfo( 'admin_email' );
@@ -87,7 +89,8 @@ function inspiralia_email_body($inspiralia_application_related, $email, $phone, 
                             <p>You have received a new application for the position: ".$inspiralia_application_related."</p>";
     $body_inspiralia .= "   <p>Email: ".$email."<br/>";
     $body_inspiralia .= "   Phone: ".$phone."<br/>";
-    $body_inspiralia .= "   CV: <a href='".$attachments."' target='_blank'>check attachment</a> </p>
+    # $body_inspiralia .= "   CV: <a href='".$attachments."' target='_blank'>Download from server</a>";
+    $body_inspiralia .= "   </p>
                         </body>
                         </html>";
     return $body_inspiralia;
