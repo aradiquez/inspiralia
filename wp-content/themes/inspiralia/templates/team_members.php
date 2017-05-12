@@ -41,6 +41,17 @@ get_template_part('index','banner'); ?>
           </header>
 
           <main class="container row">
+            <div class="item_join_us col-xs-12 col-sm-4 col-md-3 col-lg-3">
+              <a href="<?php echo get_permalink(get_ID_by_page_name('Careers')); ?>">
+                <header>
+                  <h3>Join us!</h3>
+                </header>
+                <section>
+                  &nbsp;
+                </section>
+              </a>
+            </div>
+
           <?php
             $args = array( 'post_type' => 'team_member', 'posts_per_page' => 100 );
             $loop = new WP_Query( $args );
@@ -64,18 +75,7 @@ get_template_part('index','banner'); ?>
               </div>
 
             <?php endwhile; // End of the loop. ?>
-
-            <div class="item_join_us col-xs-12 col-sm-4 col-md-3 col-lg-3">
-              <a href="<?php echo get_permalink(get_ID_by_page_name('Careers')); ?>">
-                <header>
-                  <h3>Join us!</h3>
-                </header>
-                <section>
-                  &nbsp;
-                </section>
-              </a>
-            </div>
-          </main>
+         </main>
         </section>
         <!-- ############################################################################### -->
       </div>

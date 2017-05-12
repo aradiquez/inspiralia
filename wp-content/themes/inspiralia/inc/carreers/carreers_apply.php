@@ -1,7 +1,7 @@
 <?php
 
-#require $_SERVER['DOCUMENT_ROOT'] . "/inspiralia/wp-load.php";
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/wordpress/wp-load.php"); #LOCAL
+require $_SERVER['DOCUMENT_ROOT'] . "/inspiralia/wp-load.php";
+#require_once ($_SERVER['DOCUMENT_ROOT'] . "/wordpress/wp-load.php"); #LOCAL
 session_start();
 $_SESSION['apply'] = [];
 if( 'POST' == $_SERVER['REQUEST_METHOD'] && $_POST['post_type'] == 'applications') {
