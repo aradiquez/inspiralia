@@ -332,7 +332,7 @@ function csn_deliver_mail() {
             wp_mail( $email, $subject, $user_message, $headers );
             echo '<div class="cpmsg">';
            // echo '<p>Thanks For Subscription.</p>';
-            echo "<em style='color:green;font-weight:bold'>Thanks For Subscription.</em>";  
+            echo "<em style='color:green;font-weight:bold'>Thank you for subscribing!</em>";  
             echo '</div>';
         } else {
             echo '<div class="cpmsg">';

@@ -33,6 +33,7 @@ jQuery(document).ready(function() {
             console.debug(error);
           },
       });
+			scrollToAnchor('clients_top');
     });
 
     jQuery('#details_modal').on('click', '.details_modal_close', function (e) {
@@ -106,3 +107,9 @@ jQuery(document).ready(function() {
     });
 
 });
+
+
+function scrollToAnchor(aid){
+    var aTag = jQuery("a[name='"+ aid +"']");
+    jQuery('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}

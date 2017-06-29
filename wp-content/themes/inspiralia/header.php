@@ -18,6 +18,7 @@
 <meta property="og:title"         content="Inspiralia" />
 <meta property="og:description"   content="Your partner of choice for new product development" />
 <meta property="og:image"         content="<?php echo(has_post_thumbnail() ? get_the_post_thumbnail_url($post, 'full') : '') ?>" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <?php wp_head(); ?>
 </head>

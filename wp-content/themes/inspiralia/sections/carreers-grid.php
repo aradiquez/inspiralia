@@ -14,7 +14,7 @@ $loop = new WP_Query( $args );
     <div class="modal fade" id="apply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form id="applying_for_carreer" action="<?php echo get_template_directory_uri() . '/inc/carreers/carreers_apply.php' ?>" method="POST" name="applying_for_carree" enctype="multipart/form-data">
+                <form id="applying_for_carreer" action="<?php echo get_template_directory_uri() . '/inc/carreers/carreers_apply.php' ?>" method="POST" name="applying_for_carreer" enctype="multipart/form-data">
                     <div class="modal-header">
                         <a href="" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -94,3 +94,8 @@ $loop = new WP_Query( $args );
         </div>
     </div>
 </div>
+<script type="text/javascript">
+  (function(window) {
+    makeDroppable(window.document.querySelector('.box__file'), function(files) { console.log(files); });
+  })(this);
+</script>

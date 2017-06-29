@@ -53,7 +53,7 @@ get_template_part('index','banner'); ?>
             </div>
 
           <?php
-            $args = array( 'post_type' => 'team_member', 'posts_per_page' => 100 );
+            $args = array( 'post_type' => 'team_member', 'posts_per_page' => 100, 'orderby' => 'title', 'order' => 'ASC');
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
 

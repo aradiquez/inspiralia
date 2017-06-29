@@ -18,6 +18,7 @@
 <meta property="og:title"         content="<?php the_title(); ?>" />
 <meta property="og:description"   content="<?php echo get_post_meta(get_the_ID(), "projects-box-intro", true) ?>" />
 <meta property="og:image"         content="<?php echo(has_post_thumbnail() ? get_the_post_thumbnail_url($post, 'full') : '') ?>" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <?php wp_head(); ?>
 </head>

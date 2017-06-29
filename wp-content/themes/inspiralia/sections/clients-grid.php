@@ -244,18 +244,9 @@ $countries = array("AF" => "Afghanistan",
 "ZM" => "Zambia",
 "ZW" => "Zimbabwe");
 
-
-$args = array(
-    'post_type' => 'clients',
-    'orderby' => 'title',
-    'order' => 'ASC',
-    'posts_per_page' => 18
-);
-
-$loop = new WP_Query( $args );
 ?>
 
-<div class="clients_wrapper">
+<div class="clients_wrapper"><a name="clients_top"></a>
     <!-- Modal -->
     <div id="details_modal" class="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <a href="#" class="details_modal_close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
@@ -276,13 +267,13 @@ $loop = new WP_Query( $args );
     </div>
     <!-- /.modal -->
 
-    <div class="clients_filter">
+    <!-- <div class="clients_filter">
         <span class="label">Sort By:</span>
         <div class="filters">
             <div class="single_filter">
                 <span class="label">Markets:</span>
                 <div class="clients_select">
-                    <?php
+                    <?php /*
                     $args = array(
                           'depth'                 => 2,
                           'child_of'              => get_ID_by_page_name('Markets'),
@@ -291,7 +282,7 @@ $loop = new WP_Query( $args );
                           'name'                  => 'markets_filter_page_id',
                           'class'                 => 'tri_filter markets'
                       );
-                        wp_dropdown_pages($args);
+                        wp_dropdown_pages($args); */
                      ?>
                 </div>
             </div>
@@ -299,7 +290,7 @@ $loop = new WP_Query( $args );
             <div class="single_filter">
                 <span class="label">Services:</span>
                 <div class="clients_select">
-                    <?php
+                    <?php /*
                     $args = array(
                           'depth'                 => 2,
                           'child_of'              => get_ID_by_page_name('Services'),
@@ -308,7 +299,7 @@ $loop = new WP_Query( $args );
                           'name'                  => 'services_filter_page_id',
                           'class'                 => 'tri_filter services'
                       );
-                        wp_dropdown_pages($args);
+                        wp_dropdown_pages($args); */
                      ?>
                 </div>
             </div>
@@ -318,47 +309,52 @@ $loop = new WP_Query( $args );
                 <div class="clients_select">
                 <select name="country_filter_page_id" id="country_filter_page_id" class="tri_filter countries">
                     <option value>Please select a country</option>
-                    <?php foreach($countries as $key => $country) { ?>
-                      <option class="level-0" value="<?php echo $key ?>"><?php echo $country ?></option>
-                    <?php } ?>
+                    <?php #foreach($countries as $key => $country) { ?>
+                      <option class="level-0" value="<?php #echo $key ?>"><?php #echo $country ?></option>
+                    <?php #} ?>
                 </select>
                 </div>
             </div>
         </div>
         <div class="clearfix"></div>
-    </div>
+    </div> -->
 
     <div class="clients_list row">
-        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-          <article class="col-lg-4 col-md-4 col-sm-6 item
-          <?php
-          echo (get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) ? " market_".get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) : '');
-        echo (get_post_meta(get_the_ID(), 'inspiralia_clients_service_id', true ) ? " service_".get_post_meta(get_the_ID(), 'inspiralia_clients_service_id', true ) : '');
-        echo (get_post_meta(get_the_ID(), 'inspiralia_clients_country_id', true ) ? " country_".get_post_meta(get_the_ID(), 'inspiralia_clients_country_id', true ) : '');
-        ?>"><div class="content"><a href="#" title="<?php the_title(); ?>" data-post_id="<?php the_ID() ?>" class="display_details"><?php the_title(); ?><div class="details"><?php echo wp_trim_words( get_the_content(), 15, '...' ); ?></div></a></div></article>
-        <?php endwhile; wp_reset_postdata(); ?>
     </div>
+		<div id="loading"></div>
 </div>
 <script type="text/javascript">
   // infinite scroll thing
+	window.all = true;
+	window.flag = false; //Assign the flag here
   var win = jQuery(window);
-  var page = 1; // What page we are on.
-  var ppp = 18; // Post per page
+  window.page = 1; // What page we are on.
+	pull_posts_by_page();
+
+	function pull_posts_by_page() {
+    jQuery.post(clients_ajax.ajaxurl, {
+        action:"more_post_ajax",
+        ppp: page
+    }).success(function(posts){
+				jQuery('#loading').hide();
+        window.page++;
+				jQuery(".clients_list").append(posts);
+				if (posts == "") {
+					window.all = false
+				}
+    }).always(function(){
+        window.flag = true; //Reset the flag here
+    });
+	}
 
   // Each time the user scrolls
   win.scroll(function() {
     // End of the document reached?
-    if ( ( ( jQuery(document).height() - win.height() ) - 50) < win.scrollTop() ) {
+    if (window.all && window.flag && ( ( jQuery(document).height() - win.height() ) - 50) < win.scrollTop() ) {
       jQuery('#loading').show();
-
-      jQuery.post(clients_ajax.ajaxurl, {
-          action:"more_post_ajax",
-          offset: (page * ppp) + 1,
-          ppp: ppp
-      }).success(function(posts){
-          page++;
-          jQuery(".clients_list").append(posts);
-      });
+			window.flag = false; //Set the flag here
+			pull_posts_by_page();
     }
   });
+	
 </script>

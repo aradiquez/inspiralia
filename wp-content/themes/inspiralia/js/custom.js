@@ -209,22 +209,23 @@ jQuery(document).ready(function() {
 
 
   var droppedFiles = false;
-	form = jQuery('.carreers_wrapper');
+form = jQuery('#applying_for_carree');
+boxFile = jQuery('.box__file');
 
-	form.on('drag dragstart dragend dragover dragenter dragleave drop', '#applying_for_carreer', function(e) {
+form.on('drag dragstart dragend dragover dragenter dragleave drop', '.modal-body', function(e) {
     e.preventDefault();
     e.stopPropagation();
-  })
-  .on('dragover dragenter', function() {
-   	form.addClass('is-dragover');
-  })
-  .on('dragleave dragend drop', function() {
-    form.removeClass('is-dragover');
-  })
-  .on('drop', function(e) {
+})
+.on('dragover dragenter', function() {
+    boxFile.removeClass('dragover');
+})
+.on('dragleave dragend drop', function() {
+    boxFile.addClass('dragover');
+})
+.on('drop', function(e) {
     droppedFiles = e.originalEvent.dataTransfer.files;
-  });
-	//form.find('input[type="file"]').prop('files', droppedFiles);
+});
+form.find('input[type="file"]').prop('files', droppedFiles);
 
   jQuery('#apply').on('change', '#inspiralia_application_file_list', function() {
     var file_size = (this.files[0].size / 1048576).toFixed(2);
@@ -237,9 +238,6 @@ jQuery(document).ready(function() {
   });
 
 });
-
-
-
 
 //------------------------------------------
     //scroll-top

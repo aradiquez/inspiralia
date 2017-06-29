@@ -285,19 +285,20 @@ function ajax_get_post_information() {
 }
 
 function more_post_ajax(){
-  $offset = $_POST["offset"];
   $ppp = $_POST["ppp"];
   header("Content-Type: text/html");
 
   $args = array(
       'post_type' => 'clients',
-      'posts_per_page' => $ppp,
-      'offset' => $offset,
+	    'orderby' => 'title',
+	    'order' => 'ASC',
+      'posts_per_page' => 18,
+			'paged'          => $ppp
   );
 
   $loop = new WP_Query($args);
   while ($loop->have_posts()) { $loop->the_post(); ?>
-    <article class="col-lg-4 col-md-4 col-sm-6 item
+    <article class="col-lg-4 col-md-4 col-sm-6 item <?php the_ID() ?>
     	<?php
         echo (get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) ? " market_".get_post_meta(get_the_ID(), 'inspiralia_clients_market_id', true ) : '');
         echo (get_post_meta(get_the_ID(), 'inspiralia_clients_service_id', true ) ? " service_".get_post_meta(get_the_ID(), 'inspiralia_clients_service_id', true ) : '');

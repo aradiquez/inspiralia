@@ -16,9 +16,9 @@ get_template_part('index','banner'); ?>
     <div class="row">
       <div class="col-md-12">
         <div id="primary" class="content-area">
-          <ul class="sitemap">
+          <div class="row">
             <?php get_template_part('sections/sitemap', 'sub-elements'); ?>
-          </ul>
+          </div>
         </div>
         <!-- #primary -->
       </div>

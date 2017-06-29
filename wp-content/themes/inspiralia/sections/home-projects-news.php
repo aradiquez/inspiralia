@@ -29,7 +29,7 @@
               <?php if ( get_post_meta(get_the_ID(), "projects-box-intro", true) ) { ?>
                 <?php echo wp_trim_words(get_post_meta(get_the_ID(), "projects-box-intro", true), 12, '...') ?>
               <?php } else { ?>
-                <?php the_excerpt(12); ?>
+                <?php echo wp_trim_words(get_the_content(), 12, '...') ?>
               <? } ?>
             </article>
             <?php if ( has_post_thumbnail() && ($post_number % 2) == 0) { ?>
